@@ -1,0 +1,7 @@
+{
+  "historical_susfs_sha": null,
+  "historical_susfs_evidence": null,
+  "lifetime_review_complete": false,
+  "lifetime_review_evidence": null,
+  "note": "Exploratory builds may compile a baseline but cannot pass the release/patch gate while historical source and error-path lifetime review remain unresolved."
+}

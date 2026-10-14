@@ -1,0 +1,136 @@
+name: Camera baseline and gated correction
+run-name: Camera ${{ inputs.exploratory && 'EXPLORATORY' || 'verified-input' }} — ${{ github.ref_name }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      susfs_ref:
+        description: SUSFS branch or full SHA; resolved once and recorded
+        required: true
+        default: gki-android12-5.10
+        type: string
+      exploratory:
+        description: Unverified historical SUSFS; baseline diagnostics only
+        default: true
+        type: boolean
+      build_patched:
+        description: Attempt correction only after every compatibility gate passes
+        default: false
+        type: boolean
+      private_reference:
+        description: Optional private reference artifact owner/repo:artifact_id
+        default: ''
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: camera-fix-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  camera:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    env:
+      CAMERA_SUSFS_REF: ${{ inputs.susfs_ref }}
+      CAMERA_EXPLORATORY: ${{ inputs.exploratory }}
+      CAMERA_PRIVATE_REFERENCE: ${{ inputs.private_reference }}
+    steps:
+      - name: Checkout camera branch
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: false
+      - name: Initialize diagnostic reports and validate inputs
+        run: python3 camera-build/ci.py init
+      - name: Checkout historical builder reference
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/KernelSU-Next-marble
+          ref: 3577f1d72a7c00c9248882ccac70ac3f15a97baa
+          path: camera-work/builder
+          persist-credentials: false
+      - name: Checkout kernel base
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/android_kernel_xiaomi_sm8450
+          ref: 5c59cd9a314704d30f3f66004183426da23410e1
+          path: camera-work/kernel
+          persist-credentials: false
+      - name: Checkout unmodified module sources
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/android_kernel_xiaomi_sm8450-modules
+          ref: 83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a
+          path: camera-work/modules-baseline
+          persist-credentials: false
+      - name: Install dependencies and bound runner resource use
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends bc bison build-essential flex git curl jq kmod libelf-dev libssl-dev libncurses-dev rsync xz-utils zstd python3 python3-yaml unzip zip cpio
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
+          if [ ! -e /mnt/camera-build.swap ]; then
+            sudo fallocate -l 8G /mnt/camera-build.swap
+            sudo chmod 600 /mnt/camera-build.swap
+            sudo mkswap /mnt/camera-build.swap
+            sudo swapon /mnt/camera-build.swap
+          fi
+          df -h
+          free -h
+      - name: Verify and prepare both matching compilers
+        run: python3 camera-build/ci.py toolchains
+      - name: Integrate pinned manager and resolved SUSFS
+        run: python3 camera-build/ci.py sources
+      - name: Compare running configuration and natural kernel release
+        run: python3 camera-build/ci.py config
+      - name: Build kernel artifacts with two jobs and bounded ThinLTO
+        run: python3 camera-build/ci.py kernel
+      - name: Build real external MMRM symbols
+        run: python3 camera-build/ci.py mmrm
+      - name: Build unmodified ARM64 camera baseline
+        run: python3 camera-build/ci.py baseline
+      - name: Audit baseline ABI, CFI, relocations and compiled source
+        id: compatibility
+        env:
+          CAMERA_REFERENCE_TOKEN: ${{ secrets.CAMERA_REFERENCE_TOKEN }}
+        run: python3 camera-build/ci.py compare
+      - name: Build reviewed correction in a separate checkout
+        if: ${{ inputs.build_patched && steps.compatibility.outputs.passed == 'true' }}
+        run: python3 camera-build/ci.py patched
+      - name: Finalize reports and checksums
+        if: ${{ always() }}
+        run: python3 camera-build/ci.py finalize
+      - name: Upload build logs even on failure
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: kernel-build-logs
+          path: camera-output/logs/
+          if-no-files-found: warn
+          retention-days: 14
+          compression-level: 1
+      - name: Upload baseline diagnostics
+        if: ${{ always() && hashFiles('camera-output/baseline/camera.ko') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: baseline-camera
+          path: camera-output/baseline/
+          retention-days: 14
+          compression-level: 0
+      - name: Upload compatibility evidence even on failure
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: baseline-compatibility-report
+          path: camera-output/reports/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload gated correction
+        if: ${{ always() && steps.compatibility.outputs.passed == 'true' && hashFiles('camera-output/patched/camera.ko') != '' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: patched-camera
+          path: camera-output/patched/
+          retention-days: 14
+          compression-level: 0

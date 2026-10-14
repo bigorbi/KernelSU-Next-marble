@@ -1,0 +1,161 @@
+Subject: [PATCH] camera: bound the KMD command tail and frame header
+
+Validate the declared unused tail rather than size minus used command
+length. Keep the tail inside the CPU mapping, require dword alignment
+and representable 32-bit offsets, and reject overlap with used commands.
+Snapshot the selected layout before mapping and bound the descriptor
+table within the validated packet.
+
+Bound the ISP frame-header reservation as well, including its I/O range
+and 32-bit address arithmetic, before handing its remaining capacity to
+writers. This is a review candidate; ROM compatibility has not been
+demonstrated.
+
+---
+--- a/qcom/opensource/camera-kernel/drivers/cam_utils/cam_packet_util.c
++++ b/qcom/opensource/camera-kernel/drivers/cam_utils/cam_packet_util.c
+@@ -5,6 +5,7 @@
+  */
+ 
+ #include <linux/types.h>
++#include <linux/limits.h>
+ #include <linux/slab.h>
+ 
+ #include "cam_mem_mgr.h"
+@@ -147,6 +148,9 @@
+ 	int                      rc = 0;
+ 	size_t                   len = 0;
+ 	size_t                   remain_len = 0;
++	size_t                   payload_len;
++	uint32_t                 kmd_offset;
++	struct cam_cmd_buf_desc  cmd_desc_copy;
+ 	struct cam_cmd_buf_desc *cmd_desc;
+ 	uint32_t                *cpu_addr;
+ 
+@@ -167,14 +171,44 @@
+ 		return -EINVAL;
+ 	}
+ 
++	/* Callers must supply a validated, stable packet allocation. */
++	if (packet->header.size < offsetof(struct cam_packet, payload))
++		return -EINVAL;
++
++	payload_len = packet->header.size - offsetof(struct cam_packet, payload);
++	if (!IS_ALIGNED(packet->cmd_buf_offset, sizeof(uint32_t)) ||
++		packet->cmd_buf_offset > payload_len ||
++		packet->num_cmd_buf > (payload_len - packet->cmd_buf_offset) /
++			sizeof(*cmd_desc)) {
++		CAM_ERR(CAM_UTIL, "Invalid command descriptor table");
++		return -EINVAL;
++	}
++
++	kmd_offset = packet->kmd_cmd_buf_offset;
++
+ 	/* Take first command descriptor and add offset to it for kmd*/
+ 	cmd_desc = (struct cam_cmd_buf_desc *) ((uint8_t *)
+ 		&packet->payload + packet->cmd_buf_offset);
+ 	cmd_desc += packet->kmd_cmd_buf_index;
++	cmd_desc_copy = *cmd_desc;
++	cmd_desc = &cmd_desc_copy;
+ 
+ 	rc = cam_packet_util_validate_cmd_desc(cmd_desc);
+ 	if (rc)
+ 		return rc;
++
++	/* KMD commands are dwords in the unused tail of this descriptor. */
++	if (!IS_ALIGNED(cmd_desc->offset, sizeof(uint32_t)) ||
++		!IS_ALIGNED(cmd_desc->size, sizeof(uint32_t)) ||
++		!IS_ALIGNED(kmd_offset, sizeof(uint32_t)) ||
++		kmd_offset < cmd_desc->length || kmd_offset >= cmd_desc->size ||
++		cmd_desc->size > U32_MAX - cmd_desc->offset) {
++		CAM_ERR(CAM_UTIL,
++			"Invalid KMD layout: offset %u size %u length %u kmd %u",
++			cmd_desc->offset, cmd_desc->size, cmd_desc->length,
++			kmd_offset);
++		return -EINVAL;
++	}
+ 
+ 	rc = cam_packet_util_get_cmd_mem_addr(cmd_desc->mem_handle, &cpu_addr,
+ 		&len);
+@@ -191,36 +225,26 @@
+ 	}
+ 
+ 	remain_len -= (size_t)cmd_desc->offset;
+-	if ((size_t)packet->kmd_cmd_buf_offset >= remain_len) {
+-		CAM_ERR(CAM_UTIL, "Invalid kmd cmd buf offset: %d remain_len: %d cmd offset: %d size: %d length: %d",
+-			packet->kmd_cmd_buf_offset, remain_len,
+-			cmd_desc->offset, cmd_desc->size, cmd_desc->length);
++	remain_len -= kmd_offset;
++	/* Check the same tail length that is returned to the writers. */
++	if ((size_t)(cmd_desc->size - kmd_offset) > remain_len) {
++		CAM_ERR(CAM_UTIL, "KMD tail exceeds mapped buffer");
+ 		rc = -EINVAL;
+ 		goto rel_kmd_buf;
+ 	}
+ 
+-	remain_len -= packet->kmd_cmd_buf_offset;
+-	if ((size_t)cmd_desc->size - (size_t)cmd_desc->length >= remain_len) {
+-		CAM_ERR(CAM_UTIL, "Invalid kmd buf size: %d offset: %d remain_len: %d cmd offset: %d size: %d length: %d",
+-			cmd_desc->size - cmd_desc->length,
+-			packet->kmd_cmd_buf_offset, remain_len,
+-			cmd_desc->offset, cmd_desc->size, cmd_desc->length);
+-		rc = -EINVAL;
+-		goto rel_kmd_buf;
+-	}
+-
+-	cpu_addr += (cmd_desc->offset / 4) + (packet->kmd_cmd_buf_offset / 4);
++	cpu_addr += (cmd_desc->offset / 4) + (kmd_offset / 4);
+ 	CAM_DBG(CAM_UTIL, "total size %d, cmd size: %d, KMD buffer size: %d",
+ 		cmd_desc->size, cmd_desc->length,
+-		cmd_desc->size - cmd_desc->length);
++		cmd_desc->size - kmd_offset);
+ 	CAM_DBG(CAM_UTIL, "hdl 0x%x, cmd offset %d, kmd offset %d, addr 0x%pK",
+ 		cmd_desc->mem_handle, cmd_desc->offset,
+-		packet->kmd_cmd_buf_offset, cpu_addr);
++		kmd_offset, cpu_addr);
+ 
+ 	kmd_buf->cpu_addr   = cpu_addr;
+ 	kmd_buf->handle     = cmd_desc->mem_handle;
+-	kmd_buf->offset     = cmd_desc->offset + packet->kmd_cmd_buf_offset;
+-	kmd_buf->size       = cmd_desc->size - packet->kmd_cmd_buf_offset;
++	kmd_buf->offset     = cmd_desc->offset + kmd_offset;
++	kmd_buf->size       = cmd_desc->size - kmd_offset;
+ 	kmd_buf->used_bytes = 0;
+ 	return rc;
+ 
+--- a/qcom/opensource/camera-kernel/drivers/cam_isp/isp_hw_mgr/cam_ife_hw_mgr.c
++++ b/qcom/opensource/camera-kernel/drivers/cam_isp/isp_hw_mgr/cam_ife_hw_mgr.c
+@@ -9886,6 +9886,12 @@
+ 		return rc;
+ 	}
+ 
++	if (kmd_buf->offset >= len ||
++		kmd_buf->size > len - kmd_buf->offset ||
++		iova_addr > U32_MAX ||
++		kmd_buf->offset > U32_MAX - (uint32_t)iova_addr)
++		return -EINVAL;
++
+ 	/* CDM buffer is within 32-bit address space */
+ 	frame_header_iova = (uint32_t)iova_addr;
+ 	frame_header_iova += kmd_buf->offset;
+@@ -9894,8 +9900,20 @@
+ 	if (frame_header_iova % CAM_FRAME_HEADER_ADDR_ALIGNMENT) {
+ 		padded_bytes = (uint32_t)(CAM_FRAME_HEADER_ADDR_ALIGNMENT -
+ 			(frame_header_iova % CAM_FRAME_HEADER_ADDR_ALIGNMENT));
++		if (padded_bytes > U32_MAX - frame_header_iova)
++			return -EINVAL;
+ 		frame_header_iova += padded_bytes;
+ 	}
++
++	/* Reserve only within the declared KMD tail, before deriving pointers. */
++	if (kmd_buf->used_bytes || padded_bytes > kmd_buf->size ||
++		kmd_buf->size - padded_bytes < CAM_FRAME_HEADER_BUFFER_SIZE) {
++		CAM_ERR(CAM_ISP, "Insufficient KMD space for frame header");
++		return -ENOMEM;
++	}
++
++	if (U32_MAX - frame_header_iova < CAM_FRAME_HEADER_BUFFER_SIZE - 1)
++		return -EINVAL;
+ 
+ 	prepare_hw_data->frame_header_iova = frame_header_iova;
+ 
