@@ -26987,5 +26987,4298 @@
     ".rela.gnu.linkonce.this_module": {
       "257": 2
     }
+  },
+  "cfi_publications": {
+    "module_sha256": "a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1",
+    "cfi_entry_count": 1094,
+    "published_pointer_count": 714,
+    "publications": {
+      ".data:CDM170_ops+0": {
+        "target_names": [
+          "cam_cdm_get_cmd_header_size"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+104": {
+        "target_names": [
+          "cam_cdm_write_dmi"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+112": {
+        "target_names": [
+          "cam_cdm_write_regcontinuous"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+120": {
+        "target_names": [
+          "cam_cdm_write_regrandom"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+128": {
+        "target_names": [
+          "cam_cdm_write_indirect"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+136": {
+        "target_names": [
+          "cam_cdm_write_genirq"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+144": {
+        "target_names": [
+          "cam_cdm_write_wait_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+152": {
+        "target_names": [
+          "cam_cdm_write_changebase"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+16": {
+        "target_names": [
+          "cam_cdm_required_size_reg_continuous"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+160": {
+        "target_names": [
+          "cam_cdm_write_wait_comp_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+168": {
+        "target_names": [
+          "cam_cdm_write_clear_comp_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+176": {
+        "target_names": [
+          "cam_cdm_write_wait_prefetch_disable"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+24": {
+        "target_names": [
+          "cam_cdm_required_size_reg_random"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+32": {
+        "target_names": [
+          "cam_cdm_required_size_indirect"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+40": {
+        "target_names": [
+          "cam_cdm_required_size_genirq"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+48": {
+        "target_names": [
+          "cam_cdm_required_size_wait_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+56": {
+        "target_names": [
+          "cam_cdm_required_size_changebase"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+64": {
+        "target_names": [
+          "cam_cdm_required_size_comp_wait"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+72": {
+        "target_names": [
+          "cam_cdm_required_size_clear_comp_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+8": {
+        "target_names": [
+          "cam_cdm_required_size_dmi"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+80": {
+        "target_names": [
+          "cam_cdm_required_size_prefetch_disable"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+88": {
+        "target_names": [
+          "cam_cdm_offsetof_dmi_addr"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:CDM170_ops+96": {
+        "target_names": [
+          "cam_cdm_offsetof_indirect_addr"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_apply_req+0": {
+        "target_names": [
+          "__traceiter_cam_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_buf_done+0": {
+        "target_names": [
+          "__traceiter_cam_buf_done"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_cdm_cb+0": {
+        "target_names": [
+          "__traceiter_cam_cdm_cb"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_context_state+0": {
+        "target_names": [
+          "__traceiter_cam_context_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_delay_detect+0": {
+        "target_names": [
+          "__traceiter_cam_delay_detect"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_flush_req+0": {
+        "target_names": [
+          "__traceiter_cam_flush_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_icp_fw_dbg+0": {
+        "target_names": [
+          "__traceiter_cam_icp_fw_dbg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_irq_activated+0": {
+        "target_names": [
+          "__traceiter_cam_irq_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_irq_handled+0": {
+        "target_names": [
+          "__traceiter_cam_irq_handled"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_isp_activated_irq+0": {
+        "target_names": [
+          "__traceiter_cam_isp_activated_irq"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_log_debug+0": {
+        "target_names": [
+          "__traceiter_cam_log_debug"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_log_event+0": {
+        "target_names": [
+          "__traceiter_cam_log_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_notify_frame_skip+0": {
+        "target_names": [
+          "__traceiter_cam_notify_frame_skip"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_req_mgr_add_req+0": {
+        "target_names": [
+          "__traceiter_cam_req_mgr_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_req_mgr_apply_request+0": {
+        "target_names": [
+          "__traceiter_cam_req_mgr_apply_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_req_mgr_connect_device+0": {
+        "target_names": [
+          "__traceiter_cam_req_mgr_connect_device"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__SCK__tp_func_cam_submit_to_hw+0": {
+        "target_names": [
+          "__traceiter_cam_submit_to_hw"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__cfi_jt_cleanup_module+0": {
+        "target_names": [
+          "cleanup_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:__cfi_jt_init_module+0": {
+        "target_names": [
+          "init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_a5_driver+0": {
+        "target_names": [
+          "cam_a5_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_a5_driver+8": {
+        "target_names": [
+          "cam_a5_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_actuator_i2c_driver+16": {
+        "target_names": [
+          "cam_actuator_driver_i2c_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_actuator_i2c_driver+8": {
+        "target_names": [
+          "cam_actuator_driver_i2c_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_actuator_platform_driver+0": {
+        "target_names": [
+          "cam_actuator_driver_platform_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_actuator_platform_driver+8": {
+        "target_names": [
+          "cam_actuator_platform_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_actuator_subdev_core_ops+48": {
+        "target_names": [
+          "cam_actuator_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_actuator_subdev_core_ops+56": {
+        "target_names": [
+          "cam_actuator_init_subdev_do_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_bps_driver+0": {
+        "target_names": [
+          "cam_bps_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_bps_driver+8": {
+        "target_names": [
+          "cam_bps_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_cdm_intf_driver+0": {
+        "target_names": [
+          "cam_cdm_intf_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_cdm_intf_driver+8": {
+        "target_names": [
+          "cam_cdm_intf_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_cpas_driver+0": {
+        "target_names": [
+          "cam_cpas_dev_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_cpas_driver+8": {
+        "target_names": [
+          "cam_cpas_dev_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_csid_driver+0": {
+        "target_names": [
+          "cam_custom_csid_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_csid_driver+8": {
+        "target_names": [
+          "cam_custom_csid_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine+104": {
+        "target_names": [
+          "__cam_custom_ctx_apply_default_settings"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine+280": {
+        "target_names": [
+          "__cam_custom_ctx_apply_req_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine+288": {
+        "target_names": [
+          "__cam_custom_ctx_apply_default_settings"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine+96": {
+        "target_names": [
+          "__cam_custom_ctx_apply_req_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine_irq+0": {
+        "target_names": [
+          "__cam_custom_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine_irq+16": {
+        "target_names": [
+          "__cam_custom_ctx_frame_done"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine_irq+24": {
+        "target_names": [
+          "__cam_custom_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine_irq+32": {
+        "target_names": [
+          "__cam_custom_ctx_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine_irq+40": {
+        "target_names": [
+          "__cam_custom_ctx_frame_done"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_ctx_activated_state_machine_irq+8": {
+        "target_names": [
+          "__cam_custom_ctx_reg_upd_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+1008": {
+        "target_names": [
+          "__cam_custom_ctx_unlink_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+1016": {
+        "target_names": [
+          "__cam_custom_ctx_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+1024": {
+        "target_names": [
+          "__cam_custom_ctx_apply_default_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+1032": {
+        "target_names": [
+          "__cam_custom_ctx_flush_req_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+1040": {
+        "target_names": [
+          "__cam_custom_ctx_handle_evt"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+1056": {
+        "target_names": [
+          "__cam_custom_ctx_handle_irq_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+184": {
+        "target_names": [
+          "__cam_custom_ctx_acquire_dev_in_available"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+376": {
+        "target_names": [
+          "__cam_custom_release_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+384": {
+        "target_names": [
+          "__cam_custom_ctx_config_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+416": {
+        "target_names": [
+          "__cam_custom_ctx_acquire_hw_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+424": {
+        "target_names": [
+          "__cam_custom_ctx_release_hw_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+440": {
+        "target_names": [
+          "__cam_custom_ctx_get_dev_info_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+448": {
+        "target_names": [
+          "__cam_custom_ctx_link_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+456": {
+        "target_names": [
+          "__cam_custom_ctx_unlink_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+480": {
+        "target_names": [
+          "__cam_custom_ctx_flush_req_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+560": {
+        "target_names": [
+          "__cam_custom_release_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+568": {
+        "target_names": [
+          "__cam_custom_ctx_config_dev"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+576": {
+        "target_names": [
+          "__cam_custom_ctx_start_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+608": {
+        "target_names": [
+          "__cam_custom_ctx_release_hw_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+640": {
+        "target_names": [
+          "__cam_custom_ctx_unlink_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+664": {
+        "target_names": [
+          "__cam_custom_ctx_flush_req_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+744": {
+        "target_names": [
+          "__cam_custom_ctx_release_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+752": {
+        "target_names": [
+          "__cam_custom_ctx_config_dev_in_flushed"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+768": {
+        "target_names": [
+          "__cam_custom_stop_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+792": {
+        "target_names": [
+          "__cam_custom_ctx_release_hw_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+824": {
+        "target_names": [
+          "__cam_custom_ctx_unlink_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+856": {
+        "target_names": [
+          "__cam_custom_ctx_handle_evt"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+928": {
+        "target_names": [
+          "__cam_custom_ctx_release_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+936": {
+        "target_names": [
+          "__cam_custom_ctx_config_dev"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+952": {
+        "target_names": [
+          "__cam_custom_stop_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_dev_ctx_top_state_machine+976": {
+        "target_names": [
+          "__cam_custom_ctx_release_hw_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_custom_hw_sub_mod_driver+0": {
+        "target_names": [
+          "cam_custom_hw_sub_mod_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_i2c_driver+16": {
+        "target_names": [
+          "cam_eeprom_i2c_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_i2c_driver+8": {
+        "target_names": [
+          "cam_eeprom_i2c_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_platform_driver+0": {
+        "target_names": [
+          "cam_eeprom_platform_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_platform_driver+8": {
+        "target_names": [
+          "cam_eeprom_platform_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_spi_driver+16": {
+        "target_names": [
+          "cam_eeprom_spi_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_spi_driver+8": {
+        "target_names": [
+          "cam_eeprom_spi_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_subdev_core_ops+48": {
+        "target_names": [
+          "cam_eeprom_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_eeprom_subdev_core_ops+56": {
+        "target_names": [
+          "cam_eeprom_init_subdev_do_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_flash_i2c_driver+16": {
+        "target_names": [
+          "cam_flash_i2c_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_flash_i2c_driver+8": {
+        "target_names": [
+          "cam_flash_i2c_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_flash_platform_driver+0": {
+        "target_names": [
+          "cam_flash_platform_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_flash_platform_driver+8": {
+        "target_names": [
+          "cam_flash_platform_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_flash_subdev_core_ops+48": {
+        "target_names": [
+          "cam_flash_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_flash_subdev_core_ops+56": {
+        "target_names": [
+          "cam_flash_subdev_do_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_hw_cdm_driver+0": {
+        "target_names": [
+          "cam_hw_cdm_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_hw_cdm_driver+8": {
+        "target_names": [
+          "cam_hw_cdm_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+1064": {
+        "target_names": [
+          "cam_icp_context_dump_active_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+1088": {
+        "target_names": [
+          "cam_icp_context_mini_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+184": {
+        "target_names": [
+          "__cam_icp_acquire_dev_in_available"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+352": {
+        "target_names": [
+          "cam_icp_context_mini_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+376": {
+        "target_names": [
+          "__cam_icp_release_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+384": {
+        "target_names": [
+          "__cam_icp_config_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+392": {
+        "target_names": [
+          "__cam_icp_start_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+408": {
+        "target_names": [
+          "__cam_icp_flush_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+432": {
+        "target_names": [
+          "__cam_icp_dump_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+504": {
+        "target_names": [
+          "__cam_icp_handle_buf_done_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+512": {
+        "target_names": [
+          "cam_icp_context_dump_active_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+536": {
+        "target_names": [
+          "cam_icp_context_mini_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+560": {
+        "target_names": [
+          "__cam_icp_release_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+568": {
+        "target_names": [
+          "__cam_icp_config_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+584": {
+        "target_names": [
+          "__cam_icp_stop_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+592": {
+        "target_names": [
+          "__cam_icp_flush_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+616": {
+        "target_names": [
+          "__cam_icp_dump_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+688": {
+        "target_names": [
+          "__cam_icp_handle_buf_done_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+696": {
+        "target_names": [
+          "cam_icp_context_dump_active_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_ctx_state_machine+720": {
+        "target_names": [
+          "cam_icp_context_mini_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_driver+0": {
+        "target_names": [
+          "cam_icp_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_icp_driver+8": {
+        "target_names": [
+          "cam_icp_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ife_csid_driver+0": {
+        "target_names": [
+          "cam_ife_csid_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ife_csid_driver+8": {
+        "target_names": [
+          "cam_ife_csid_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ife_csid_lite_driver+0": {
+        "target_names": [
+          "cam_ife_csid_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ife_csid_lite_driver+8": {
+        "target_names": [
+          "cam_ife_csid_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ipe_driver+0": {
+        "target_names": [
+          "cam_ipe_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ipe_driver+8": {
+        "target_names": [
+          "cam_ipe_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine+104": {
+        "target_names": [
+          "__cam_isp_ctx_apply_default_req_settings"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine+464": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine+472": {
+        "target_names": [
+          "__cam_isp_ctx_apply_default_req_settings"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine+648": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req_in_bubble"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine+656": {
+        "target_names": [
+          "__cam_isp_ctx_apply_default_req_settings"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine+96": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+0": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+104": {
+        "target_names": [
+          "__cam_isp_ctx_handle_secondary_events"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+112": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+120": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+128": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_epoch_bubble_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+136": {
+        "target_names": [
+          "__cam_isp_ctx_notify_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+144": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+152": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+16": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+160": {
+        "target_names": [
+          "__cam_isp_ctx_handle_secondary_events"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+168": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+176": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+184": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_epoch_bubble_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+192": {
+        "target_names": [
+          "__cam_isp_ctx_notify_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+200": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+208": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_bubble"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+216": {
+        "target_names": [
+          "__cam_isp_ctx_handle_secondary_events"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+224": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+232": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+24": {
+        "target_names": [
+          "__cam_isp_ctx_notify_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+240": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+248": {
+        "target_names": [
+          "__cam_isp_ctx_epoch_in_bubble_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+264": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_bubble_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+272": {
+        "target_names": [
+          "__cam_isp_ctx_handle_secondary_events"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+288": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+296": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_hw_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+32": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+40": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+48": {
+        "target_names": [
+          "__cam_isp_ctx_handle_secondary_events"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+56": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+64": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+72": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+8": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+80": {
+        "target_names": [
+          "__cam_isp_ctx_epoch_in_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+88": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_activated_state_machine_irq+96": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine+464": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine+648": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req_in_bubble"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine+96": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+0": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+112": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+120": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+128": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_epoch_bubble_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+136": {
+        "target_names": [
+          "__cam_isp_ctx_notify_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+144": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+152": {
+        "target_names": [
+          "__cam_isp_ctx_fs2_buf_done_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+16": {
+        "target_names": [
+          "__cam_isp_ctx_fs2_reg_upd_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+168": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+176": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+184": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_epoch_bubble_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+192": {
+        "target_names": [
+          "__cam_isp_ctx_notify_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+200": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+208": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_bubble"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+224": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+232": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+24": {
+        "target_names": [
+          "__cam_isp_ctx_fs2_sof_in_sof_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+240": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+248": {
+        "target_names": [
+          "__cam_isp_ctx_epoch_in_bubble_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+264": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_bubble_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+288": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+296": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_hw_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+32": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+56": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+64": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+72": {
+        "target_names": [
+          "__cam_isp_ctx_fs2_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+8": {
+        "target_names": [
+          "__cam_isp_ctx_fs2_sof_in_sof_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+80": {
+        "target_names": [
+          "__cam_isp_ctx_epoch_in_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+88": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_fs2_state_machine_irq+96": {
+        "target_names": [
+          "__cam_isp_ctx_fs2_buf_done_in_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+0": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+112": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+120": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+136": {
+        "target_names": [
+          "__cam_isp_ctx_offline_epoch_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+152": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+288": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+296": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_hw_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+56": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+64": {
+        "target_names": [
+          "__cam_isp_ctx_sof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+72": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+80": {
+        "target_names": [
+          "__cam_isp_ctx_offline_epoch_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_offline_state_machine_irq+96": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine+464": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_apply_req_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine+96": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_apply_req_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+112": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+120": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_sof_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+144": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+152": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_epoch"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+16": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_sof"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+168": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+176": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_sof_in_bubble_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+184": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_reg_upd_in_bubble_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+200": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+208": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_bubble"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+224": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+232": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_sof_in_bubble_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+240": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_reg_upd_in_bubble_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+256": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+264": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_bubble_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+32": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+56": {
+        "target_names": [
+          "__cam_isp_ctx_handle_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+64": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_sof_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+72": {
+        "target_names": [
+          "__cam_isp_ctx_reg_upd_in_applied_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+8": {
+        "target_names": [
+          "__cam_isp_ctx_rdi_only_sof_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+88": {
+        "target_names": [
+          "__cam_isp_ctx_notify_eof_in_activated_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_rdi_only_activated_state_machine_irq+96": {
+        "target_names": [
+          "__cam_isp_ctx_buf_done_in_applied"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1008": {
+        "target_names": [
+          "__cam_isp_ctx_unlink_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1016": {
+        "target_names": [
+          "__cam_isp_ctx_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1024": {
+        "target_names": [
+          "__cam_isp_ctx_apply_default_settings"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1032": {
+        "target_names": [
+          "__cam_isp_ctx_flush_req_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1040": {
+        "target_names": [
+          "__cam_isp_ctx_process_evt"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1048": {
+        "target_names": [
+          "__cam_isp_ctx_dump_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1056": {
+        "target_names": [
+          "__cam_isp_ctx_handle_irq_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1064": {
+        "target_names": [
+          "cam_isp_context_dump_requests"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1072": {
+        "target_names": [
+          "cam_isp_context_info_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1080": {
+        "target_names": [
+          "cam_isp_context_hw_recovery"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+1096": {
+        "target_names": [
+          "cam_isp_context_handle_message"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+184": {
+        "target_names": [
+          "__cam_isp_ctx_acquire_dev_in_available"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+376": {
+        "target_names": [
+          "__cam_isp_ctx_release_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+384": {
+        "target_names": [
+          "__cam_isp_ctx_config_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+408": {
+        "target_names": [
+          "__cam_isp_ctx_flush_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+416": {
+        "target_names": [
+          "__cam_isp_ctx_acquire_hw_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+424": {
+        "target_names": [
+          "__cam_isp_ctx_release_hw_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+440": {
+        "target_names": [
+          "__cam_isp_ctx_get_dev_info_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+448": {
+        "target_names": [
+          "__cam_isp_ctx_link_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+456": {
+        "target_names": [
+          "__cam_isp_ctx_unlink_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+480": {
+        "target_names": [
+          "__cam_isp_ctx_flush_req_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+496": {
+        "target_names": [
+          "__cam_isp_ctx_dump_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+512": {
+        "target_names": [
+          "cam_isp_context_dump_requests"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+520": {
+        "target_names": [
+          "cam_isp_context_info_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+560": {
+        "target_names": [
+          "__cam_isp_ctx_release_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+568": {
+        "target_names": [
+          "__cam_isp_ctx_config_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+576": {
+        "target_names": [
+          "__cam_isp_ctx_start_dev_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+592": {
+        "target_names": [
+          "__cam_isp_ctx_flush_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+608": {
+        "target_names": [
+          "__cam_isp_ctx_release_hw_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+640": {
+        "target_names": [
+          "__cam_isp_ctx_unlink_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+664": {
+        "target_names": [
+          "__cam_isp_ctx_flush_req_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+680": {
+        "target_names": [
+          "__cam_isp_ctx_dump_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+696": {
+        "target_names": [
+          "cam_isp_context_dump_requests"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+704": {
+        "target_names": [
+          "cam_isp_context_info_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+744": {
+        "target_names": [
+          "__cam_isp_ctx_release_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+752": {
+        "target_names": [
+          "__cam_isp_ctx_config_dev_in_flushed"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+768": {
+        "target_names": [
+          "__cam_isp_ctx_stop_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+792": {
+        "target_names": [
+          "__cam_isp_ctx_release_hw_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+824": {
+        "target_names": [
+          "__cam_isp_ctx_unlink_in_ready"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+848": {
+        "target_names": [
+          "__cam_isp_ctx_flush_req_in_flushed_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+856": {
+        "target_names": [
+          "__cam_isp_ctx_process_evt"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+880": {
+        "target_names": [
+          "cam_isp_context_dump_requests"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+888": {
+        "target_names": [
+          "cam_isp_context_info_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+912": {
+        "target_names": [
+          "cam_isp_context_handle_message"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+928": {
+        "target_names": [
+          "__cam_isp_ctx_release_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+936": {
+        "target_names": [
+          "__cam_isp_ctx_config_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+952": {
+        "target_names": [
+          "__cam_isp_ctx_stop_dev_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+960": {
+        "target_names": [
+          "__cam_isp_ctx_flush_dev_in_top_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_isp_ctx_top_state_machine+976": {
+        "target_names": [
+          "__cam_isp_ctx_release_hw_in_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+184": {
+        "target_names": [
+          "__cam_jpeg_ctx_acquire_dev_in_available"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+352": {
+        "target_names": [
+          "cam_jpeg_context_mini_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+376": {
+        "target_names": [
+          "__cam_jpeg_ctx_release_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+384": {
+        "target_names": [
+          "__cam_jpeg_ctx_config_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+400": {
+        "target_names": [
+          "__cam_jpeg_ctx_stop_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+408": {
+        "target_names": [
+          "__cam_jpeg_ctx_flush_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+432": {
+        "target_names": [
+          "__cam_jpeg_ctx_dump_dev_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+504": {
+        "target_names": [
+          "__cam_jpeg_ctx_handle_buf_done_in_acquired"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+512": {
+        "target_names": [
+          "cam_jpeg_context_dump_active_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_ctx_state_machine+536": {
+        "target_names": [
+          "cam_jpeg_context_mini_dump"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_dma_driver+0": {
+        "target_names": [
+          "cam_jpeg_dma_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_dma_driver+8": {
+        "target_names": [
+          "cam_jpeg_dma_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_enc_driver+0": {
+        "target_names": [
+          "cam_jpeg_enc_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_jpeg_enc_driver+8": {
+        "target_names": [
+          "cam_jpeg_enc_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_lx7_driver+0": {
+        "target_names": [
+          "cam_lx7_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_lx7_driver+8": {
+        "target_names": [
+          "cam_lx7_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ois_i2c_driver+16": {
+        "target_names": [
+          "cam_ois_i2c_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ois_i2c_driver+8": {
+        "target_names": [
+          "cam_ois_i2c_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ois_platform_driver+0": {
+        "target_names": [
+          "cam_ois_platform_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ois_platform_driver+8": {
+        "target_names": [
+          "cam_ois_platform_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ois_subdev_core_ops+48": {
+        "target_names": [
+          "cam_ois_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_ois_subdev_core_ops+56": {
+        "target_names": [
+          "cam_ois_init_subdev_do_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_driver+0": {
+        "target_names": [
+          "cam_req_mgr_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_driver+8": {
+        "target_names": [
+          "cam_req_mgr_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_ops+0": {
+        "target_names": [
+          "cam_req_mgr_cb_notify_trigger"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_ops+16": {
+        "target_names": [
+          "cam_req_mgr_cb_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_ops+24": {
+        "target_names": [
+          "cam_req_mgr_cb_notify_timer"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_ops+32": {
+        "target_names": [
+          "cam_req_mgr_cb_notify_stop"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_req_mgr_ops+8": {
+        "target_names": [
+          "cam_req_mgr_cb_notify_err"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_res_mgr_driver+0": {
+        "target_names": [
+          "cam_res_mgr_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_res_mgr_driver+8": {
+        "target_names": [
+          "cam_res_mgr_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_i2c_driver+16": {
+        "target_names": [
+          "cam_sensor_i2c_driver_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_i2c_driver+8": {
+        "target_names": [
+          "cam_sensor_i2c_driver_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_platform_driver+0": {
+        "target_names": [
+          "cam_sensor_driver_platform_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_platform_driver+8": {
+        "target_names": [
+          "cam_sensor_platform_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_subdev_core_ops+48": {
+        "target_names": [
+          "cam_sensor_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_subdev_core_ops+56": {
+        "target_names": [
+          "cam_sensor_init_subdev_do_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sensor_subdev_core_ops+64": {
+        "target_names": [
+          "cam_sensor_power"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sfe_driver+0": {
+        "target_names": [
+          "cam_sfe_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sfe_driver+8": {
+        "target_names": [
+          "cam_sfe_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_smmu_driver+0": {
+        "target_names": [
+          "cam_smmu_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_smmu_driver+8": {
+        "target_names": [
+          "cam_smmu_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_subparts_info_attribute+16": {
+        "target_names": [
+          "cam_cpas_sysfs_get_subparts_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_driver+0": {
+        "target_names": [
+          "cam_sync_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_driver+8": {
+        "target_names": [
+          "cam_sync_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_v4l2_fops+24": {
+        "target_names": [
+          "cam_sync_poll"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_v4l2_fops+32": {
+        "target_names": [
+          "video_ioctl2"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_v4l2_fops+40": {
+        "target_names": [
+          "video_ioctl2"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_v4l2_fops+64": {
+        "target_names": [
+          "cam_sync_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_v4l2_fops+72": {
+        "target_names": [
+          "cam_sync_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_sync_v4l2_ops+24": {
+        "target_names": [
+          "cam_sync_event_queue_notify_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_tpg_driver+0": {
+        "target_names": [
+          "cam_tpg_platform_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_tpg_driver+8": {
+        "target_names": [
+          "cam_tpg_device_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_vfe_driver+0": {
+        "target_names": [
+          "cam_vfe_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cam_vfe_driver+8": {
+        "target_names": [
+          "cam_vfe_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:camera_debug_sysfs_attr+24": {
+        "target_names": [
+          "cam_debug_sysfs_node_store"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cci_driver+0": {
+        "target_names": [
+          "cam_cci_platform_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cci_driver+8": {
+        "target_names": [
+          "cam_cci_device_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cci_subdev_core_ops+48": {
+        "target_names": [
+          "cam_cci_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cci_subdev_core_ops+56": {
+        "target_names": [
+          "cam_cci_subdev_compat_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cci_subdev_core_ops+72": {
+        "target_names": [
+          "cam_cci_irq_routine"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cpas_subdev_core_ops+48": {
+        "target_names": [
+          "cam_cpas_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:cpas_subdev_core_ops+56": {
+        "target_names": [
+          "cam_cpas_subdev_compat_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:csiphy_driver+0": {
+        "target_names": [
+          "cam_csiphy_platform_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:csiphy_driver+8": {
+        "target_names": [
+          "cam_csiphy_device_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:csiphy_subdev_core_ops+48": {
+        "target_names": [
+          "cam_csiphy_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:csiphy_subdev_core_ops+56": {
+        "target_names": [
+          "cam_csiphy_subdev_compat_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:custom_driver+0": {
+        "target_names": [
+          "cam_custom_dev_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:custom_driver+8": {
+        "target_names": [
+          "cam_custom_dev_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:g_cam_fops+24": {
+        "target_names": [
+          "cam_req_mgr_poll"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:g_cam_fops+32": {
+        "target_names": [
+          "video_ioctl2"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:g_cam_fops+40": {
+        "target_names": [
+          "video_ioctl2"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:g_cam_fops+64": {
+        "target_names": [
+          "cam_req_mgr_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:g_cam_fops+72": {
+        "target_names": [
+          "cam_req_mgr_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:g_cam_v4l2_ops+24": {
+        "target_names": [
+          "cam_v4l2_event_queue_notify_error"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:isp_driver+0": {
+        "target_names": [
+          "cam_isp_dev_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:isp_driver+8": {
+        "target_names": [
+          "cam_isp_dev_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:jpeg_driver+0": {
+        "target_names": [
+          "cam_jpeg_dev_probe"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:jpeg_driver+8": {
+        "target_names": [
+          "cam_jpeg_dev_remove"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:kobj_cam_cpas_hw_type+0": {
+        "target_names": [
+          "cam_cpas_hw_kobj_release"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:sfe_680_bus_wr_irq_err_desc+24": {
+        "target_names": [
+          "cam_sfe_bus_wr_get_constraint_errors"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:sfe_680_bus_wr_irq_err_desc+56": {
+        "target_names": [
+          "cam_sfe_bus_wr_print_ccif_violation_status"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:sfe_680_bus_wr_irq_err_desc+88": {
+        "target_names": [
+          "cam_sfe_bus_wr_print_violation_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:sfe_780_bus_wr_irq_err_desc+24": {
+        "target_names": [
+          "cam_sfe_bus_wr_get_constraint_errors"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:sfe_780_bus_wr_irq_err_desc+56": {
+        "target_names": [
+          "cam_sfe_bus_wr_print_ccif_violation_status"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:sfe_780_bus_wr_irq_err_desc+88": {
+        "target_names": [
+          "cam_sfe_bus_wr_print_violation_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tasklet_bh_api+0": {
+        "target_names": [
+          "cam_tasklet_enqueue_cmd"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tasklet_bh_api+16": {
+        "target_names": [
+          "cam_tasklet_put_cmd"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tasklet_bh_api+8": {
+        "target_names": [
+          "cam_tasklet_get_cmd"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_0_ops+0": {
+        "target_names": [
+          "tpg_hw_v_1_0_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_0_ops+16": {
+        "target_names": [
+          "tpg_hw_v_1_0_stop"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_0_ops+8": {
+        "target_names": [
+          "tpg_hw_v_1_0_start"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_2_ops+0": {
+        "target_names": [
+          "tpg_hw_v_1_2_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_2_ops+16": {
+        "target_names": [
+          "tpg_hw_v_1_2_stop"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_2_ops+48": {
+        "target_names": [
+          "tpg_hw_v_1_2_process_cmd"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_2_ops+56": {
+        "target_names": [
+          "tpg_hw_v_1_2_dump_status"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_2_ops+8": {
+        "target_names": [
+          "tpg_hw_v_1_2_start"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_3_ops+0": {
+        "target_names": [
+          "tpg_hw_v_1_3_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_3_ops+16": {
+        "target_names": [
+          "tpg_hw_v_1_3_stop"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_3_ops+48": {
+        "target_names": [
+          "tpg_hw_v_1_3_process_cmd"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_3_ops+56": {
+        "target_names": [
+          "tpg_hw_v_1_3_dump_status"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_hw_v_1_3_ops+8": {
+        "target_names": [
+          "tpg_hw_v_1_3_start"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_subdev_core_ops+48": {
+        "target_names": [
+          "cam_tpg_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:tpg_subdev_core_ops+56": {
+        "target_names": [
+          "cam_tpg_subdev_compat_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_apply_req+0": {
+        "target_names": [
+          "trace_raw_output_cam_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_buf_done+0": {
+        "target_names": [
+          "trace_raw_output_cam_buf_done"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_cdm_cb+0": {
+        "target_names": [
+          "trace_raw_output_cam_cdm_cb"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_context_state+0": {
+        "target_names": [
+          "trace_raw_output_cam_context_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_delay_detect+0": {
+        "target_names": [
+          "trace_raw_output_cam_delay_detect"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_flush_req+0": {
+        "target_names": [
+          "trace_raw_output_cam_flush_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_icp_fw_dbg+0": {
+        "target_names": [
+          "trace_raw_output_cam_icp_fw_dbg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_irq_activated+0": {
+        "target_names": [
+          "trace_raw_output_cam_irq_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_irq_handled+0": {
+        "target_names": [
+          "trace_raw_output_cam_irq_handled"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_isp_activated_irq+0": {
+        "target_names": [
+          "trace_raw_output_cam_isp_activated_irq"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_log_debug+0": {
+        "target_names": [
+          "trace_raw_output_cam_log_debug"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_log_event+0": {
+        "target_names": [
+          "trace_raw_output_cam_log_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_notify_frame_skip+0": {
+        "target_names": [
+          "trace_raw_output_cam_notify_frame_skip"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_req_mgr_add_req+0": {
+        "target_names": [
+          "trace_raw_output_cam_req_mgr_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_req_mgr_apply_request+0": {
+        "target_names": [
+          "trace_raw_output_cam_req_mgr_apply_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_req_mgr_connect_device+0": {
+        "target_names": [
+          "trace_raw_output_cam_req_mgr_connect_device"
+        ],
+        "valid_bti_entry": true
+      },
+      ".data:trace_event_type_funcs_cam_submit_to_hw+0": {
+        "target_names": [
+          "trace_raw_output_cam_submit_to_hw"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_apply_req+16": {
+        "target_names": [
+          "perf_trace_cam_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_apply_req+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_apply_req+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_apply_req+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_buf_done+16": {
+        "target_names": [
+          "perf_trace_cam_buf_done"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_buf_done+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_buf_done+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_buf_done+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_buf_done"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_cdm_cb+16": {
+        "target_names": [
+          "perf_trace_cam_cdm_cb"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_cdm_cb+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_cdm_cb+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_cdm_cb+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_cdm_cb"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_context_state+16": {
+        "target_names": [
+          "perf_trace_cam_context_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_context_state+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_context_state+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_context_state+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_context_state"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_delay_detect+16": {
+        "target_names": [
+          "perf_trace_cam_delay_detect"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_delay_detect+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_delay_detect+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_delay_detect+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_delay_detect"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_flush_req+16": {
+        "target_names": [
+          "perf_trace_cam_flush_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_flush_req+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_flush_req+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_flush_req+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_flush_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_icp_fw_dbg+16": {
+        "target_names": [
+          "perf_trace_cam_icp_fw_dbg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_icp_fw_dbg+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_icp_fw_dbg+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_icp_fw_dbg+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_icp_fw_dbg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_activated+16": {
+        "target_names": [
+          "perf_trace_cam_irq_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_activated+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_activated+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_activated+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_irq_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_handled+16": {
+        "target_names": [
+          "perf_trace_cam_irq_handled"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_handled+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_handled+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_irq_handled+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_irq_handled"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_isp_activated_irq+16": {
+        "target_names": [
+          "perf_trace_cam_isp_activated_irq"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_isp_activated_irq+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_isp_activated_irq+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_isp_activated_irq+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_isp_activated_irq"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_debug+16": {
+        "target_names": [
+          "perf_trace_cam_log_debug"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_debug+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_debug+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_debug+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_log_debug"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_event+16": {
+        "target_names": [
+          "perf_trace_cam_log_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_event+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_event+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_log_event+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_log_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_notify_frame_skip+16": {
+        "target_names": [
+          "perf_trace_cam_notify_frame_skip"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_notify_frame_skip+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_notify_frame_skip+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_notify_frame_skip+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_notify_frame_skip"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_add_req+16": {
+        "target_names": [
+          "perf_trace_cam_req_mgr_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_add_req+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_add_req+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_add_req+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_req_mgr_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_apply_request+16": {
+        "target_names": [
+          "perf_trace_cam_req_mgr_apply_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_apply_request+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_apply_request+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_apply_request+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_req_mgr_apply_request"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_connect_device+16": {
+        "target_names": [
+          "perf_trace_cam_req_mgr_connect_device"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_connect_device+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_connect_device+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_req_mgr_connect_device+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_req_mgr_connect_device"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_submit_to_hw+16": {
+        "target_names": [
+          "perf_trace_cam_submit_to_hw"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_submit_to_hw+24": {
+        "target_names": [
+          "trace_event_reg"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_submit_to_hw+64": {
+        "target_names": [
+          "trace_event_raw_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".ref.data:event_class_cam_submit_to_hw+8": {
+        "target_names": [
+          "trace_event_raw_event_cam_submit_to_hw"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_a5_component_ops+0": {
+        "target_names": [
+          "cam_a5_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_a5_component_ops+8": {
+        "target_names": [
+          "cam_a5_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_actuator_i2c_component_ops+0": {
+        "target_names": [
+          "cam_actuator_i2c_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_actuator_i2c_component_ops+8": {
+        "target_names": [
+          "cam_actuator_i2c_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_actuator_internal_ops+24": {
+        "target_names": [
+          "cam_actuator_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_actuator_platform_component_ops+0": {
+        "target_names": [
+          "cam_actuator_platform_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_actuator_platform_component_ops+8": {
+        "target_names": [
+          "cam_actuator_platform_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_bps_component_ops+0": {
+        "target_names": [
+          "cam_bps_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_bps_component_ops+8": {
+        "target_names": [
+          "cam_bps_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_cci_component_ops+0": {
+        "target_names": [
+          "cam_cci_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_cci_component_ops+8": {
+        "target_names": [
+          "cam_cci_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_cdm_intf_component_ops+0": {
+        "target_names": [
+          "cam_cdm_intf_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_cdm_intf_component_ops+8": {
+        "target_names": [
+          "cam_cdm_intf_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_cpas_dev_component_ops+0": {
+        "target_names": [
+          "cam_cpas_dev_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_cpas_dev_component_ops+8": {
+        "target_names": [
+          "cam_cpas_dev_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_csiphy_component_ops+0": {
+        "target_names": [
+          "cam_csiphy_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_csiphy_component_ops+8": {
+        "target_names": [
+          "cam_csiphy_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_component_ops+0": {
+        "target_names": [
+          "cam_custom_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_component_ops+8": {
+        "target_names": [
+          "cam_custom_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_csid_component_ops+0": {
+        "target_names": [
+          "cam_custom_csid_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_csid_component_ops+8": {
+        "target_names": [
+          "cam_custom_csid_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_hw_sub_mod_component_ops+0": {
+        "target_names": [
+          "cam_custom_hw_sub_mod_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_hw_sub_mod_component_ops+8": {
+        "target_names": [
+          "cam_custom_hw_sub_mod_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_subdev_internal_ops+16": {
+        "target_names": [
+          "cam_custom_subdev_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_custom_subdev_internal_ops+24": {
+        "target_names": [
+          "cam_custom_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_eeprom_component_ops+0": {
+        "target_names": [
+          "cam_eeprom_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_eeprom_component_ops+8": {
+        "target_names": [
+          "cam_eeprom_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_eeprom_i2c_component_ops+0": {
+        "target_names": [
+          "cam_eeprom_i2c_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_eeprom_i2c_component_ops+8": {
+        "target_names": [
+          "cam_eeprom_i2c_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_eeprom_internal_ops+24": {
+        "target_names": [
+          "cam_eeprom_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_flash_component_ops+0": {
+        "target_names": [
+          "cam_flash_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_flash_component_ops+8": {
+        "target_names": [
+          "cam_flash_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_flash_i2c_component_ops+0": {
+        "target_names": [
+          "cam_flash_i2c_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_flash_i2c_component_ops+8": {
+        "target_names": [
+          "cam_flash_i2c_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_flash_internal_ops+24": {
+        "target_names": [
+          "cam_flash_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_hw_cdm_component_ops+0": {
+        "target_names": [
+          "cam_hw_cdm_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_hw_cdm_component_ops+8": {
+        "target_names": [
+          "cam_hw_cdm_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_icp_component_ops+0": {
+        "target_names": [
+          "cam_icp_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_icp_component_ops+8": {
+        "target_names": [
+          "cam_icp_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_icp_subdev_internal_ops+16": {
+        "target_names": [
+          "cam_icp_subdev_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_icp_subdev_internal_ops+24": {
+        "target_names": [
+          "cam_icp_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_680_path_irq_desc+328": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_680_path_irq_desc+352": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_680_path_irq_desc+688": {
+        "target_names": [
+          "cam_ife_csid_hw_ver2_mup_mismatch_handler"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_780_path_irq_desc+16": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_illegal_programming_irq_status"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_780_path_irq_desc+328": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_780_path_irq_desc+352": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_780_path_irq_desc+688": {
+        "target_names": [
+          "cam_ife_csid_hw_ver2_mup_mismatch_handler"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_780_top_irq_desc+120": {
+        "target_names": [
+          "cam_ife_csid_hw_ver2_rdi_line_buffer_conflict_handler"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_component_ops+0": {
+        "target_names": [
+          "cam_ife_csid_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_component_ops+8": {
+        "target_names": [
+          "cam_ife_csid_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_680_path_irq_desc+328": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_680_path_irq_desc+352": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_680_path_irq_desc+688": {
+        "target_names": [
+          "cam_ife_csid_hw_ver2_mup_mismatch_handler"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_780_path_irq_desc+16": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_illegal_programming_irq_status"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_780_path_irq_desc+328": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_780_path_irq_desc+352": {
+        "target_names": [
+          "cam_ife_csid_ver2_print_format_measure_info"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_780_path_irq_desc+688": {
+        "target_names": [
+          "cam_ife_csid_hw_ver2_mup_mismatch_handler"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ife_csid_lite_780_top_irq_desc+120": {
+        "target_names": [
+          "cam_ife_csid_hw_ver2_rdi_line_buffer_conflict_handler"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ipe_component_ops+0": {
+        "target_names": [
+          "cam_ipe_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ipe_component_ops+8": {
+        "target_names": [
+          "cam_ipe_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_isp_dev_component_ops+0": {
+        "target_names": [
+          "cam_isp_dev_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_isp_dev_component_ops+8": {
+        "target_names": [
+          "cam_isp_dev_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_isp_subdev_internal_ops+16": {
+        "target_names": [
+          "cam_isp_subdev_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_isp_subdev_internal_ops+24": {
+        "target_names": [
+          "cam_isp_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_dev_component_ops+0": {
+        "target_names": [
+          "cam_jpeg_dev_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_dev_component_ops+8": {
+        "target_names": [
+          "cam_jpeg_dev_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_dma_component_ops+0": {
+        "target_names": [
+          "cam_jpeg_dma_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_dma_component_ops+8": {
+        "target_names": [
+          "cam_jpeg_dma_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_enc_component_ops+0": {
+        "target_names": [
+          "cam_jpeg_enc_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_enc_component_ops+8": {
+        "target_names": [
+          "cam_jpeg_enc_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_subdev_internal_ops+16": {
+        "target_names": [
+          "cam_jpeg_subdev_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_jpeg_subdev_internal_ops+24": {
+        "target_names": [
+          "cam_jpeg_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_lx7_component_ops+0": {
+        "target_names": [
+          "cam_lx7_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_lx7_component_ops+8": {
+        "target_names": [
+          "cam_lx7_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ois_component_ops+0": {
+        "target_names": [
+          "cam_ois_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ois_component_ops+8": {
+        "target_names": [
+          "cam_ois_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ois_i2c_component_ops+0": {
+        "target_names": [
+          "cam_ois_i2c_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ois_i2c_component_ops+8": {
+        "target_names": [
+          "cam_ois_i2c_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_ois_internal_ops+24": {
+        "target_names": [
+          "cam_ois_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_req_mgr_component_master_ops+0": {
+        "target_names": [
+          "cam_req_mgr_component_master_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_req_mgr_component_master_ops+8": {
+        "target_names": [
+          "cam_req_mgr_component_master_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_res_mgr_component_ops+0": {
+        "target_names": [
+          "cam_res_mgr_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_res_mgr_component_ops+8": {
+        "target_names": [
+          "cam_res_mgr_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sensor_component_ops+0": {
+        "target_names": [
+          "cam_sensor_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sensor_component_ops+8": {
+        "target_names": [
+          "cam_sensor_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sensor_i2c_component_ops+0": {
+        "target_names": [
+          "cam_sensor_i2c_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sensor_i2c_component_ops+8": {
+        "target_names": [
+          "cam_sensor_i2c_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sensor_internal_ops+24": {
+        "target_names": [
+          "cam_sensor_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sfe_component_ops+0": {
+        "target_names": [
+          "cam_sfe_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sfe_component_ops+8": {
+        "target_names": [
+          "cam_sfe_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_cb_component_ops+0": {
+        "target_names": [
+          "cam_smmu_cb_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_cb_component_ops+8": {
+        "target_names": [
+          "cam_smmu_cb_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_cb_qsmmu_component_ops+0": {
+        "target_names": [
+          "cam_smmu_cb_qsmmu_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_cb_qsmmu_component_ops+8": {
+        "target_names": [
+          "cam_smmu_cb_qsmmu_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_component_ops+0": {
+        "target_names": [
+          "cam_smmu_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_component_ops+8": {
+        "target_names": [
+          "cam_smmu_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_fw_dev_component_ops+0": {
+        "target_names": [
+          "cam_smmu_fw_dev_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_smmu_fw_dev_component_ops+8": {
+        "target_names": [
+          "cam_smmu_fw_dev_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_subdev_core_ops+48": {
+        "target_names": [
+          "cam_subdev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_subdev_core_ops+56": {
+        "target_names": [
+          "cam_subdev_compat_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_subdev_core_ops+80": {
+        "target_names": [
+          "cam_subdev_subscribe_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_subdev_core_ops+88": {
+        "target_names": [
+          "cam_subdev_unsubscribe_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sync_component_ops+0": {
+        "target_names": [
+          "cam_sync_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_sync_component_ops+8": {
+        "target_names": [
+          "cam_sync_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_tpg_component_ops+0": {
+        "target_names": [
+          "cam_tpg_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_tpg_component_ops+8": {
+        "target_names": [
+          "cam_tpg_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_vfe_component_ops+0": {
+        "target_names": [
+          "cam_vfe_component_bind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cam_vfe_component_ops+8": {
+        "target_names": [
+          "cam_vfe_component_unbind"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+0": {
+        "target_names": [
+          "cam_req_mgr_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+16": {
+        "target_names": [
+          "cam_sync_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+24": {
+        "target_names": [
+          "cam_sync_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+32": {
+        "target_names": [
+          "cam_smmu_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+40": {
+        "target_names": [
+          "cam_smmu_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+48": {
+        "target_names": [
+          "cam_cpas_dev_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+56": {
+        "target_names": [
+          "cam_cpas_dev_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+64": {
+        "target_names": [
+          "cam_cdm_intf_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+72": {
+        "target_names": [
+          "cam_cdm_intf_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+8": {
+        "target_names": [
+          "cam_req_mgr_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+80": {
+        "target_names": [
+          "cam_hw_cdm_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_base+88": {
+        "target_names": [
+          "cam_hw_cdm_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_custom+0": {
+        "target_names": [
+          "cam_custom_hw_sub_module_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_custom+16": {
+        "target_names": [
+          "cam_custom_csid_driver_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_custom+24": {
+        "target_names": [
+          "cam_custom_csid_driver_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_custom+32": {
+        "target_names": [
+          "cam_custom_dev_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_custom+40": {
+        "target_names": [
+          "cam_custom_dev_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_custom+8": {
+        "target_names": [
+          "cam_custom_hw_sub_module_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+0": {
+        "target_names": [
+          "cam_a5_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+16": {
+        "target_names": [
+          "cam_lx7_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+24": {
+        "target_names": [
+          "cam_lx7_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+32": {
+        "target_names": [
+          "cam_ipe_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+40": {
+        "target_names": [
+          "cam_ipe_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+48": {
+        "target_names": [
+          "cam_bps_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+56": {
+        "target_names": [
+          "cam_bps_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+64": {
+        "target_names": [
+          "cam_icp_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+72": {
+        "target_names": [
+          "cam_icp_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_icp+8": {
+        "target_names": [
+          "cam_a5_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+0": {
+        "target_names": [
+          "cam_ife_csid_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+16": {
+        "target_names": [
+          "cam_ife_csid_lite_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+24": {
+        "target_names": [
+          "cam_ife_csid_lite_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+32": {
+        "target_names": [
+          "cam_vfe_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+40": {
+        "target_names": [
+          "cam_vfe_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+48": {
+        "target_names": [
+          "cam_sfe_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+56": {
+        "target_names": [
+          "cam_sfe_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+64": {
+        "target_names": [
+          "cam_isp_dev_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+72": {
+        "target_names": [
+          "cam_isp_dev_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_isp+8": {
+        "target_names": [
+          "cam_ife_csid_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_jpeg+0": {
+        "target_names": [
+          "cam_jpeg_enc_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_jpeg+16": {
+        "target_names": [
+          "cam_jpeg_dma_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_jpeg+24": {
+        "target_names": [
+          "cam_jpeg_dma_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_jpeg+32": {
+        "target_names": [
+          "cam_jpeg_dev_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_jpeg+40": {
+        "target_names": [
+          "cam_jpeg_dev_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_jpeg+8": {
+        "target_names": [
+          "cam_jpeg_enc_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+0": {
+        "target_names": [
+          "cam_res_mgr_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+104": {
+        "target_names": [
+          "cam_eeprom_driver_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+112": {
+        "target_names": [
+          "cam_ois_driver_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+120": {
+        "target_names": [
+          "cam_ois_driver_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+128": {
+        "target_names": [
+          "cam_flash_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+136": {
+        "target_names": [
+          "cam_flash_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+16": {
+        "target_names": [
+          "cam_cci_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+24": {
+        "target_names": [
+          "cam_cci_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+32": {
+        "target_names": [
+          "cam_csiphy_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+40": {
+        "target_names": [
+          "cam_csiphy_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+48": {
+        "target_names": [
+          "cam_tpg_init_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+56": {
+        "target_names": [
+          "cam_tpg_exit_module"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+64": {
+        "target_names": [
+          "cam_actuator_driver_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+72": {
+        "target_names": [
+          "cam_actuator_driver_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+8": {
+        "target_names": [
+          "cam_res_mgr_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+80": {
+        "target_names": [
+          "cam_sensor_driver_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+88": {
+        "target_names": [
+          "cam_sensor_driver_exit"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:camera_sensor+96": {
+        "target_names": [
+          "cam_eeprom_driver_init"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cpas_subdev_intern_ops+16": {
+        "target_names": [
+          "cam_cpas_subdev_open"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:cpas_subdev_intern_ops+24": {
+        "target_names": [
+          "cam_cpas_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:csiphy_subdev_intern_ops+24": {
+        "target_names": [
+          "cam_csiphy_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:g_cam_ioctl_ops+928": {
+        "target_names": [
+          "cam_subscribe_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:g_cam_ioctl_ops+936": {
+        "target_names": [
+          "cam_unsubscribe_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:g_cam_ioctl_ops+944": {
+        "target_names": [
+          "cam_private_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:g_cam_sync_ioctl_ops+928": {
+        "target_names": [
+          "cam_sync_subscribe_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:g_cam_sync_ioctl_ops+936": {
+        "target_names": [
+          "cam_sync_unsubscribe_event"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:g_cam_sync_ioctl_ops+944": {
+        "target_names": [
+          "cam_sync_dev_ioctl"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:hfi_a5_ops+0": {
+        "target_names": [
+          "cam_a5_irq_raise"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:hfi_a5_ops+16": {
+        "target_names": [
+          "cam_a5_iface_addr"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:hfi_a5_ops+8": {
+        "target_names": [
+          "cam_a5_irq_enable"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:hfi_lx7_ops+0": {
+        "target_names": [
+          "cam_lx7_irq_raise"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:hfi_lx7_ops+16": {
+        "target_names": [
+          "cam_lx7_iface_addr"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:hfi_lx7_ops+8": {
+        "target_names": [
+          "cam_lx7_irq_enable"
+        ],
+        "valid_bti_entry": true
+      },
+      ".rodata:tpg_subdev_intern_ops+24": {
+        "target_names": [
+          "cam_tpg_subdev_close"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_apply_req+8": {
+        "target_names": [
+          "__bpf_trace_cam_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_buf_done+8": {
+        "target_names": [
+          "__bpf_trace_cam_buf_done"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_cdm_cb+8": {
+        "target_names": [
+          "__bpf_trace_cam_cdm_cb"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_context_state+8": {
+        "target_names": [
+          "__bpf_trace_cam_context_state"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_delay_detect+8": {
+        "target_names": [
+          "__bpf_trace_cam_delay_detect"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_flush_req+8": {
+        "target_names": [
+          "__bpf_trace_cam_flush_req"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_icp_fw_dbg+8": {
+        "target_names": [
+          "__bpf_trace_cam_icp_fw_dbg"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_irq_activated+8": {
+        "target_names": [
+          "__bpf_trace_cam_irq_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_irq_handled+8": {
+        "target_names": [
+          "__bpf_trace_cam_irq_handled"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_isp_activated_irq+8": {
+        "target_names": [
+          "__bpf_trace_cam_isp_activated_irq"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_log_debug+8": {
+        "target_names": [
+          "__bpf_trace_cam_log_debug"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_log_event+8": {
+        "target_names": [
+          "__bpf_trace_cam_log_event"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_notify_frame_skip+8": {
+        "target_names": [
+          "__bpf_trace_cam_notify_frame_skip"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_req_mgr_add_req+8": {
+        "target_names": [
+          "__bpf_trace_cam_req_mgr_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_req_mgr_apply_request+8": {
+        "target_names": [
+          "__bpf_trace_cam_req_mgr_apply_request"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_req_mgr_connect_device+8": {
+        "target_names": [
+          "__bpf_trace_cam_req_mgr_connect_device"
+        ],
+        "valid_bti_entry": true
+      },
+      "__bpf_raw_tp_map:__bpf_trace_tp_map_cam_submit_to_hw+8": {
+        "target_names": [
+          "__bpf_trace_cam_submit_to_hw"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_apply_req+40": {
+        "target_names": [
+          "__traceiter_cam_apply_req"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_buf_done+40": {
+        "target_names": [
+          "__traceiter_cam_buf_done"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_cdm_cb+40": {
+        "target_names": [
+          "__traceiter_cam_cdm_cb"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_context_state+40": {
+        "target_names": [
+          "__traceiter_cam_context_state"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_delay_detect+40": {
+        "target_names": [
+          "__traceiter_cam_delay_detect"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_flush_req+40": {
+        "target_names": [
+          "__traceiter_cam_flush_req"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_icp_fw_dbg+40": {
+        "target_names": [
+          "__traceiter_cam_icp_fw_dbg"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_irq_activated+40": {
+        "target_names": [
+          "__traceiter_cam_irq_activated"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_irq_handled+40": {
+        "target_names": [
+          "__traceiter_cam_irq_handled"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_isp_activated_irq+40": {
+        "target_names": [
+          "__traceiter_cam_isp_activated_irq"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_log_debug+40": {
+        "target_names": [
+          "__traceiter_cam_log_debug"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_log_event+40": {
+        "target_names": [
+          "__traceiter_cam_log_event"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_notify_frame_skip+40": {
+        "target_names": [
+          "__traceiter_cam_notify_frame_skip"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_req_mgr_add_req+40": {
+        "target_names": [
+          "__traceiter_cam_req_mgr_add_req"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_req_mgr_apply_request+40": {
+        "target_names": [
+          "__traceiter_cam_req_mgr_apply_request"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_req_mgr_connect_device+40": {
+        "target_names": [
+          "__traceiter_cam_req_mgr_connect_device"
+        ],
+        "valid_bti_entry": true
+      },
+      "__tracepoints:__tracepoint_cam_submit_to_hw+40": {
+        "target_names": [
+          "__traceiter_cam_submit_to_hw"
+        ],
+        "valid_bti_entry": true
+      }
+    },
+    "invalid_published_pointers": [],
+    "unattributed_fields": []
   }
 }

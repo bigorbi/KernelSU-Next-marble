@@ -13,6 +13,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 from audit import audit, compare
+from cfi_pointers import pointer_inventory
 from install_toolchains import install, verify_manifest, LLVM_SHA
 from fetch_android_manifest import COMMIT, ROOT_TREE
 
@@ -389,6 +390,10 @@ def patched():
     checks = {key: baseline_info[key] == patched_info[key] for key in ['elf_type', 'machine', 'compiler', 'modinfo',
               'imports_crc', 'undefined', 'exports', 'absolute_export_crc', 'module_struct_size', 'signature_trailer']}
     checks['cfi_symbol_surface'] = sorted(map(lambda name: re.sub(r'\.llvm\.\d+', '.llvm', name), baseline_info['cfi_symbols'])) == sorted(map(lambda name: re.sub(r'\.llvm\.\d+', '.llvm', name), patched_info['cfi_symbols']))
+    baseline_pointers, patched_pointers = pointer_inventory(OUT / 'baseline/camera.ko'), pointer_inventory(file)
+    checks['cfi_published_targets'] = (not patched_pointers['invalid_published_pointers'] and
+                                     not patched_pointers['unattributed_fields'] and
+                                     patched_pointers['publications'] == baseline_pointers['publications'])
     write('patched-abi.json', {'checks': checks, 'pass': all(checks.values())})
     if not all(checks.values()): raise ValueError('Patched output changed ABI; no candidate artifact published')
     directory = OUT / 'patched'; directory.mkdir(exist_ok=True)

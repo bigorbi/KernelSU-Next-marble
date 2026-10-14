@@ -8,6 +8,7 @@ import re
 import struct
 from pathlib import Path
 from module_inventory import cstr, inventory
+from cfi_pointers import pointer_inventory
 
 
 def normal(name):
@@ -130,7 +131,15 @@ def compare(baseline, reference, reference_audit):
         actual_audit['runtime_relocation_type_counts'] == reference_audit['runtime_relocation_type_counts'])
     checks['cfi_type_dispatch_and_targets'] = bool(actual_audit['cfi_fingerprints'].get('__cfi_check')) and actual_audit['cfi_fingerprints'] == reference_audit['cfi_fingerprints']
     checks['compiled_source_equivalence'] = actual_audit['function_fingerprints'] == reference_audit['function_fingerprints']
+    published = pointer_inventory(baseline)
+    expected_published = reference_audit.get('cfi_publications', {})
+    checks['cfi_published_targets'] = (
+        expected_published.get('module_sha256') == reference['sha256'] and
+        not published['invalid_published_pointers'] and not published['unattributed_fields'] and
+        published['cfi_entry_count'] == expected_published.get('cfi_entry_count') and
+        published['publications'] == expected_published.get('publications'))
     return {'checks': checks, 'necessary_abi_and_code_checks_pass': all(checks.values()),
+            'published_cfi_pointer_audit': published,
             'mismatch_details': mismatch_details(observed, reference, actual_audit, reference_audit),
             'baseline_inventory': observed, 'baseline_audit': actual_audit,
             'failed_checks': [key for key, value in checks.items() if not value]}

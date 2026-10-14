@@ -76,3 +76,7 @@ python3 camera-build/ci.py kernel --dry-run
 These commands validate YAML structure, syntax and closed-gate behavior. With LLVM inspection tools installed, the audit tests also assemble tiny ARM64 ELF fixtures; they do not compile the kernel or camera driver and do not dispatch Actions. The runner executes those regression tests before substantial compilation.
 
 Run [38603388362](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38603388362) successfully compiled the kernel, MMRM and ARM64 camera baseline. Its compatibility audit failed. See [the investigation](RUN-38603388362.md) for the five failures, justified audit refinements and remaining blockers. The unresolved historical SUSFS provenance and lifetime review cannot be solved merely by running the build in the cloud.
+
+## Current CFI and code-generation findings
+
+[The focused investigation](CODEGEN-INVESTIGATION.md) confirms 41 invalid callback pointers in the first baseline and supplies a tested BTI parser source patch. The original body/type-ID comparison missed the published addresses; a new required publication audit now catches them. The separate manual code-generation experiment is prepared for review only. It reuses authenticated symbol tables, prepares headers, performs two camera compilations plus a final-link repeat, and never runs a full kernel/MMRM build or opens a release gate. Do not dispatch it before explicit approval.

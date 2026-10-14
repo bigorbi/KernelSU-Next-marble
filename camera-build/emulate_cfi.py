@@ -15,7 +15,7 @@ BASE = 0x1000000
 EXIT = 0x2000000
 
 
-def emulate(path):
+def load_dispatcher(path):
     e = Elf(path)
     s = e.byname["__cfi_check"]
     si = s["section"]
@@ -66,6 +66,13 @@ def emulate(path):
             raise ValueError("Unexpected dispatch termination")
         return state["accepted"]
 
+    return e, accepts
+
+
+def emulate(path):
+    e, accepts = load_dispatcher(path)
+    s = e.byname["__cfi_check"]
+    si = s["section"]
     # Enumerate constants from the actual dispatcher, including optimizer pivot +/-1.
     values = []
     registers = {}

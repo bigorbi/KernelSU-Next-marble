@@ -1,0 +1,11 @@
+--- a/scripts/generate_cfi_kallsyms.pl
++++ b/scripts/generate_cfi_kallsyms.pl
+@@ -93,7 +93,7 @@
+ 
+ sub is_hint {
+ 	my ($line) = @_;
+-	my ($hint) = $_ =~ /^\s*([a-f0-9]+)\:.*\s+hint\s+#/;
++	my ($hint) = $_ =~ /^\s*([a-f0-9]+)\:.*\s+(?:hint\s+#|bti\s+c\b)/;
+ 
+ 	if (defined($hint)) {
+ 		$last = HINT;

@@ -1,0 +1,457 @@
+{
+  "input_sha256": {
+    "original": "a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1",
+    "baseline": "5d8e4c2e9a9b72c058cfae0473f561734bad3382550ea130c33514f3efd85d2c"
+  },
+  "section_accounting": {
+    "original": {
+      ".text": {
+        "size": 1684720,
+        "function_body_union": 1653964,
+        "jump_entry_union_outside_bodies": 8752,
+        "unattributed_or_padding": 22004
+      },
+      ".data": {
+        "size": 930416,
+        "object_body_union": 930065,
+        "unattributed_or_padding": 351
+      },
+      ".bss": {
+        "size": 3461364,
+        "object_body_union": 3461314,
+        "unattributed_or_padding": 50
+      },
+      ".rodata": {
+        "size": 477115,
+        "object_body_union": 38934,
+        "unattributed_or_padding": 438181
+      }
+    },
+    "baseline": {
+      ".text": {
+        "size": 1564368,
+        "function_body_union": 1533704,
+        "jump_entry_union_outside_bodies": 8752,
+        "unattributed_or_padding": 21912
+      },
+      ".data": {
+        "size": 930456,
+        "object_body_union": 930105,
+        "unattributed_or_padding": 351
+      },
+      ".bss": {
+        "size": 3461360,
+        "object_body_union": 3461314,
+        "unattributed_or_padding": 46
+      },
+      ".rodata": {
+        "size": 478555,
+        "object_body_union": 39033,
+        "unattributed_or_padding": 439522
+      }
+    }
+  },
+  "function_comparison": {
+    "original_names": 2163,
+    "baseline_names": 2167,
+    "exact_resolved_matches": 1135,
+    "changed": 1008,
+    "ambiguous_names": [
+      "__raw_spin_lock",
+      "__raw_spin_lock_bh",
+      "__raw_spin_unlock",
+      "__raw_spin_unlock_bh",
+      "_copy_from_user",
+      "_copy_to_user",
+      "cam_ife_csid_irq",
+      "cam_vfe_bus_deinit_hw",
+      "cam_vfe_bus_init_hw",
+      "cam_vfe_bus_start_hw",
+      "cam_vfe_bus_stop_hw",
+      "cam_vfe_camif_lite_err_irq_top_half",
+      "cam_vfe_camif_lite_get_evt_payload",
+      "cam_vfe_camif_lite_handle_irq_bottom_half",
+      "cam_vfe_camif_lite_handle_irq_top_half",
+      "cam_vfe_camif_lite_process_cmd",
+      "cam_vfe_camif_lite_resource_start",
+      "cam_vfe_camif_lite_resource_stop",
+      "prepare_shutdown"
+    ],
+    "only_original": [
+      "__camera_exit"
+    ],
+    "only_baseline": [
+      "__cam_isp_ctx_substate_val_to_type",
+      "cam_icp_dev_type_to_name",
+      "cam_isp_hw_evt_type_to_string",
+      "cam_isp_util_usage_data_to_string",
+      "cam_vfe_bus_ver3_get_out_res_id_and_index"
+    ],
+    "largest_size_deltas": {
+      "cam_ife_csid_ver2_start": {
+        "original": {
+          "size": 11972,
+          "sha256": "fbe1b8ad7b365de6982a645514f447d3366a2576e20cc5821dc54246f0053c1a",
+          "unresolved_references": 28,
+          "aliases": [
+            "cam_ife_csid_ver2_start"
+          ]
+        },
+        "baseline": {
+          "size": 8328,
+          "sha256": "5c36537fe26fc131414f40b958f455db2f899ead3287cf3b9faa66ea447a796d",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver2_start"
+          ]
+        },
+        "size_delta": -3644
+      },
+      "cam_ife_csid_ver1_global_reset": {
+        "original": {
+          "size": 6020,
+          "sha256": "972242fdfb653cf9607876f3947b33a86da43de47456e6f3a8583e172af4c24a",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver1_global_reset"
+          ]
+        },
+        "baseline": {
+          "size": 2404,
+          "sha256": "68fa4aa3308e9d4628a9125dfd0465b86c9f2821b78eb3ad84e6c468624cc5d7",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver1_global_reset"
+          ]
+        },
+        "size_delta": -3616
+      },
+      "cam_sensor_i2c_command_parser": {
+        "original": {
+          "size": 7368,
+          "sha256": "e561176bd0bd42371468447b5dbb1569ba57a58457ed721f85aa2417ad7c00be",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_sensor_i2c_command_parser"
+          ]
+        },
+        "baseline": {
+          "size": 4056,
+          "sha256": "c383493e1ebd505d6dcbf4893fca503d022a8da2f45fa68d1be6f679f1a92edc",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_sensor_i2c_command_parser"
+          ]
+        },
+        "size_delta": -3312
+      },
+      "cam_ife_csid_ver1_init_hw": {
+        "original": {
+          "size": 8228,
+          "sha256": "444dab74afc85954dbc9dcc2da484c115e16d497845c6a0d8ed7fa70d43aab3d",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver1_init_hw"
+          ]
+        },
+        "baseline": {
+          "size": 5200,
+          "sha256": "d30c23fd12b02d279ea3b8f14f2eb49a6dfd38e119965c3e7899cc96b6f3d8af",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver1_init_hw"
+          ]
+        },
+        "size_delta": -3028
+      },
+      "cam_ife_csid_ver1_start": {
+        "original": {
+          "size": 6440,
+          "sha256": "6e6904a36e8fa709500c0953e80f71ca4418cce3a574a7989da0a0117102a606",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver1_start"
+          ]
+        },
+        "baseline": {
+          "size": 3916,
+          "sha256": "7fed4ab48171bd0bad6a84c84d47a041035822820e05124d30275ff8a876e094",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver1_start"
+          ]
+        },
+        "size_delta": -2524
+      },
+      "cam_get_dt_power_setting_data": {
+        "original": {
+          "size": 4196,
+          "sha256": "43a3e12b72287b54d28ac5552e791d9f883121a9a09ef62a7b639370ffc7db94",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_get_dt_power_setting_data"
+          ]
+        },
+        "baseline": {
+          "size": 2008,
+          "sha256": "8e9d7fda7ffdef229e6c5bee32117e14bb7d867370a96efb05b0e0235ad9bd15",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_get_dt_power_setting_data"
+          ]
+        },
+        "size_delta": -2188
+      },
+      "cam_hfi_resume": {
+        "original": {
+          "size": 3036,
+          "sha256": "d4b977b1e94b8f6746bcdf56a88fb181581860b78a7a5d4cd2658bc7ebbf6cb2",
+          "unresolved_references": 4,
+          "aliases": [
+            "cam_hfi_resume"
+          ]
+        },
+        "baseline": {
+          "size": 1068,
+          "sha256": "44472f5f12abf513dd37d7fe168d1e034ee5433dc61d244ae73b0b18ce4fa761",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_hfi_resume"
+          ]
+        },
+        "size_delta": -1968
+      },
+      "cam_sfe_bus_wr_process_cmd": {
+        "original": {
+          "size": 11132,
+          "sha256": "69a7927b15b661f1a6e77089fb647afdb201f3f3807ba6f422a972e8ecfcd18d",
+          "unresolved_references": 12,
+          "aliases": [
+            "cam_sfe_bus_wr_process_cmd"
+          ]
+        },
+        "baseline": {
+          "size": 9188,
+          "sha256": "41d718d9f93dfdd11329baeaad30ef89183ff26142958b82bf855a42b2891a4a",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_sfe_bus_wr_process_cmd"
+          ]
+        },
+        "size_delta": -1944
+      },
+      "cam_hfi_init": {
+        "original": {
+          "size": 3756,
+          "sha256": "603432670dd56b430320fa3121200e2fba75ef12141c0ec6ee56571637b941c1",
+          "unresolved_references": 4,
+          "aliases": [
+            "cam_hfi_init"
+          ]
+        },
+        "baseline": {
+          "size": 1856,
+          "sha256": "1494d4ad01edbdcec97600ef4c33f10e10bc0b5a5e78930b2d330b0f8a55184a",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_hfi_init"
+          ]
+        },
+        "size_delta": -1900
+      },
+      "tpg_hw_v_1_3_process_cmd": {
+        "original": {
+          "size": 3380,
+          "sha256": "cfc4d554f78f6da066801870c850fd94b90b3f86eb6597a2769f786483d4decc",
+          "unresolved_references": 0,
+          "aliases": [
+            "tpg_hw_v_1_3_process_cmd"
+          ]
+        },
+        "baseline": {
+          "size": 1784,
+          "sha256": "103e558d35507061511295945247314ff6f5ecc418c2fc27f83bee727086992f",
+          "unresolved_references": 0,
+          "aliases": [
+            "tpg_hw_v_1_3_process_cmd"
+          ]
+        },
+        "size_delta": -1596
+      },
+      "cam_vfe_bus_start_vfe_out": {
+        "original": {
+          "size": 4028,
+          "sha256": "ed802f0691d514ce917dd1f62350fc6cdbde225213f8d1f7b92b9b9f1760d77f",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_vfe_bus_start_vfe_out"
+          ]
+        },
+        "baseline": {
+          "size": 2448,
+          "sha256": "be03710aec3bc7e3f9cbc272c4b29f8fe37540557f97a8246f1a5861b31c284c",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_vfe_bus_start_vfe_out"
+          ]
+        },
+        "size_delta": -1580
+      },
+      "__cam_csiphy_get_preamble_status": {
+        "original": {
+          "size": 4124,
+          "sha256": "1cb433575dceb6d883b73559b36eaf8424be0638bb407f6b3f19072cb814b64f",
+          "unresolved_references": 0,
+          "aliases": [
+            "__cam_csiphy_get_preamble_status"
+          ]
+        },
+        "baseline": {
+          "size": 2596,
+          "sha256": "c4ebabc98594036aaff918b60bb1c84d154f55496197187f1e968e3259e26196",
+          "unresolved_references": 0,
+          "aliases": [
+            "__cam_csiphy_get_preamble_status"
+          ]
+        },
+        "size_delta": -1528
+      },
+      "cam_ife_csid_ver2_init_config_pxl_path": {
+        "original": {
+          "size": 3004,
+          "sha256": "b30b5cd1a9019791362b3d94a2e3ae7a717c8eca9d18aef5efcf1f1e30a61646",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver2_init_config_pxl_path"
+          ]
+        },
+        "baseline": {
+          "size": 1492,
+          "sha256": "6255e177cc8877f80fa39755a7d8a6c981b8bd78053bc3f19105ee5e556a9f72",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_csid_ver2_init_config_pxl_path"
+          ]
+        },
+        "size_delta": -1512
+      },
+      "cam_ife_hw_mgr_init": {
+        "original": {
+          "size": 6456,
+          "sha256": "63a85b8ca74a6c59b04884202e321243b64306ff1dcd3b36d68c1358c78b34b1",
+          "unresolved_references": 16,
+          "aliases": [
+            "cam_ife_hw_mgr_init"
+          ]
+        },
+        "baseline": {
+          "size": 4948,
+          "sha256": "0a2556c4c3e9a5f80f4c5b8ab1cfff9efb6fa70abfc013cae4c03b17df3eb757",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_ife_hw_mgr_init"
+          ]
+        },
+        "size_delta": -1508
+      },
+      "cam_eeprom_init_pkt_parser": {
+        "original": {
+          "size": 3848,
+          "sha256": "fa1ca81ac7df9e837530682037c22f04ce67ec9f5e8fb8318281fa5e26e08c12",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_eeprom_init_pkt_parser"
+          ]
+        },
+        "baseline": {
+          "size": 2384,
+          "sha256": "593322bf68cd570a0af9717f84eaed96e9796322303609ffc8e0eafd144d1f08",
+          "unresolved_references": 0,
+          "aliases": [
+            "cam_eeprom_init_pkt_parser"
+          ]
+        },
+        "size_delta": -1464
+      }
+    }
+  },
+  "jump_key_changes": {
+    "('symbol', '__tracepoint_rwmmio_read', 8)": {
+      "original": 11,
+      "baseline": 9
+    },
+    "('symbol', '__tracepoint_rwmmio_post_read', 8)": {
+      "original": 11,
+      "baseline": 9
+    },
+    "('symbol', '__tracepoint_rwmmio_write', 8)": {
+      "original": 527,
+      "baseline": 8
+    },
+    "('symbol', 'cpu_hwcap_keys', 81)": {
+      "original": 416,
+      "baseline": 396
+    },
+    "('symbol', 'arm64_const_caps_ready', 1)": {
+      "original": 510,
+      "baseline": 490
+    }
+  },
+  "alternative_feature_counts": {
+    "original": {
+      "59:4:4": 1359,
+      "11:4:4": 71,
+      "42:4:4": 734,
+      "10:4:4": 94,
+      "1:4:4": 11
+    },
+    "baseline": {
+      "59:4:4": 1290,
+      "11:4:4": 71,
+      "42:4:4": 734,
+      "10:4:4": 94,
+      "1:4:4": 9
+    }
+  },
+  "source_paths": {
+    "original": {
+      "count": 8,
+      "total_with_nuls": 712,
+      "paths": [
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_jpeg/jpeg_hw/jpeg_dma_hw/jpeg_dma_core.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_core/cam_context_utils.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_jpeg/jpeg_hw/jpeg_enc_hw/jpeg_enc_core.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_icp/icp_hw/icp_hw_mgr/cam_icp_hw_mgr.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_cdm/cam_cdm_intf.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_cdm/cam_cdm_core_common.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_isp/cam_isp_context.c",
+        "../sm8450-modules/qcom/opensource/camera-kernel/drivers/cam_core/cam_context.c"
+      ]
+    },
+    "baseline": {
+      "count": 8,
+      "total_with_nuls": 1280,
+      "paths": [
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_cdm/cam_cdm_core_common.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_icp/icp_hw/icp_hw_mgr/cam_icp_hw_mgr.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_cdm/cam_cdm_intf.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_core/cam_context_utils.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_jpeg/jpeg_hw/jpeg_enc_hw/jpeg_enc_core.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_core/cam_context.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_isp/cam_isp_context.c",
+        "/home/runner/work/KernelSU-Next-marble/KernelSU-Next-marble/camera-work/modules-baseline/qcom/opensource/camera-kernel/drivers/cam_jpeg/jpeg_hw/jpeg_dma_hw/jpeg_dma_core.c"
+      ]
+    }
+  },
+  "cfi_published_pointer_failure": {
+    "count": 41,
+    "callback_functions": 15,
+    "source_script_sha256": "a4a8eb23cdbca209fb8846d153e7cc03a5d438cd239c0cf7852f2206de25164e",
+    "all_emulated_published_pointers_rejected": true,
+    "all_preceding_bti_entries_accepted": true,
+    "original_invalid_pointer_count": 0
+  },
+  "source_revision_confirmed": false,
+  "compatibility_gate_passed": false,
+  "installation_approved": false
+}

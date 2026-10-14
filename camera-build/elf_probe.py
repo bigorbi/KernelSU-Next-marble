@@ -6,7 +6,7 @@ import collections
 
 
 class Elf:
-    def __init__(self, p):
+    def __init__(self, p, allocated_only=False):
         self.d = pathlib.Path(p).read_bytes()
         h = struct.unpack_from("<16sHHIQQQIHHHHHH", self.d)
         if self.d[:6] != b"\x7fELF\x02\x01" or h[1] != 1 or h[2] != 183:
@@ -33,6 +33,7 @@ class Elf:
                     name=string(strings, n),
                     type=t & 15,
                     binding=t >> 4,
+                    visibility=v & 3,
                     section=s,
                     value=a,
                     size=z,
@@ -42,6 +43,8 @@ class Elf:
         self.rel = collections.defaultdict(list)
         for ss in self.ss:
             if ss[1] == 4:
+                if allocated_only and not self.ss[ss[7]][2] & 2:
+                    continue
                 for o in range(ss[4], ss[4] + ss[5], 24):
                     a, i, v = struct.unpack_from("<QQq", self.d, o)
                     self.rel[ss[7]].append((a, i & 0xFFFFFFFF, self.sy[i >> 32], v))
