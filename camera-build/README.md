@@ -69,8 +69,10 @@ Missing inputs, patch rejects, configuration differences, compiler/linker errors
 
 ```sh
 python3 camera-build/validate.py
-python3 -m unittest discover -s camera-build/tests -p 'test_ci.py'
+python3 -m unittest discover -s camera-build/tests -p 'test_*.py'
 python3 camera-build/ci.py kernel --dry-run
 ```
 
-These commands validate YAML structure/pinned actions, Python syntax and fail-closed gate behavior. They perform no ARM64 compilation and do not dispatch Actions. Actual compilation is untested until an approved runner execution. The unresolved historical SUSFS provenance and lifetime review cannot be solved merely by running the build in the cloud.
+These commands validate YAML structure, syntax and closed-gate behavior. With LLVM inspection tools installed, the audit tests also assemble tiny ARM64 ELF fixtures; they do not compile the kernel or camera driver and do not dispatch Actions. The runner executes those regression tests before substantial compilation.
+
+Run [38603388362](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38603388362) successfully compiled the kernel, MMRM and ARM64 camera baseline. Its compatibility audit failed. See [the investigation](RUN-38603388362.md) for the five failures, justified audit refinements and remaining blockers. The unresolved historical SUSFS provenance and lifetime review cannot be solved merely by running the build in the cloud.

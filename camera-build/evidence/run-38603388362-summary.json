@@ -1,0 +1,191 @@
+{
+  "run": 38603388362,
+  "artifacts": {
+    "run_id": 38603388362,
+    "branch": "camera-fix",
+    "head_sha": "009a9d3da3e4d973b41843a9fb9cd7f131bc1d58",
+    "artifacts": [
+      {
+        "name": "baseline-camera",
+        "artifact_id": 11916777612,
+        "archive_sha256": "eb2098e1a25e73dfdbda4b27cd87e5d9750223f5f6a6c4a5182fc893e5151c23",
+        "verified_against_github_digest": true
+      },
+      {
+        "name": "baseline-compatibility-report",
+        "artifact_id": 11916212764,
+        "archive_sha256": "09bbe435f27d6220b6a43b9113454a845baf2ee10689bf33c871fa7b49e67ff0",
+        "verified_against_github_digest": true
+      },
+      {
+        "name": "kernel-build-logs",
+        "artifact_id": 11916192703,
+        "archive_sha256": "078abf066a336e9582fcd5fb3349b24d65fb833323e19e1d0a0116d2d6ecaa8d",
+        "verified_against_github_digest": true
+      }
+    ]
+  },
+  "source_manifest": {
+    "kernel_sha": "5c59cd9a314704d30f3f66004183426da23410e1",
+    "modules_sha": "83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a",
+    "manager_sha": "9a8d3f03db9bd6d51410a6fd732d1db273692ca6",
+    "builder_sha": "3577f1d72a7c00c9248882ccac70ac3f15a97baa",
+    "susfs_sha": "ca7093a1a26f7911987110c34a1352d74cfb1d09",
+    "exploratory": true,
+    "kernel_release_expected": "5.10.269-Zois-17-5c59cd",
+    "workflow_sha": "009a9d3da3e4d973b41843a9fb9cd7f131bc1d58",
+    "workflow_run": "38603388362",
+    "make_jobs": 2,
+    "thinlto_jobs": 2,
+    "manager_compiled_version": 33321,
+    "manager_git_count": 3321,
+    "manager_compiled_tag": "v3.4.0",
+    "historical_packaging_version": 33329,
+    "susfs_ref_requested": "gki-android12-5.10",
+    "susfs_patch_sha256": "6e5b676c8e3a30f722d0fef20d131345c8889aa5e9bcf9aaeb29c77759ed621f",
+    "susfs_version": "v2.3.0",
+    "camera_patch_sha256": "cbc37f8d259b096cb7625e03e71c4593f4232d5b6d80e84df0449d53f8465d7d"
+  },
+  "configuration": {
+    "differences": {},
+    "abi_options_match": true,
+    "release_match": true,
+    "config_sha256": "8a23283724515d0f8a2d91ca472c45824e69b711986f2d6070535d98b6668e50"
+  },
+  "generated_tables": {
+    "kernel": {
+      "generated": true,
+      "sha256": "1e772632d2d2b37ba92388df4e502aed3146e1410ac9d18b51f51dc17daac03f"
+    },
+    "mmrm": {
+      "generated": true,
+      "sha256": "a983328d6b99a1e0eedcbafdc9aade443355ab573bcd372b88e164ab30c108a7"
+    },
+    "camera": {
+      "generated": true,
+      "sha256": "1b4e1e75aad371901bb698d396a606a114ad753d39e9daade0d6af89922e46df"
+    }
+  },
+  "binary_summary": {
+    "input_sha256": {
+      "original": "a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1",
+      "baseline": "5d8e4c2e9a9b72c058cfae0473f561734bad3382550ea130c33514f3efd85d2c"
+    },
+    "selected_functions": {
+      "__cfi_check": {
+        "original_size": 9204,
+        "baseline_size": 9204,
+        "relocation_masked_body_equal": false,
+        "different_bytes_in_common_prefix": 6,
+        "referenced_rodata_string_hashes_equal": true
+      },
+      "cam_packet_util_get_kmd_buffer": {
+        "original_size": 1116,
+        "baseline_size": 1116,
+        "relocation_masked_body_equal": true,
+        "different_bytes_in_common_prefix": 0,
+        "referenced_rodata_string_hashes_equal": true
+      },
+      "cam_packet_util_validate_packet": {
+        "original_size": 368,
+        "baseline_size": 368,
+        "relocation_masked_body_equal": true,
+        "different_bytes_in_common_prefix": 0,
+        "referenced_rodata_string_hashes_equal": true
+      },
+      "__cam_csiphy_get_preamble_status": {
+        "original_size": 4124,
+        "baseline_size": 2596,
+        "relocation_masked_body_equal": false,
+        "different_bytes_in_common_prefix": 1897,
+        "referenced_rodata_string_hashes_equal": false
+      },
+      "cam_a5_deinit_hw": {
+        "original_size": 852,
+        "baseline_size": 800,
+        "relocation_masked_body_equal": false,
+        "different_bytes_in_common_prefix": 639,
+        "referenced_rodata_string_hashes_equal": false
+      }
+    },
+    "diagnostic_only": true,
+    "cfi_symbol_diagnostics": {
+      "original_all_cfi_names": 1102,
+      "baseline_all_cfi_names": 1101,
+      "mapping_symbol_original_only": "$x.cfi_jt",
+      "canonical_multiset_equal": true,
+      "canonical_name_count": 1101,
+      "normalization": "Remove 32-hex TU suffix, numeric full-LTO disambiguators; exclude ARM mapping symbols. Diagnostics only."
+    },
+    "function_counts": {
+      "original": 3381,
+      "baseline": 4045,
+      "baseline_hashed_symbol_names": 1362,
+      "original_hashed_symbol_names": 0
+    }
+  },
+  "strip_debug_test": {
+    "original_size": 48475912,
+    "strip_debug_size": 6801256,
+    "unchanged": {
+      "modinfo": true,
+      "imports_crc": true,
+      "exports": true,
+      "undefined": true,
+      "absolute_export_crc": true,
+      "module_struct_size": true,
+      "cfi_symbols": true
+    },
+    "allocatable_sections_unchanged": true,
+    "function_fingerprints_unchanged": true,
+    "cfi_fingerprints_unchanged": true,
+    "removed_relocation_sections": [
+      ".rela.debug_frame",
+      ".rela.debug_info",
+      ".rela.debug_line",
+      ".rela.debug_loc",
+      ".rela.debug_ranges"
+    ]
+  },
+  "refined_checks": {
+    "elf_type": true,
+    "machine": true,
+    "compiler": true,
+    "modinfo": true,
+    "imports_crc": true,
+    "undefined": true,
+    "exports": true,
+    "absolute_export_crc": true,
+    "module_struct_size": true,
+    "signature_trailer": true,
+    "allocatable_sections": false,
+    "cfi_symbols": true,
+    "relocation_properties": false,
+    "cfi_type_dispatch_and_targets": false,
+    "compiled_source_equivalence": false
+  },
+  "gate_passed": false,
+  "installation_approved": false,
+  "cfi_emulation": {
+    "method": "Unicorn execution of relocated ARM64 dispatcher. IDs recovered from MOVZ/MOVN/MOVK/CMP constants and pivots; every eight-byte table slot tested. BTI/B destinations decoded. Specific to this dispatcher form.",
+    "unicorn_version": "2.1.4",
+    "input_sha256": {
+      "original": "a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1",
+      "baseline": "5d8e4c2e9a9b72c058cfae0473f561734bad3382550ea130c33514f3efd85d2c"
+    },
+    "changes": {},
+    "equal_diagnostic_type_target_sets": true,
+    "negative_tests": {
+      "original": {
+        "rejected_wrong_type_and_unaligned_pointers": 594
+      },
+      "baseline": {
+        "rejected_wrong_type_and_unaligned_pointers": 594
+      }
+    },
+    "redirected_destination_mutation_detected": true,
+    "limitation": "Internal 32-hex and numeric suffixes normalized only for this diagnostic. Named destination equality does not prove destination body equivalence, full CFI equivalence, or historical source identity. No release gate is changed.",
+    "accepted_type_ids": 198,
+    "accepted_targets": 1094
+  }
+}

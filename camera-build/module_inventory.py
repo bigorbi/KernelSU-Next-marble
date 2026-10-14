@@ -29,7 +29,7 @@ def inventory(path):
     for offset in range(symtab[4], symtab[4]+symtab[5], symtab[9]):
         name, info, other, index, value, size = struct.unpack_from('<IBBHQQ', data, offset)
         symbols.append({'name': cstr(strings, name), 'binding': info >> 4, 'type': info & 15,
-                        'section': index, 'value': value, 'size': size})
+                        'visibility': other & 3, 'section': index, 'value': value, 'size': size})
     versions = blobs.get('__versions', b'')
     assert len(versions) % 64 == 0, 'Unexpected modversion_info size'
     imports = {cstr(versions[i+8:i+64]): f'{struct.unpack_from("<Q", versions, i)[0]:08x}'
@@ -48,6 +48,9 @@ def inventory(path):
             'sections': {n: {'type': s[1], 'size': s[5], 'flags': s[2], 'alignment': s[8]}
                          for n, s in zip(section_names, sections)},
             'cfi_symbols': sorted(s['name'] for s in symbols if 'cfi' in s['name'].lower()),
+            'cfi_symbol_records': [{'name': s['name'], 'binding': s['binding'], 'type': s['type'],
+                                    'visibility': s['visibility'], 'defined': s['section'] != 0, 'size': s['size']}
+                                   for s in symbols if 'cfi' in s['name'].lower()],
             'signature_trailer': data[-28:] == b'~Module signature appended~\n'}
 
 

@@ -2501,5 +2501,8823 @@
     "video_device_release_empty.cfi_jt",
     "video_ioctl2.cfi_jt"
   ],
-  "signature_trailer": false
+  "signature_trailer": false,
+  "cfi_symbol_records": [
+    {
+      "name": "cam_req_mgr_cb_notify_trigger.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_cb_notify_err.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_cb_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_cb_notify_timer.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_cb_notify_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_subdev_notify_message.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_notify_message.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_is_shutdown.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_req_mgr_is_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_req_mgr_component_master_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_component_master_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "video_device_release_empty.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "video_ioctl2.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_unregister_subdev.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_register_subdev.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_mem_put_kref.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_mem_put_cpu_buf.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_mem_mgr_reserve_memory_region.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_mem_mgr_request_mem.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_mem_mgr_release_mem.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_mem_mgr_free_memory_region.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_mem_mgr_cache_ops.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_mem_get_io_buf.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_mem_get_cpu_buf.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_mmrm_notifier_callback.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_debug_sysfs_node_store.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "trace_event_reg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "trace_event_raw_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "trace_raw_output_cam_submit_to_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_req_mgr_connect_device.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_req_mgr_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_req_mgr_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_log_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_log_debug.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_isp_activated_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_irq_handled.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_irq_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_icp_fw_dbg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_delay_detect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_context_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_cdm_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_buf_done.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "trace_raw_output_cam_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 136
+    },
+    {
+      "name": "__traceiter_cam_req_mgr_connect_device.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_req_mgr_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_req_mgr_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_submit_to_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__traceiter_cam_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__traceiter_cam_log_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_log_debug.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_isp_activated_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_icp_fw_dbg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_delay_detect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_context_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_irq_handled.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__traceiter_cam_irq_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__traceiter_cam_cdm_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__traceiter_cam_buf_done.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__traceiter_cam_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "trace_event_raw_event_cam_req_mgr_connect_device.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_req_mgr_connect_device.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_req_mgr_connect_device.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_req_mgr_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_req_mgr_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_req_mgr_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_req_mgr_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_req_mgr_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_req_mgr_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_submit_to_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "perf_trace_cam_submit_to_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "trace_event_raw_event_cam_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "perf_trace_cam_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__bpf_trace_cam_submit_to_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__bpf_trace_cam_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "trace_event_raw_event_cam_log_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_log_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_log_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_log_debug.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_log_debug.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_log_debug.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_isp_activated_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_isp_activated_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_isp_activated_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_icp_fw_dbg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_icp_fw_dbg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_icp_fw_dbg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_delay_detect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_delay_detect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_delay_detect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_context_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_context_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_context_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_irq_handled.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "perf_trace_cam_irq_handled.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "trace_event_raw_event_cam_irq_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "perf_trace_cam_irq_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "trace_event_raw_event_cam_cdm_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "perf_trace_cam_cdm_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "__bpf_trace_cam_irq_handled.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "__bpf_trace_cam_irq_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "__bpf_trace_cam_cdm_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "trace_event_raw_event_cam_buf_done.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_buf_done.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_buf_done.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "trace_event_raw_event_cam_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "perf_trace_cam_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__bpf_trace_cam_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_common_mem_kdup.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "camera_component_compare_dev.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "camera_platform_compare_dev.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "camera_i2c_compare_dev.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_req_mgr_ordered_list_cmp.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_context_sync_callback.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_mem_util_unmap_dummy.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_mem_util_unmap_wrapper.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_node_put_ctxt_to_free_list.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_subdev_subscribe_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_subdev_unsubscribe_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_smmu_unmap_user_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_unmap_kernel_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_reserve_buf_region.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_release_buf_region.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_unmap_stage2_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_smmu_put_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_smmu_ops.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_map_user_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_map_stage2_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_map_kernel_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_get_region_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_get_stage2_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_smmu_get_iova.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_smmu_get_handle.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_alloc_qdss.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_alloc_firmware.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_smmu_iommu_fault_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_sync_register_callback.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_sync_deregister_callback.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_smmu_destroy_handle.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_smmu_dealloc_qdss.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_smmu_dealloc_firmware.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_sync_get_obj_ref.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_v4l2_event_queue_notify_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_sync_event_queue_notify_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_subscribe_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_unsubscribe_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_sync_subscribe_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_sync_unsubscribe_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_synx_sync_signal.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_private_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_sync_dev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_req_mgr_poll.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_sync_poll.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_req_mgr_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_req_mgr_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_sync_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_sync_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_cpastop_qchannel_handshake.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpastop_setup_qos_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cpastop_set_tpg_mux_sel.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cpastop_get_hw_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cpastop_init_hw_version.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_camsstop_get_hw_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cpastop_setup_regbase_indices.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_camsstop_setup_regbase_indices.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cpas_update_axi_vote.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_update_ahb_vote.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_register_client.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_reg_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_reg_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_prepare_subpart_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_notify_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_is_feature_supported.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_get_hw_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_axi_util_trans_type_to_string.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cpas_axi_util_path_type_to_string.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cpas_get_scid.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cpas_deactivate_llcc.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cpas_activate_llcc.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cpas_sysfs_get_subparts_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_hw_kobj_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_get_cmd_header_size.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cdm_required_size_reg_continuous.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cdm_required_size_reg_random.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_req_mgr_get_id_subscribed.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_dmi.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_indirect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_genirq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_wait_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_changebase.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_comp_wait.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_clear_comp_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_required_size_prefetch_disable.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_offsetof_dmi_addr.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_offsetof_indirect_addr.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_cdm_write_dmi.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_write_regcontinuous.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_write_regrandom.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_write_genirq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_write_wait_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_write_changebase.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_write_indirect.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cdm_write_wait_comp_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cdm_write_clear_comp_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cdm_write_wait_prefetch_disable.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_submit_bls.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_publish_ops.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_get_iommu_handle.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_detect_hang_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cdm_acquire.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_tasklet_enqueue_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_tasklet_get_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_tasklet_put_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_tasklet_action.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_ife_csid_hw_ver1_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_ife_csid_hw_ver2_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cpastop_poweron.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_cpastop_poweroff.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_cpastop_print_poweron_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_ife_csid_hw_ver1_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_ife_csid_hw_ver2_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_vfe_handle_epoch.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_vfe_handle_eof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_vfe_handle_sof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_vfe_resource_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_resource_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_camif_resource_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_camif_resource_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_camif_ver3_resource_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_camif_ver3_resource_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_fe_resource_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_vfe_fe_resource_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_sfe_bus_start_rm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_sfe_bus_stop_rm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_sfe_bus_start_wm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_sfe_bus_stop_wm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_sfe_bus_start_sfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_sfe_bus_stop_sfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_start_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_stop_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_start_rm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_stop_rm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_start_vfe_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_stop_vfe_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_ver3_start_wm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_ver3_stop_wm.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_ver3_start_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_ver3_stop_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_lite_resource_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_lite_resource_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_resource_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_resource_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_resource_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_resource_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_ver3_resource_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_ver3_resource_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_rdi_resource_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_rdi_resource_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_fe_resource_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_fe_resource_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_lite_resource_start.5613.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_camif_lite_resource_stop.5614.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 240
+    },
+    {
+      "name": "cam_vfe_bus_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_bus_rd_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_bus_ver3_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_camif_lite_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_camif_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_camif_ver3_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_rdi_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_fe_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_vfe_camif_lite_process_cmd.5615.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 72
+    },
+    {
+      "name": "cam_ife_csid_ver2_handle_buf_done_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_top_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_path_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_discard_sof_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_path_err_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_rx_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_rx_err_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_csid_ver2_reset_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_top_handle_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_top_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_rd_handle_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_rd_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_rd_out_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_handle_wm_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_handle_sfe_out_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_wr_handle_bus_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_sfe_bus_wr_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_reset_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_handle_wm_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_handle_comp_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_handle_vfe_out_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver2_handle_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_error_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_rd_ver1_handle_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_rd_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_comp_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_wm_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_vfe_out_done_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_bus_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_rup_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_rup_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_lite_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_lite_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_ver4_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_ver3_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_ver3_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_rdi_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_rdi_err_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_fe_handle_irq_top_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_lite_handle_irq_top_half.5616.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_vfe_camif_lite_err_irq_top_half.5704.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 360
+    },
+    {
+      "name": "cam_ife_cam_cdm_callback.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_ife_mgr_regspace_data_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__cam_isp_ctx_dump_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_isp_context_info_dump.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_common_user_dump_clock.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_ife_csid_ver2_user_dump_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_sfe_bus_wr_user_dump_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_vfe_bus_ver3_user_dump_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_ife_mgr_user_dump_stream_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_isp_ctx_user_dump_timer.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_isp_ctx_user_dump_stream_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_isp_ctx_user_dump_req_list.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_isp_ctx_user_dump_active_requests.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_isp_ctx_user_dump_state_monitor_array_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "cam_isp_ctx_user_dump_events.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_handle_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_sof_in_activated_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_reg_upd_in_applied_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_offline_epoch_in_activated_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_buf_done_in_applied.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_buf_done_in_epoch.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_reg_upd_in_hw_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_fs2_sof_in_sof_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_fs2_reg_upd_in_sof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_notify_eof_in_activated_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_fs2_reg_upd_in_applied_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_epoch_in_applied.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_fs2_buf_done_in_applied.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_sof_in_epoch.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_reg_upd_in_epoch_bubble_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_notify_sof_in_activated_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_fs2_buf_done_in_epoch.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_buf_done_in_bubble.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_epoch_in_bubble_applied.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_buf_done_in_bubble_applied.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_sof_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_reg_upd_in_sof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_sof_in_applied_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_sof_in_bubble_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_reg_upd_in_bubble_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_sof_in_bubble_applied.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_reg_upd_in_bubble_applied_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_buf_done_in_sof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "__cam_isp_ctx_handle_secondary_events.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 232
+    },
+    {
+      "name": "cam_icp_hw_mgr_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__cam_req_mgr_sof_freeze.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "crm_timer_callback.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_icp_ctx_timer_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_icp_device_timer_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_common_mem_free.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "cam_ife_csid_hw_ver2_rdi_line_buffer_conflict_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "cam_a5_irq_raise.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "cam_a5_irq_enable.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "cam_lx7_irq_raise.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "cam_lx7_irq_enable.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "cam_a5_iface_addr.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_lx7_iface_addr.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_cdm_cpas_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_vfe_cpas_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_a5_cpas_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_lx7_cpas_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_bps_cpas_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_jpeg_hw_mgr_sched_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_ife_csid_hw_ver2_mup_mismatch_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_ife_csid_ver2_print_illegal_programming_irq_status.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_ife_csid_ver2_print_format_measure_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_sfe_bus_wr_get_constraint_errors.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_sfe_bus_wr_print_ccif_violation_status.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_sfe_bus_wr_print_violation_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_icp_dev_mini_dump_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_jpeg_dev_mini_dump_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_flush_dev_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__cam_icp_flush_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__cam_jpeg_ctx_flush_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "__cam_icp_dump_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_jpeg_ctx_dump_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_isp_context_dump_requests.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_icp_context_dump_active_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_jpeg_context_dump_active_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 24
+    },
+    {
+      "name": "cam_cci_irq_routine.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cci_dump_registers.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_req_mgr_process_workq_link_worker.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_smmu_page_fault_work.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_sync_util_cb_dispatch.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cpastop_work.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_virtual_cdm_work.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_hw_cdm_work.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_cam_ife_worker.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_offline_ife_worker.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_icp_command_queue.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_icp_message_queue.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_icp_timer_queue.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_jpeg_command_queue.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_req_mgr_process_workq_jpeg_message_queue.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cci_write_async_helper.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "__cam_node_crm_process_evt.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_tpg_process_crm_evt.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_node_crm_dump_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_tpg_dump_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "tpg_hw_v_1_2_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "tpg_hw_v_1_3_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "tpg_hw_v_1_0_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_0_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_0_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_2_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_2_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_2_dump_status.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_2_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_3_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_3_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_3_dump_status.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "tpg_hw_v_1_3_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "get_clk_vote_default.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "get_clk_voting_dynamic.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_isp_subdev_handle_message.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_csiphy_subdev_handle_message.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_eeprom_spi_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_eeprom_spi_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_sfe_packet_generic_blob_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_isp_packet_generic_blob_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_icp_packet_generic_blob_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_jpeg_generic_blob_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_generic_blob_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_power.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_cpas_unregister_client.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cpas_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cpas_select_qos_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cpas_enable_tpg_mux_sel.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cpas_dump_camnoc_buff_fill_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cdm_stream_on.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cdm_stream_off.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cdm_reset_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cdm_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cdm_handle_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_cdm_flush_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_res_mgr_util_shared_gpio_check_hold.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_res_mgr_util_get_idx_from_shared_gpio.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_res_mgr_util_get_idx_from_shared_pctrl_gpio.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 112
+    },
+    {
+      "name": "cam_res_mgr_util_check_if_gpio_is_shared.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_res_mgr_led_trigger_unregister.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_res_mgr_led_trigger_register.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_res_mgr_led_trigger_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_res_mgr_gpio_set_value.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_res_mgr_gpio_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_res_mgr_gpio_free_arry.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "cam_actuator_driver_i2c_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_eeprom_i2c_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_ois_i2c_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_i2c_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_flash_i2c_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_actuator_driver_i2c_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_eeprom_i2c_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_ois_i2c_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_i2c_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_flash_i2c_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_cpas_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_actuator_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_cci_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_tpg_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_csiphy_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_eeprom_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_ois_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_sensor_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_flash_subdev_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_subdev_compat_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_cpas_subdev_compat_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_actuator_init_subdev_do_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_cci_subdev_compat_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_tpg_subdev_compat_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_csiphy_subdev_compat_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_eeprom_init_subdev_do_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_ois_init_subdev_do_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_sensor_init_subdev_do_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_flash_subdev_do_ioctl.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 80
+    },
+    {
+      "name": "cam_flash_pmic_power_ops.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_flash_i2c_power_ops.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_flash_pmic_flush_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_flash_i2c_flush_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_node_crm_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_actuator_flush_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_tpg_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_flush_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_flash_flush_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_flash_i2c_apply_setting.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_flash_pmic_apply_setting.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_flash_i2c_pkt_parser.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "cam_flash_pmic_pkt_parser.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_node_crm_get_dev_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_actuator_publish_dev_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_tpg_publish_dev_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_publish_dev_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_flash_publish_dev_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_node_crm_link_setup.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_actuator_establish_link.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_tpg_setup_link.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_sensor_establish_link.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_flash_establish_link.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_node_crm_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_node_crm_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_actuator_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_tpg_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_tpg_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_sensor_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_sensor_notify_frame_skip.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_flash_apply_request.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_cpas_hw_get_hw_info.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cpas_hw_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cpas_hw_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cpas_hw_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cdm_get_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cdm_stream_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cdm_stream_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_hw_cdm_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_hw_cdm_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver1_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ife_csid_ver2_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_top_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_top_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_top_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_top_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_acquire_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_release_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_start_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_stop_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_acquire_sfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_release_sfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_wr_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_wr_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_wr_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_sfe_bus_wr_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_acquire_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_release_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_acquire_vfe_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_release_vfe_bus_rd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_start_hw.4654.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_stop_hw.4655.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_init_hw.4656.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_deinit_hw.4657.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_ver3_acquire_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_ver3_release_vfe_out.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_ver3_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_ver3_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_ver3_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_bus_ver3_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver4_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_ver3_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_vfe_top_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ipe_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_ipe_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_a5_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_a5_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_lx7_hw_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_lx7_hw_deinit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_bps_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_bps_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_enc_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_enc_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_enc_reset_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_enc_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_enc_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_dma_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_dma_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_dma_reset_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_dma_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_jpeg_dma_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_init_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_deinit_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_reserve.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_release.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_start.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 1104
+    },
+    {
+      "name": "cam_cpastop_handle_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_hw_cdm_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_ife_csid_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_ife_csid_irq.3164.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_sfe_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_vfe_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_ipe_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_a5_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_lx7_handle_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_bps_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_jpeg_enc_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_jpeg_dma_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_cci_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_tpg_irq_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_csiphy_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 128
+    },
+    {
+      "name": "cam_cpas_hw_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_cdm_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_ife_csid_ver1_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_ife_csid_ver2_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_sfe_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_sfe_top_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_sfe_bus_rd_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_sfe_bus_wr_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_vfe_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "__cam_vfe_bus_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "__cam_vfe_bus_rd_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "__cam_vfe_bus_ver3_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_vfe_top_ver4_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_vfe_top_ver3_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_vfe_top_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_ipe_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_a5_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_lx7_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_bps_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_jpeg_enc_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_jpeg_dma_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 176
+    },
+    {
+      "name": "cam_req_mgr_process_flush_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_req_mgr_process_add_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_req_mgr_process_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_req_mgr_process_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_req_mgr_process_trigger.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "__cam_req_mgr_process_sof_freeze.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_context_handle_hw_recovery.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver1_bottom_half_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_top_err_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_ipp_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_discard_sof_pix_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_ppp_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_rdi_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_discard_sof_rdi_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_csid_ver2_rx_err_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_top_handle_err_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_top_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_bus_rd_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_bus_rd_out_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_bus_handle_wm_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_bus_handle_sfe_out_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_sfe_bus_wr_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_handle_wm_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_handle_vfe_out_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_err_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_rd_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_wm_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_vfe_out_done_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_ver3_err_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_bus_ver3_handle_rup_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_camif_lite_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_camif_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_camif_ver3_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_rdi_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_fe_handle_irq_bottom_half.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_vfe_camif_lite_handle_irq_bottom_half.5617.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_acquire.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_release_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_prepare_hw_update.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_config_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_dump.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_ife_mgr_recover_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_isp_context_hw_recovery.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "__cam_isp_ctx_apply_req_offline.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "__cam_isp_ctx_minidump_cb.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_acquire_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_release_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_prepare_hw_update.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_config_stream_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_config_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_hw_open_u.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_hw_close_u.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_hw_flush.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_hw_dump.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_delete_sync.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_abort_handle_wq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_process_msg.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_mgr_process_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_ctx_timer.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_deinit_idle_clk.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_icp_context_mini_dump.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_acquire_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_release_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_prepare_hw_update.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_config_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_hw_flush.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_hw_stop.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_hw_dump.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_bottom_half_irq.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_mgr_process_hw_update_entries.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_jpeg_context_mini_dump.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_get_hw_caps.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_acquire_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_start_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_stop_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_read.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_write.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_release_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_prepare_hw_update.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_config_hw.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_hw_mgr_reset.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_custom_mgr_cmd.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 752
+    },
+    {
+      "name": "cam_req_mgr_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_req_mgr_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_smmu_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_smmu_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_sync_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_sync_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_cpas_dev_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_cpas_dev_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_cdm_intf_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_cdm_intf_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_hw_cdm_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_hw_cdm_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_ife_csid_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_ife_csid_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_sfe_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_sfe_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_vfe_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_vfe_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_isp_dev_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_isp_dev_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_ipe_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_ipe_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_a5_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_a5_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_lx7_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_lx7_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_bps_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_bps_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_icp_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_icp_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_jpeg_enc_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_jpeg_enc_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_jpeg_dma_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_jpeg_dma_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_jpeg_dev_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_jpeg_dev_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_actuator_driver_platform_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_actuator_platform_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_cci_platform_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_cci_device_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_tpg_platform_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_tpg_device_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_csiphy_platform_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_csiphy_device_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_eeprom_platform_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_eeprom_platform_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_ois_platform_driver_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_ois_platform_driver_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_sensor_driver_platform_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_sensor_platform_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_res_mgr_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_res_mgr_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_flash_platform_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_flash_platform_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_custom_csid_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_custom_csid_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_custom_dev_probe.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_custom_dev_remove.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 472
+    },
+    {
+      "name": "cam_smmu_fw_dev_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_cb_qsmmu_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_cb_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sync_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_cpas_dev_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_cdm_intf_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_hw_cdm_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ife_csid_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sfe_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_vfe_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_isp_dev_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ipe_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_a5_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_lx7_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_bps_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_icp_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_jpeg_enc_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_jpeg_dma_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_jpeg_dev_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_actuator_i2c_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_actuator_platform_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_cci_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_tpg_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_csiphy_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_eeprom_i2c_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_eeprom_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ois_i2c_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ois_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sensor_i2c_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sensor_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_res_mgr_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_flash_i2c_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_flash_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_custom_csid_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_custom_component_bind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_fw_dev_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_cb_qsmmu_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_cb_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_smmu_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sync_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_cpas_dev_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_cdm_intf_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_hw_cdm_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ife_csid_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sfe_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_vfe_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_isp_dev_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ipe_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_a5_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_lx7_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_bps_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_icp_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_jpeg_enc_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_jpeg_dma_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_jpeg_dev_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_actuator_i2c_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_actuator_platform_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_cci_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_tpg_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_csiphy_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_eeprom_i2c_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_eeprom_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ois_i2c_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_ois_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sensor_i2c_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_sensor_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_res_mgr_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_flash_i2c_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_flash_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_custom_hw_sub_mod_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_custom_csid_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_custom_component_unbind.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 296
+    },
+    {
+      "name": "cam_hw_cdm_iommu_fault_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_isp_dev_iommu_fault_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_icp_dev_iommu_fault_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_jpeg_dev_iommu_fault_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_custom_dev_iommu_fault_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "cam_cpas_subdev_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_cpas_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_isp_subdev_close_internal.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_isp_subdev_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_isp_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_icp_subdev_close_internal.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_icp_subdev_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_icp_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_jpeg_subdev_close_internal.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_jpeg_subdev_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_jpeg_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_actuator_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_tpg_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_csiphy_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_eeprom_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_ois_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_sensor_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_flash_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_custom_subdev_close_internal.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_custom_subdev_open.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "cam_custom_subdev_close.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 168
+    },
+    {
+      "name": "__cam_isp_ctx_acquire_dev_in_available.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_icp_acquire_dev_in_available.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_jpeg_ctx_acquire_dev_in_available.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_custom_ctx_acquire_dev_in_available.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_isp_ctx_get_dev_info_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_custom_ctx_get_dev_info_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_isp_ctx_flush_req_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_isp_ctx_flush_req_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_isp_ctx_flush_req_in_flushed_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_custom_ctx_flush_req_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_custom_ctx_flush_req_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 40
+    },
+    {
+      "name": "__cam_isp_ctx_release_dev_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_isp_ctx_release_dev_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_icp_release_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_icp_release_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_jpeg_ctx_release_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_custom_release_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_custom_ctx_release_dev_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_isp_ctx_config_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_config_dev_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_config_dev_in_flushed.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_icp_config_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_jpeg_ctx_config_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_config_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_config_dev.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_config_dev_in_flushed.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_start_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_isp_ctx_stop_dev_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_icp_start_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_icp_stop_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_jpeg_ctx_stop_dev_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_custom_ctx_start_dev_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_custom_stop_dev_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 56
+    },
+    {
+      "name": "__cam_isp_ctx_acquire_hw_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__cam_isp_ctx_release_hw_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__cam_isp_ctx_release_hw_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__cam_custom_ctx_acquire_hw_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__cam_custom_ctx_release_hw_in_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__cam_custom_ctx_release_hw_in_activated_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 48
+    },
+    {
+      "name": "__cam_isp_ctx_process_evt.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_custom_ctx_handle_evt.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 16
+    },
+    {
+      "name": "__cam_isp_ctx_link_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_unlink_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_unlink_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_unlink_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_link_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_unlink_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_unlink_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_unlink_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_context_handle_hw_event.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_ife_hw_mgr_event_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_isp_context_handle_message.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_handle_irq_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_icp_handle_buf_done_in_ready.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_jpeg_ctx_handle_buf_done_in_acquired.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "cam_custom_hw_mgr_evt_handler.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_custom_ctx_handle_irq_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 64
+    },
+    {
+      "name": "__cam_isp_ctx_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_apply_default_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_apply_req_in_sof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_apply_req_in_epoch.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_apply_req_in_bubble.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_rdi_only_apply_req_top_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_isp_ctx_apply_default_req_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_custom_ctx_apply_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_custom_ctx_apply_default_req.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_custom_ctx_apply_req_in_activated.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_custom_ctx_apply_default_settings.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cam_custom_ctx_handle_error.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_custom_ctx_reg_upd_in_sof.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_custom_ctx_frame_done.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "__cam_custom_ctx_reg_upd_in_applied_state.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 32
+    },
+    {
+      "name": "cam_req_mgr_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_smmu_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_sync_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_cpas_dev_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_cdm_intf_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_hw_cdm_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_ife_csid_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_ife_csid_lite_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_sfe_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_vfe_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_isp_dev_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_ipe_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_a5_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_lx7_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_bps_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_icp_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_jpeg_enc_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_jpeg_dma_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_jpeg_dev_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_actuator_driver_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_cci_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_tpg_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_csiphy_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_eeprom_driver_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_ois_driver_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_sensor_driver_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_res_mgr_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_flash_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_custom_hw_sub_module_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_custom_csid_driver_init.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_custom_dev_init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "init_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 256
+    },
+    {
+      "name": "cam_req_mgr_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_smmu_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_sync_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_cpas_log_votes.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_cpas_dev_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_cdm_intf_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_hw_cdm_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_ife_csid_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_ife_csid_lite_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_sfe_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_vfe_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_isp_dev_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_ipe_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_a5_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_lx7_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_bps_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_icp_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_jpeg_enc_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_jpeg_dma_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_jpeg_dev_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_actuator_driver_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_cci_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_tpg_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_csiphy_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_eeprom_driver_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_ois_driver_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_sensor_driver_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_res_mgr_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_flash_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_custom_hw_sub_module_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_custom_csid_driver_exit.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cam_custom_dev_exit_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "cleanup_module.cfi_jt",
+      "binding": 0,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 264
+    },
+    {
+      "name": "__cfi_check_fail",
+      "binding": 2,
+      "type": 2,
+      "visibility": 2,
+      "defined": true,
+      "size": 88
+    },
+    {
+      "name": "__cfi_check",
+      "binding": 1,
+      "type": 2,
+      "visibility": 0,
+      "defined": true,
+      "size": 9204
+    },
+    {
+      "name": "__cfi_slowpath",
+      "binding": 1,
+      "type": 0,
+      "visibility": 0,
+      "defined": false,
+      "size": 0
+    },
+    {
+      "name": "__cfi_jt_init_module",
+      "binding": 1,
+      "type": 1,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__cfi_jt_cleanup_module",
+      "binding": 1,
+      "type": 1,
+      "visibility": 0,
+      "defined": true,
+      "size": 8
+    },
+    {
+      "name": "__cfi_jt_start",
+      "binding": 1,
+      "type": 0,
+      "visibility": 0,
+      "defined": true,
+      "size": 0
+    },
+    {
+      "name": "__cfi_jt_end",
+      "binding": 1,
+      "type": 0,
+      "visibility": 0,
+      "defined": true,
+      "size": 0
+    },
+    {
+      "name": "$x.cfi_jt",
+      "binding": 1,
+      "type": 0,
+      "visibility": 0,
+      "defined": true,
+      "size": 0
+    }
+  ]
 }

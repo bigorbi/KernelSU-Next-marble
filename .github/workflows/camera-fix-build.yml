@@ -80,6 +80,10 @@ jobs:
           free -h
       - name: Verify and prepare both matching compilers
         run: python3 camera-build/ci.py toolchains
+      - name: Test audit rules and closed compatibility gates
+        run: |
+          PATH="$PWD/camera-build/toolchains/android-r563880c/bin:$PATH" \
+            python3 -m unittest discover -s camera-build/tests -p 'test_*.py' -v
       - name: Integrate pinned manager and resolved SUSFS
         run: python3 camera-build/ci.py sources
       - name: Compare running configuration and natural kernel release

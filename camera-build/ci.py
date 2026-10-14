@@ -281,7 +281,7 @@ def camera(source, name):
     mmrm_symbols = MODULES / 'qcom/opensource/mmrm-driver/Module.symvers'
     before = digest(KOUT / '.config')
     run(make_args(True) + ['M=' + str(path), 'CAMERA_KERNEL_ROOT=' + str(path), 'KERNEL_ROOT=' + str(KERNEL),
-                          'MODNAME=camera', 'TARGET_PRODUCT=marble', 'KBUILD_EXTRA_SYMBOLS=' + str(mmrm_symbols), 'modules'],
+                          'MODNAME=camera', 'TARGET_PRODUCT=marble', 'KBUILD_EXTRA_SYMBOLS=' + str(mmrm_symbols), 'V=1', 'modules'],
         name + '-build', environment('android-r563880c'))
     if digest(KOUT / '.config') != before: raise ValueError('External compilation changed kernel configuration')
     return path / 'camera.ko'

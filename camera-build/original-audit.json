@@ -26927,5 +26927,65 @@
       }
     ]
   },
-  "method": "Conservative masked-instruction/relocation fingerprint v1. Link-layout differences can fail; they never justify silently passing source equivalence."
+  "method": "Conservative masked-instruction/relocation fingerprint v1. Link-layout differences can fail; they never justify silently passing source equivalence.",
+  "runtime_relocation_type_counts": {
+    ".rela__kcrctab": {
+      "258": 87
+    },
+    ".rela__ksymtab": {
+      "261": 261
+    },
+    ".rela__tracepoints_ptrs": {
+      "261": 17
+    },
+    ".rela__kcrctab_gpl": {
+      "258": 1
+    },
+    ".rela__ksymtab_gpl": {
+      "261": 3
+    },
+    ".rela.text": {
+      "275": 52901,
+      "286": 1921,
+      "283": 21293,
+      "278": 3370,
+      "285": 4075,
+      "277": 46884,
+      "282": 1094
+    },
+    ".rela.altinstructions": {
+      "261": 4538
+    },
+    ".rela__jump_table": {
+      "261": 3604,
+      "260": 1802
+    },
+    ".rela__bug_table": {
+      "261": 46
+    },
+    ".rela.data": {
+      "257": 2915
+    },
+    ".rela.rodata": {
+      "257": 762
+    },
+    ".rela__param": {
+      "257": 44
+    },
+    ".rela__tracepoints": {
+      "257": 51
+    },
+    ".rela.ref.data": {
+      "257": 136
+    },
+    ".rela_ftrace_events": {
+      "257": 17
+    },
+    ".rela__bpf_raw_tp_map": {
+      "257": 34
+    },
+    ".rela.gnu.linkonce.this_module": {
+      "257": 2
+    }
+  }
 }
