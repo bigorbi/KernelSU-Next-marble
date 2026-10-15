@@ -1,0 +1,257 @@
+{
+  "run": 38626370150,
+  "commit": "627a7f7e08e98c5c7460c612664e6e4c2093fbce",
+  "workflow_conclusion": "success",
+  "archive_sha256": {
+    "camera-codegen-experiment.zip": "ff3df086454a4c09fc156c677ecf11439caa48bd5f995c1583d4fd7a5752445d",
+    "kernel-build-logs.zip": "7e187f81cc6d5bf4ece2b706f68bb204a5b0dbe65245154ec6342dc72c5e193d"
+  },
+  "module_sha256": {
+    "original": "a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1",
+    "thin-control": "5d8e4c2e9a9b72c058cfae0473f561734bad3382550ea130c33514f3efd85d2c",
+    "thin-fixed-relink": "da19b24f551e3152374490013655013d674a120155e86f92e49eba200d37ba48",
+    "full-diagnostic": "f357af1129965f3fed2d6916e21e806ee19547f9612041904e6faedb4ff93864"
+  },
+  "control": {
+    "checks": {
+      "elf_type": true,
+      "machine": true,
+      "compiler": true,
+      "modinfo": true,
+      "imports_crc": true,
+      "undefined": true,
+      "exports": true,
+      "absolute_export_crc": true,
+      "module_struct_size": true,
+      "allocated_sections": true,
+      "strict_function_fingerprints": true,
+      "runtime_relocations": true,
+      "published_pointer_inventory": true
+    },
+    "environment_control_reproduced": true,
+    "release_gate_passed": false
+  },
+  "fixed_relink": {
+    "checks": {
+      "all_compiled_objects_unchanged": true,
+      "published_targets_valid": true,
+      "published_fields_match_rom": true
+    },
+    "helper_patch_sha256": "238556945a8f0abee4204e95fb7a3eadecbdaa6b162d197414f2eb1154d466f1",
+    "kernel_configuration_changed": false,
+    "release_gate_passed": false
+  },
+  "failed_checks": {
+    "thin-control": [
+      "allocatable_sections",
+      "relocation_properties",
+      "cfi_type_dispatch_and_targets",
+      "compiled_source_equivalence",
+      "cfi_published_targets"
+    ],
+    "thin-fixed-relink": [
+      "allocatable_sections",
+      "relocation_properties",
+      "cfi_type_dispatch_and_targets",
+      "compiled_source_equivalence"
+    ],
+    "full-diagnostic": [
+      "imports_crc",
+      "undefined",
+      "allocatable_sections",
+      "cfi_symbols",
+      "relocation_properties",
+      "cfi_type_dispatch_and_targets",
+      "compiled_source_equivalence"
+    ]
+  },
+  "full_extra_imports": [
+    "__ubsan_handle_cfi_check_fail_abort"
+  ],
+  "all_original_import_crcs_preserved": true,
+  "full_handler_call_count": 389,
+  "full_handler_caller_count": 381,
+  "nonhandler_call_histograms_equal": true,
+  "nonhandler_per_function_call_histograms_equal": true,
+  "failure_path": {
+    "original": {
+      "size": 88,
+      "brk_instructions": 6,
+      "handler_calls": 0
+    },
+    "full": {
+      "size": 136,
+      "brk_instructions": 0,
+      "handler_calls": 6
+    }
+  },
+  "cfi_dispatcher": {
+    "raw_instruction_bytes_equal": true,
+    "relocation_shape_and_names_equal": true,
+    "relocation_addend_delta_counts": {
+      "2208": 396,
+      "0": 1
+    },
+    "changed_cfi_jump_fingerprint_count": 885,
+    "changed_jump_raw_bytes_equal": true
+  },
+  "runtime_relocation_mismatches": {
+    ".rela.text": {
+      "baseline": {
+        "283": 21682,
+        "275": 52901,
+        "286": 1921,
+        "278": 3370,
+        "285": 4075,
+        "277": 46884,
+        "282": 1094
+      },
+      "original": {
+        "275": 52901,
+        "286": 1921,
+        "283": 21293,
+        "278": 3370,
+        "285": 4075,
+        "277": 46884,
+        "282": 1094
+      }
+    }
+  },
+  "section_accounting": {
+    "original": {
+      ".text": {
+        "size": 1684720,
+        "function_body_union": 1653964,
+        "jump_entry_union_outside_bodies": 8752,
+        "unattributed_or_padding": 22004
+      },
+      ".data": {
+        "size": 930416,
+        "object_body_union": 930065,
+        "unattributed_or_padding": 351
+      },
+      ".bss": {
+        "size": 3461364,
+        "object_body_union": 3461314,
+        "unattributed_or_padding": 50
+      },
+      ".rodata": {
+        "size": 477115,
+        "object_body_union": 38934,
+        "unattributed_or_padding": 438181
+      }
+    },
+    "baseline": {
+      ".text": {
+        "size": 1686928,
+        "function_body_union": 1655812,
+        "jump_entry_union_outside_bodies": 8752,
+        "unattributed_or_padding": 22364
+      },
+      ".data": {
+        "size": 930416,
+        "object_body_union": 930065,
+        "unattributed_or_padding": 351
+      },
+      ".bss": {
+        "size": 3461364,
+        "object_body_union": 3461314,
+        "unattributed_or_padding": 50
+      },
+      ".rodata": {
+        "size": 477683,
+        "object_body_union": 38934,
+        "unattributed_or_padding": 438749
+      }
+    }
+  },
+  "instrumentation": {
+    "jump_tables": {
+      "original": {
+        "entry_count": 1802,
+        "keys": {
+          "('symbol', 'arm64_const_caps_ready', 1)": 510,
+          "('symbol', 'cpu_hwcap_keys', 81)": 416,
+          "('symbol', '__tracepoint_cam_flush_req', 8)": 1,
+          "('symbol', '__tracepoint_cam_req_mgr_add_req', 8)": 1,
+          "('symbol', '__tracepoint_cam_req_mgr_apply_request', 8)": 1,
+          "('symbol', '__tracepoint_cam_delay_detect', 8)": 3,
+          "('symbol', '__tracepoint_cam_req_mgr_connect_device', 8)": 1,
+          "('symbol', 'cpu_hwcap_keys', 64)": 94,
+          "('symbol', 'gic_nonsecure_priorities', 0)": 180,
+          "('symbol', '__tracepoint_cam_log_event', 8)": 19,
+          "('symbol', '__tracepoint_rwmmio_write', 8)": 527,
+          "('symbol', '__tracepoint_cam_log_debug', 8)": 1,
+          "('symbol', '__tracepoint_rwmmio_read', 8)": 11,
+          "('symbol', '__tracepoint_rwmmio_post_read', 8)": 11,
+          "('symbol', '__tracepoint_cam_buf_done', 8)": 3,
+          "('symbol', '__tracepoint_cam_apply_req', 8)": 5,
+          "('symbol', '__tracepoint_cam_context_state', 8)": 15,
+          "('symbol', '__tracepoint_cam_isp_activated_irq', 8)": 1,
+          "('symbol', '__tracepoint_cam_icp_fw_dbg', 8)": 1,
+          "('symbol', '__tracepoint_cam_notify_frame_skip', 8)": 1
+        }
+      },
+      "baseline": {
+        "entry_count": 1802,
+        "keys": {
+          "('symbol', 'arm64_const_caps_ready', 1)": 510,
+          "('symbol', 'cpu_hwcap_keys', 81)": 416,
+          "('symbol', '__tracepoint_cam_flush_req', 8)": 1,
+          "('symbol', '__tracepoint_cam_req_mgr_add_req', 8)": 1,
+          "('symbol', '__tracepoint_cam_req_mgr_apply_request', 8)": 1,
+          "('symbol', '__tracepoint_cam_delay_detect', 8)": 3,
+          "('symbol', '__tracepoint_cam_req_mgr_connect_device', 8)": 1,
+          "('symbol', 'cpu_hwcap_keys', 64)": 94,
+          "('symbol', 'gic_nonsecure_priorities', 0)": 180,
+          "('symbol', '__tracepoint_cam_log_event', 8)": 19,
+          "('symbol', '__tracepoint_rwmmio_write', 8)": 527,
+          "('symbol', '__tracepoint_cam_log_debug', 8)": 1,
+          "('symbol', '__tracepoint_rwmmio_read', 8)": 11,
+          "('symbol', '__tracepoint_rwmmio_post_read', 8)": 11,
+          "('symbol', '__tracepoint_cam_buf_done', 8)": 3,
+          "('symbol', '__tracepoint_cam_apply_req', 8)": 5,
+          "('symbol', '__tracepoint_cam_context_state', 8)": 15,
+          "('symbol', '__tracepoint_cam_isp_activated_irq', 8)": 1,
+          "('symbol', '__tracepoint_cam_icp_fw_dbg', 8)": 1,
+          "('symbol', '__tracepoint_cam_notify_frame_skip', 8)": 1
+        }
+      }
+    },
+    "alternatives": {
+      "original": {
+        "entry_count": 2269,
+        "feature_length_counts": {
+          "59:4:4": 1359,
+          "11:4:4": 71,
+          "42:4:4": 734,
+          "10:4:4": 94,
+          "1:4:4": 11
+        }
+      },
+      "baseline": {
+        "entry_count": 2269,
+        "feature_length_counts": {
+          "59:4:4": 1359,
+          "11:4:4": 71,
+          "42:4:4": 734,
+          "10:4:4": 94,
+          "1:4:4": 11
+        }
+      }
+    }
+  },
+  "function_comparison": {
+    "thin_exact_resolved_pairs": 1135,
+    "full_exact_resolved_pairs": 1422,
+    "full_unproved_pairs": 722,
+    "full_unproved_pairs_with_equal_raw_instruction_bytes": 344,
+    "full_unproved_pairs_with_different_raw_instruction_bytes": 378,
+    "raw_changed_pairs_without_handler_calls": [],
+    "full_ambiguous_names": 19,
+    "full_only_original": [],
+    "full_only_baseline": []
+  },
+  "limitation": "Equal raw instructions do not establish relocated references or source equivalence. Diagnostic only; gates unchanged.",
+  "installation_approved": false
+}

@@ -1,8 +1,8 @@
 # Camera code-generation investigation — 2026-10-15
 
-**A genuine CFI incompatibility is now confirmed in the unmodified cloud baseline.** Its earlier matching table-entry/type-ID inventory did not validate pointers actually stored in callback tables. No installation candidate exists and no experiment has been dispatched.
+**Current result: the final-link CFI correction succeeded in [run 38626370150](RUN-38626370150.md).** FullLTO reproduces much more of the ROM, but an erroneous custom trap-handler flag confounded that experiment. The flag correction and regression tests are prepared locally; no further run is authorized or started, and no installation candidate exists. The linked report records the completed run, current blockers and next experiment.
 
-This report supersedes the CFI interpretation in [the first audit report](RUN-38603388362.md), while retaining its raw measurements. It reuses the authenticated artifacts from [run 38603388362](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38603388362). The previous audit commit `c4b5c10f7ef7262c69eaf0d8fe79ee9bf1c01ee6` is verified on the fork's `camera-fix` branch. Changes described here are for local review before any push.
+The pre-experiment analysis below is retained from commit `627a7f7`, since published and used for that run. It supersedes the CFI interpretation in [the first audit report](RUN-38603388362.md), while retaining its raw measurements, and reuses the authenticated artifacts from [run 38603388362](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38603388362). Statements below about proposed execution describe the historical plan; the completed results are in the newer report.
 
 ## Confirmed causes
 
@@ -122,7 +122,7 @@ The confirmed build-helper correction can be tested by repeating only the final 
 
 For the KMD correction itself, changing either reviewed C source file under LTO may change inlining, cloning, register allocation and layout outside those functions. It is **not currently possible to promise that every unrelated compiled function stays unchanged**. After a compatible baseline and lifetime review exist, the patch must be built in isolation and every unrelated opcode/reference fingerprint difference reviewed. Splicing machine code, copying CRCs or disabling LTO/CFI to satisfy a comparison would not prove safety and is not proposed.
 
-## Prepared next cloud experiment — approval required, not run
+## Original cloud experiment plan — subsequently executed as run 38626370150
 
 Workflow: `.github/workflows/camera-codegen-experiment.yml`; staged runner script: `camera-build/codegen_experiment.py`.
 
@@ -140,4 +140,4 @@ The workflow is manual-only, read-only permissions plus Actions read access for 
 
 Local validation: 23 tests pass, including actual pinned-helper replay, legacy/new disassembly, invalid published-pointer detection, opcode/register preservation and experiment safeguards. YAML, shell/Python syntax and dry runs pass. The original module's reference self-check passes all 16 conditions. This baseline fails the four prior conservative checks **plus the new confirmed `cfi_published_targets` condition**. Historical SUSFS attribution and request lifetime review remain independent blockers.
 
-Full results are retained locally under `results/codegen-investigation/`, including all 41 dynamic pointer tests, precise section/call/feature inventories and strict compatibility JSON. Public source files contain only scripts, a source patch, names, hashes and metadata; the original ROM module/instruction bytes are not committed. No large local compilation, phone action, push or cloud dispatch was performed.
+Pre-experiment results are retained locally under `results/codegen-investigation/`, including all 41 dynamic pointer tests, precise section/call/feature inventories and strict compatibility JSON. Public source files contain only scripts, a source patch, names, hashes and metadata; the original ROM module/instruction bytes are not committed. That analysis session performed no large local compilation, phone action, push or cloud dispatch. The later approved run's evidence is under `results/actions-run-38626370150/`.

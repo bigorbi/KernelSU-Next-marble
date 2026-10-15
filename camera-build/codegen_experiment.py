@@ -40,9 +40,25 @@ PROBE = ci.OUT / "codegen-probe"
 INPUT = ci.WORK / "probe-input"
 FULL_FLAGS = (
     "-flto -fvisibility=default -fsanitize=cfi -fsanitize-cfi-cross-dso "
-    "-fno-sanitize-cfi-canonical-jump-tables -fno-sanitize-blacklist "
-    "-ftrap-function=__ubsan_handle_cfi_check_fail_abort"
+    "-fno-sanitize-cfi-canonical-jump-tables -fno-sanitize-blacklist"
 )
+
+
+def full_lto_flags(config):
+    # The pinned Makefile omits a custom trap handler under CONFIG_UBSAN_TRAP.
+    # Keep native trapping CFI and reject configurations outside this experiment.
+    required = {
+        "CONFIG_LTO": "y",
+        "CONFIG_LTO_CLANG": "y",
+        "CONFIG_LTO_CLANG_THIN": "y",
+        "CONFIG_CFI_CLANG": "y",
+        "CONFIG_CFI_PERMISSIVE": "n",
+        "CONFIG_UBSAN_TRAP": "y",
+    }
+    for key, value in required.items():
+        if config.get(key) != value:
+            raise ValueError(f"FullLTO probe requires {key}={value}")
+    return FULL_FLAGS
 
 
 def write(name, value):
@@ -322,6 +338,7 @@ def fix_relink():
 
 
 def full():
+    flags = full_lto_flags(ci.config_values(ci.KOUT / ".config"))
     camera = ci.MODULES / "qcom/opensource/camera-kernel"
     ci.run(
         ci.make_args(True)
@@ -344,7 +361,7 @@ def full():
         "TARGET_PRODUCT=marble",
         "KBUILD_EXTRA_SYMBOLS="
         + str(ci.MODULES / "qcom/opensource/mmrm-driver/Module.symvers"),
-        "CC_FLAGS_LTO=" + FULL_FLAGS,
+        "CC_FLAGS_LTO=" + flags,
         "V=1",
         "modules",
     ]
@@ -359,7 +376,8 @@ def full():
         {
             "boot_kernel_configuration_lto": "ThinLTO",
             "experimental_camera_lto": "FullLTO",
-            "explicit_CC_FLAGS_LTO": FULL_FLAGS,
+            "explicit_CC_FLAGS_LTO": flags,
+            "cfi_failure_mode": "native trap (CONFIG_UBSAN_TRAP=y)",
             "kernel_config_sha256": before,
             "source_changed": False,
             "helper_patch_sha256": ci.digest(ci.ROOT / "cfi-bti-parser.patch"),
