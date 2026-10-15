@@ -1,0 +1,97 @@
+{
+  "run": 38759893534,
+  "attempt": 1,
+  "commit": "764f0f33aeaa21c7715e7255304f43ce3da1151b",
+  "artifacts": {
+    "initrc-kernel-review": {
+      "id": 11986804057,
+      "sha256": "261c8a83307a4c47d69a30270775a731c371cdbceef31265559dbbec826582c1"
+    },
+    "initrc-kernel-build-logs": {
+      "id": 11987691290,
+      "sha256": "260cd59bb712c80a4eb5702a69f7f6138633bc1d9833ed91e7aff4e5058df8d5"
+    }
+  },
+  "products": {
+    "arch/arm64/boot/Image": {
+      "size": 41376356,
+      "sha256": "66361dd2c50eee46ca94379b53fdb1e16a086b42e065da806919ab5254d02647"
+    },
+    "vmlinux": {
+      "size": 574413856,
+      "sha256": "d0f4c73f8491d41e1427a25fa11de906cea88a7cbb98493029d8be2bf9957c9f"
+    },
+    "System.map": {
+      "size": 10369662,
+      "sha256": "98829667777a8bd9da4bb6c75e447208dbdb3810bc7671379170d68710fb30c2"
+    },
+    "Module.symvers": {
+      "size": 1035883,
+      "sha256": "1e772632d2d2b37ba92388df4e502aed3146e1410ac9d18b51f51dc17daac03f"
+    },
+    ".config": {
+      "size": 214083,
+      "sha256": "8a23283724515d0f8a2d91ca472c45824e69b711986f2d6070535d98b6668e50"
+    },
+    "include/generated/compile.h": {
+      "size": 455,
+      "sha256": "7273ed383a0f521784f3faf59e09aceb3436a56f1a0deba2ed13bb04b272dc1d"
+    },
+    "include/generated/autoconf.h": {
+      "size": 85361,
+      "sha256": "96c3f333b7982edfd5044f602dca3ffd00c7c6f914414765720f931f3a75364d"
+    },
+    "include/generated/utsrelease.h": {
+      "size": 46,
+      "sha256": "5bae34455fefe4d6159a470ae553735de388ac8dab8e869953e526597ceeae4e"
+    }
+  },
+  "reproduction_timestamp": "Thu Oct 15 15:31:51 UTC 2026",
+  "original_timestamp_was_implicit": true,
+  "kheaders_original_file_mtimes_unavailable": true,
+  "source_manifest": {
+    "kernel_sha": "5c59cd9a314704d30f3f66004183426da23410e1",
+    "modules_sha": "83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a",
+    "manager_sha": "9a8d3f03db9bd6d51410a6fd732d1db273692ca6",
+    "builder_sha": "3577f1d72a7c00c9248882ccac70ac3f15a97baa",
+    "susfs_sha": "ca7093a1a26f7911987110c34a1352d74cfb1d09",
+    "exploratory": true,
+    "kernel_release_expected": "5.10.269-Zois-17-5c59cd",
+    "workflow_sha": "764f0f33aeaa21c7715e7255304f43ce3da1151b",
+    "workflow_run": "38759893534",
+    "make_jobs": 2,
+    "thinlto_jobs": 2,
+    "manager_compiled_version": 33321,
+    "manager_git_count": 3321,
+    "manager_compiled_tag": "v3.4.0",
+    "historical_packaging_version": 33329,
+    "susfs_ref_requested": "ca7093a1a26f7911987110c34a1352d74cfb1d09",
+    "susfs_patch_sha256": "6e5b676c8e3a30f722d0fef20d131345c8889aa5e9bcf9aaeb29c77759ed621f",
+    "susfs_version": "v2.3.0",
+    "camera_patch_sha256": "cbc37f8d259b096cb7625e03e71c4593f4232d5b6d80e84df0449d53f8465d7d",
+    "initrc_patch_sha256": "80cbf9e049061489d7a63481ae22cffd32ca30e79ae61bb08b61179e7d229807",
+    "initrc_original_sha256": "e9e676e00d2de75885525f58b1c433ea1841c2bec41dc413170dea9f5cb99ad1",
+    "initrc_corrected_sha256": "6e560f1293606a36e5cd7d4e5ba9fbe4b4c9e21e0dc160a535801d3c3eae5b7b",
+    "unchanged_camera_sha256": "ddf6dd8e764ce8d99f69706c75b5f9aeb61d08542617c93ac0e6a02e170c08ea",
+    "kernel_cfi_helper_sha256": "a4a8eb23cdbca209fb8846d153e7cc03a5d438cd239c0cf7852f2206de25164e"
+  },
+  "required_checks": [
+    "all_baseline_exports_match",
+    "all_config_options_and_natural_release",
+    "cfi_dispatch_and_trapping_runtime_present",
+    "cfi_slowpath_export_crc_unchanged",
+    "compiled_callback_retains_thinlto_and_cfi",
+    "compiled_ksu_version_and_tag",
+    "embedded_config_matches_generated",
+    "official_kernel_imports_match",
+    "pinned_integration_and_only_reviewed_ksu_change",
+    "raw_arm64_image_magic"
+  ],
+  "integration_patch_sha256": "ddc1af8f2897cf47b83b79d234d2e074c93b18ee10897531355790e70cb33131",
+  "susfs_copied_inputs": {
+    "fs/susfs.c": "5521aa600f6df698e1d5e31df72e3557a36d33c161bd65dcafe5788fb56a7fa7",
+    "include/linux/susfs.h": "fafff787b8856bd37a6736c2f0bbc5a57fd1f36232be267936f892fb57bc5120",
+    "include/linux/susfs_def.h": "db7f98dcf8119a4eb5c45c05205b6c1065766047d6f803b0e86f3d14b1a251f0"
+  },
+  "reviewed_inputs_manifest_sha256": "8e56fb5aef3597f7cb8adf1e96576d28d821fc1735738fbd41b61d526a096593"
+}

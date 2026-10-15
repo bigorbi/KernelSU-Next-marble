@@ -1,0 +1,102 @@
+ffffffc008e4a7b0 <ksu_handle_vfs_fstat>:
+ffffffc008e4a7b0: d503233f     	paciasp
+ffffffc008e4a7b4: f800865e     	str	x30, [x18], #0x8
+ffffffc008e4a7b8: d10543ff     	sub	sp, sp, #0x150
+ffffffc008e4a7bc: a9117bfd     	stp	x29, x30, [sp, #0x110]
+ffffffc008e4a7c0: f90093fc     	str	x28, [sp, #0x120]
+ffffffc008e4a7c4: a91357f6     	stp	x22, x21, [sp, #0x130]
+ffffffc008e4a7c8: a9144ff4     	stp	x20, x19, [sp, #0x140]
+ffffffc008e4a7cc: 910443fd     	add	x29, sp, #0x110
+ffffffc008e4a7d0: d5384108     	mrs	x8, SP_EL0
+ffffffc008e4a7d4: aa0103f4     	mov	x20, x1
+ffffffc008e4a7d8: f942e908     	ldr	x8, [x8, #0x5d0]
+ffffffc008e4a7dc: f81f83a8     	stur	x8, [x29, #-0x8]
+ffffffc008e4a7e0: 97d920b8     	bl	0xffffffc008492ac0 <fget>
+ffffffc008e4a7e4: b40005e0     	cbz	x0, 0xffffffc008e4a8a0 <ksu_handle_vfs_fstat+0xf0>
+ffffffc008e4a7e8: aa0003f3     	mov	x19, x0
+ffffffc008e4a7ec: d5384108     	mrs	x8, SP_EL0
+ffffffc008e4a7f0: 900085a1     	adrp	x1, 0xffffffc009efe000 <.str.1.llvm.17500417649288868172+0x5f>
+ffffffc008e4a7f4: 9115b421     	add	x1, x1, #0x56d
+ffffffc008e4a7f8: 911e4100     	add	x0, x8, #0x790
+ffffffc008e4a7fc: 97c754dd     	bl	0xffffffc00801fb70 <strcmp>
+ffffffc008e4a800: 350004a0     	cbnz	w0, 0xffffffc008e4a894 <ksu_handle_vfs_fstat+0xe4>
+ffffffc008e4a804: f9400e68     	ldr	x8, [x19, #0x18]
+ffffffc008e4a808: b9400109     	ldr	w9, [x8]
+ffffffc008e4a80c: 120c0929     	and	w9, w9, #0x700000
+ffffffc008e4a810: 7150013f     	cmp	w9, #0x400, lsl #12 // =0x400000
+ffffffc008e4a814: 54000401     	b.ne	0xffffffc008e4a894 <ksu_handle_vfs_fstat+0xe4>
+ffffffc008e4a818: f9401500     	ldr	x0, [x8, #0x28]
+ffffffc008e4a81c: d00082a1     	adrp	x1, 0xffffffc009ea0000 <.str.309.llvm.10645026092222082665+0x28>
+ffffffc008e4a820: 9115ec21     	add	x1, x1, #0x57b
+ffffffc008e4a824: 97c754d3     	bl	0xffffffc00801fb70 <strcmp>
+ffffffc008e4a828: 35000360     	cbnz	w0, 0xffffffc008e4a894 <ksu_handle_vfs_fstat+0xe4>
+ffffffc008e4a82c: 91004260     	add	x0, x19, #0x10
+ffffffc008e4a830: 910023e1     	add	x1, sp, #0x8
+ffffffc008e4a834: 52802002     	mov	w2, #0x100      // =256
+ffffffc008e4a838: a90fffff     	stp	xzr, xzr, [sp, #0xf8]
+ffffffc008e4a83c: a90effff     	stp	xzr, xzr, [sp, #0xe8]
+ffffffc008e4a840: a90dffff     	stp	xzr, xzr, [sp, #0xd8]
+ffffffc008e4a844: a90cffff     	stp	xzr, xzr, [sp, #0xc8]
+ffffffc008e4a848: a90bffff     	stp	xzr, xzr, [sp, #0xb8]
+ffffffc008e4a84c: a90affff     	stp	xzr, xzr, [sp, #0xa8]
+ffffffc008e4a850: a909ffff     	stp	xzr, xzr, [sp, #0x98]
+ffffffc008e4a854: a908ffff     	stp	xzr, xzr, [sp, #0x88]
+ffffffc008e4a858: a907ffff     	stp	xzr, xzr, [sp, #0x78]
+ffffffc008e4a85c: a906ffff     	stp	xzr, xzr, [sp, #0x68]
+ffffffc008e4a860: a905ffff     	stp	xzr, xzr, [sp, #0x58]
+ffffffc008e4a864: a904ffff     	stp	xzr, xzr, [sp, #0x48]
+ffffffc008e4a868: a903ffff     	stp	xzr, xzr, [sp, #0x38]
+ffffffc008e4a86c: a902ffff     	stp	xzr, xzr, [sp, #0x28]
+ffffffc008e4a870: a901ffff     	stp	xzr, xzr, [sp, #0x18]
+ffffffc008e4a874: a900ffff     	stp	xzr, xzr, [sp, #0x8]
+ffffffc008e4a878: 97d9ba5a     	bl	0xffffffc0084b91e0 <d_path>
+ffffffc008e4a87c: b13ffc1f     	cmn	x0, #0xfff
+ffffffc008e4a880: 540000a2     	b.hs	0xffffffc008e4a894 <ksu_handle_vfs_fstat+0xe4>
+ffffffc008e4a884: f0008781     	adrp	x1, 0xffffffc009f3d000 <.str.3.llvm.4237161954254302383+0x87>
+ffffffc008e4a888: 91202c21     	add	x1, x1, #0x80b
+ffffffc008e4a88c: 97c754b9     	bl	0xffffffc00801fb70 <strcmp>
+ffffffc008e4a890: 34000220     	cbz	w0, 0xffffffc008e4a8d4 <ksu_handle_vfs_fstat+0x124>
+ffffffc008e4a894: aa1303e0     	mov	x0, x19
+ffffffc008e4a898: 52800021     	mov	w1, #0x1        // =1
+ffffffc008e4a89c: 97d850ed     	bl	0xffffffc00845ec50 <fput_many>
+ffffffc008e4a8a0: d5384108     	mrs	x8, SP_EL0
+ffffffc008e4a8a4: f942e908     	ldr	x8, [x8, #0x5d0]
+ffffffc008e4a8a8: f85f83a9     	ldur	x9, [x29, #-0x8]
+ffffffc008e4a8ac: eb09011f     	cmp	x8, x9
+ffffffc008e4a8b0: 54000441     	b.ne	0xffffffc008e4a938 <ksu_handle_vfs_fstat+0x188>
+ffffffc008e4a8b4: a9544ff4     	ldp	x20, x19, [sp, #0x140]
+ffffffc008e4a8b8: f94093fc     	ldr	x28, [sp, #0x120]
+ffffffc008e4a8bc: a95357f6     	ldp	x22, x21, [sp, #0x130]
+ffffffc008e4a8c0: a9517bfd     	ldp	x29, x30, [sp, #0x110]
+ffffffc008e4a8c4: 910543ff     	add	sp, sp, #0x150
+ffffffc008e4a8c8: f85f8e5e     	ldr	x30, [x18, #-0x8]!
+ffffffc008e4a8cc: d50323bf     	autiasp
+ffffffc008e4a8d0: d65f03c0     	ret
+ffffffc008e4a8d4: 9400001b     	bl	0xffffffc008e4a940 <load_module_rc_once>
+ffffffc008e4a8d8: f9400288     	ldr	x8, [x20]
+ffffffc008e4a8dc: b7f800e8     	tbnz	x8, #0x3f, 0xffffffc008e4a8f8 <ksu_handle_vfs_fstat+0x148>
+ffffffc008e4a8e0: b1058d08     	adds	x8, x8, #0x163
+ffffffc008e4a8e4: 540000a6     	b.vs	0xffffffc008e4a8f8 <ksu_handle_vfs_fstat+0x148>
+ffffffc008e4a8e8: f000c716     	adrp	x22, 0xffffffc00a72d000 <feature_handlers.llvm.9433297143358180469+0x12a00>
+ffffffc008e4a8ec: f94756c9     	ldr	x9, [x22, #0xea8]
+ffffffc008e4a8f0: ab090115     	adds	x21, x8, x9
+ffffffc008e4a8f4: 540000a7     	b.vc	0xffffffc008e4a908 <ksu_handle_vfs_fstat+0x158>
+ffffffc008e4a8f8: f0008460     	adrp	x0, 0xffffffc009ed9000 <.str.9.llvm.14593081666028428659+0x63a>
+ffffffc008e4a8fc: 911cf000     	add	x0, x0, #0x73c
+ffffffc008e4a900: 97ce750c     	bl	0xffffffc0081e7d30 <printk>
+ffffffc008e4a904: 17ffffe4     	b	0xffffffc008e4a894 <ksu_handle_vfs_fstat+0xe4>
+ffffffc008e4a908: 90008440     	adrp	x0, 0xffffffc009ed2000 <.str.245.llvm.10645026092222082665+0x27>
+ffffffc008e4a90c: 91164000     	add	x0, x0, #0x590
+ffffffc008e4a910: 97ce7508     	bl	0xffffffc0081e7d30 <printk>
+ffffffc008e4a914: f9400281     	ldr	x1, [x20]
+ffffffc008e4a918: f94756c4     	ldr	x4, [x22, #0xea8]
+ffffffc008e4a91c: d00082a0     	adrp	x0, 0xffffffc009ea0000 <.str.309.llvm.10645026092222082665+0x28>
+ffffffc008e4a920: 9113e400     	add	x0, x0, #0x4f9
+ffffffc008e4a924: aa1503e2     	mov	x2, x21
+ffffffc008e4a928: 52802c63     	mov	w3, #0x163      // =355
+ffffffc008e4a92c: 97ce7501     	bl	0xffffffc0081e7d30 <printk>
+ffffffc008e4a930: f9000295     	str	x21, [x20]
+ffffffc008e4a934: 17ffffd8     	b	0xffffffc008e4a894 <ksu_handle_vfs_fstat+0xe4>
+ffffffc008e4a938: 9410d452     	bl	0xffffffc00927fa80 <__stack_chk_fail>
+ffffffc008e4a93c: 00000000     	udf	#0x0
+

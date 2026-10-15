@@ -1,0 +1,99 @@
+#!/system/bin/sh
+# HELD OPERATOR PROCEDURE, not an installer. Never invoked by a workflow.
+# Default is read-only. The write branch requires separate future authorization.
+set -eu
+stop() { echo "STOP: $*" >&2; exit 1; }
+mode=${1:---check-only}
+case "$mode" in --check-only|--restore-boot-b-with-separate-authorization) ;;
+    *) stop 'Unsupported operation' ;; esac
+[ "$#" = 2 ] || stop 'Usage: sh restore-boot-b.sh.HELD MODE EXPECTED_CURRENT_FULL_SHA256'
+expected_current=$2
+[ "${#expected_current}" = 64 ] || stop 'Full expected CURRENT partition SHA-256 required'
+case "$expected_current" in *[!0-9a-f]*) stop 'Invalid current hash' ;; esac
+original=54ec14c10478432611138c5915876ce524360dd7c87433954abb2d3ec33d4268
+bytes=201326592
+source=/tmp/poco-f5-boot-b-rollback/boot_b.img
+[ "$(id -u)" = 0 ] || stop 'Recovery root required'
+[ -f /tmp/recovery.log ] || stop 'Expected recovery session evidence missing'
+[ -f "$source" ] && [ ! -L "$source" ] || stop 'Staged regular backup missing or symlinked'
+[ "$(readlink -f "$source")" = "$source" ] || stop 'Source parent redirects elsewhere'
+case "$(stat -f -c %T "$source")" in tmpfs|ramfs|rootfs) ;;
+    *) stop 'Staging must be recovery RAM, not a persistent partition' ;; esac
+[ "$(stat -c %s "$source")" = "$bytes" ] || stop 'Source size mismatch'
+[ "$(stat -c %u:%g:%a "$source")" = 0:0:400 ] || stop 'Source must be root:root mode 0400'
+hash() { result=$(sha256sum "$1") || stop 'Hash read failed'; printf '%s\n' "${result%% *}"; }
+[ "$(hash "$source")" = "$original" ] || stop 'Source full hash mismatch'
+resolve_label() {
+    label=$1
+    resolved=
+    for directory in /dev/block/by-name /dev/block/bootdevice/by-name; do
+        alias_path=$directory/$label
+        if [ -e "$alias_path" ] || [ -L "$alias_path" ]; then
+            [ -b "$alias_path" ] || stop "Non-block/dangling alias: $alias_path"
+            node=$(readlink -f "$alias_path")
+            [ -z "$resolved" ] || [ "$resolved" = "$node" ] || stop "Conflicting $label aliases"
+            resolved=$node
+        fi
+    done
+    [ -n "$resolved" ] && [ -b "$resolved" ] || stop "Missing explicit $label block label"
+    name=
+    while IFS='=' read -r key value; do
+        case "$key" in PARTNAME) [ -z "$name" ] || stop 'Duplicate PARTNAME'; name=$value ;; esac
+    done < "/sys/class/block/${resolved##*/}/uevent"
+    [ "$name" = "$label" ] || stop "sysfs partition label is not $label"
+    printf '%s\n' "$resolved"
+}
+identify() {
+    dest=$(resolve_label boot_b) || stop 'boot_b identity failed'
+    recovery=$(resolve_label recovery_b) || stop 'recovery_b identity failed'
+    [ "$dest" != "$recovery" ] || stop 'Recovery and boot resolve to same path'
+    dest_rdev=$(stat -Lc %t:%T "$dest")
+    [ "$dest_rdev" != "$(stat -Lc %t:%T "$recovery")" ] || stop 'Recovery aliases boot device'
+    [ "$(blockdev --getsize64 "$dest")" = "$bytes" ] || stop 'Destination full size mismatch'
+    boot_sys=/sys/class/block/${dest##*/}
+    recovery_sys=/sys/class/block/${recovery##*/}
+    [ "$(dirname "$(readlink -f "$boot_sys")")" = "$(dirname "$(readlink -f "$recovery_sys")")" ] ||
+        stop 'Unexpected disk topology; review instead of guessing'
+    boot_start=$(cat "$boot_sys/start")
+    boot_sectors=$(cat "$boot_sys/size")
+    recovery_start=$(cat "$recovery_sys/start")
+    recovery_sectors=$(cat "$recovery_sys/size")
+    for value in "$boot_start" "$boot_sectors" "$recovery_start" "$recovery_sectors"; do
+        case "$value" in ''|*[!0-9]*) stop 'Malformed partition geometry' ;; esac
+    done
+    [ "$((boot_sectors * 512))" = "$bytes" ] || stop 'sysfs boot size mismatch'
+    [ "$recovery_sectors" -gt 0 ] || stop 'Empty recovery partition'
+    if [ "$boot_start" -lt "$((recovery_start + recovery_sectors))" ] &&
+       [ "$recovery_start" -lt "$((boot_start + boot_sectors))" ]; then
+        stop 'Partition extents overlap'
+    fi
+    current=$(hash "$dest")
+}
+identify
+printf 'boot_b=%s rdev=%s bytes=%s full_sha256=%s\n' "$dest" "$dest_rdev" "$bytes" "$current"
+printf 'distinct_recovery_b=%s\n' "$recovery"
+if [ "$current" = "$original" ]; then
+    echo 'ALREADY_ORIGINAL: no partition write needed or performed'
+    exit 0
+fi
+[ "$current" = "$expected_current" ] || stop 'Current partition differs from explicitly approved full image hash'
+if [ "$mode" = --check-only ]; then
+    echo 'ROLLBACK_PREFLIGHT_PASS_NO_WRITE: restoration remains separately authorized'
+    exit 0
+fi
+[ "${BOOT_B_RESTORE_AUTHORIZED:-}" = RESTORE_ONLY_BOOT_B_FROM_VERIFIED_BACKUP ] || stop 'Separate explicit authorization required'
+[ -w "$dest" ] || stop 'Destination not reported writable'
+original_dest=$dest
+original_rdev=$dest_rdev
+# Revalidate labels, source and complete destination immediately before writing.
+[ "$(hash "$source")" = "$original" ] || stop 'Source changed since preflight'
+identify
+[ "$dest" = "$original_dest" ] && [ "$dest_rdev" = "$original_rdev" ] &&
+    [ "$current" = "$expected_current" ] || stop 'Destination identity/content changed'
+# This is the ONLY partition write. No fallback target, slot change or reboot.
+dd if="$source" of="$dest" bs=1048576 count=192 conv=fsync || stop 'Write error: stay in recovery; do not reboot or retry blindly'
+sync
+identify
+[ "$dest" = "$original_dest" ] && [ "$dest_rdev" = "$original_rdev" ] || stop 'Post-write destination identity changed'
+[ "$current" = "$original" ] || stop 'Full readback mismatch: stay in recovery'
+echo 'BOOT_B_EXACT_RESTORE_VERIFIED: original full partition including AVB restored; no reboot performed'

@@ -1,0 +1,122 @@
+name: Corrected init-RC raw ARM64 Image for review
+run-name: EXPLORATORY raw Image retention - exact hash gate - no boot image
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: camera-initrc-image-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      CAMERA_EXPLORATORY: 'true'
+      # Reproduction metadata; the actual new run time remains in GitHub provenance.
+      KBUILD_BUILD_TIMESTAMP: 'Thu Oct 15 15:31:51 UTC 2026'
+      KBUILD_BUILD_VERSION: '1'
+      CAMERA_SUSFS_REF: ca7093a1a26f7911987110c34a1352d74cfb1d09
+    steps:
+      - name: Checkout reviewed camera branch
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: 'false'
+      - name: Verify frozen reviewed build inputs and reproduction policy
+        run: python3 camera-build/initrc_image.py preflight
+      - name: Initialize closed publication gate
+        run: python3 camera-build/kernel_initrc_fix.py init
+      - name: Checkout historical builder reference
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/KernelSU-Next-marble
+          ref: 3577f1d72a7c00c9248882ccac70ac3f15a97baa
+          path: camera-work/builder
+          persist-credentials: 'false'
+      - name: Checkout exact kernel base
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/android_kernel_xiaomi_sm8450
+          ref: 5c59cd9a314704d30f3f66004183426da23410e1
+          path: camera-work/kernel
+          persist-credentials: 'false'
+      - name: Checkout pinned module header inputs only
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/android_kernel_xiaomi_sm8450-modules
+          ref: 83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a
+          path: camera-work/modules-baseline
+          persist-credentials: 'false'
+      - name: Install dependencies and bound runner memory
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends bc bison build-essential flex git curl kmod libelf-dev libssl-dev libncurses-dev rsync xz-utils zstd lz4 python3 python3-yaml python3-venv cpio
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
+          if [ ! -e /mnt/camera-initrc.swap ]; then
+            sudo fallocate -l 8G /mnt/camera-initrc.swap
+            sudo chmod 600 /mnt/camera-initrc.swap
+            sudo mkswap /mnt/camera-initrc.swap
+            sudo swapon /mnt/camera-initrc.swap
+          fi
+          df -h
+          free -h
+      - name: Install hash-pinned offline disassembly executor
+        run: |
+          python3 -m venv camera-work/audit-venv
+          camera-work/audit-venv/bin/python -m pip install --require-hashes --only-binary=:all: -r camera-build/requirements-cfi.txt
+      - name: Verify upstream LLVM 22.1.8 only
+        run: python3 camera-build/kernel_initrc_fix.py toolchain
+      - name: Integrate pinned KSU and SUSFS and test the minimal correction
+        run: python3 camera-build/kernel_initrc_fix.py sources
+      - name: Validate workflow and regression rules
+        run: python3 -m unittest discover -s camera-build/tests -p 'test_*.py' -v
+      - name: Require every running config option and natural release to match
+        run: python3 camera-build/kernel_initrc_fix.py config
+      - name: Compile genuine ThinLTO kernel and symbol table with two jobs
+        run: python3 camera-build/kernel_initrc_fix.py build
+      - name: Audit kernel ABI, security options, KSU and embedded configuration
+        run: python3 camera-build/kernel_initrc_fix.py audit
+      - name: Execute emitted fstat and CFI audit and require prior product hashes
+        id: image
+        run: camera-work/audit-venv/bin/python camera-build/initrc_image.py retain
+      - name: Finalize diagnostics and checksums even on failure
+        if: ${{ always() }}
+        run: python3 camera-build/initrc_image.py finalize
+      - name: Upload kernel diagnostic logs even on failure
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: initrc-image-build-logs
+          path: camera-output/logs/
+          if-no-files-found: warn
+          retention-days: '14'
+          compression-level: '1'
+      - name: Upload source changes, hashes, headers and ABI reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: initrc-image-audit
+          path: camera-output/reports/
+          if-no-files-found: warn
+          retention-days: '14'
+          compression-level: '6'
+      - name: Retain exact-reference raw Image for host review only
+        if: ${{ success() && steps.image.outputs.exact == 'true' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: initrc-exact-raw-Image-NOT-BOOT-APPROVAL
+          path: camera-output/reviewed-raw-image/
+          if-no-files-found: error
+          retention-days: '14'
+          compression-level: '1'
+      - name: Preserve differing binary as a distinct failed-reproduction diagnostic
+        if: ${{ failure() && steps.image.outcome == 'failure' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: initrc-HASH-MISMATCH-quarantine-NOT-REFERENCE-Image
+          path: camera-output/quarantined-raw-image/
+          if-no-files-found: warn
+          retention-days: '14'
+          compression-level: '1'
+      # No boot.img, repack, DTB, camera rebuild, flashable ZIP, release or device job.
+      # Hash mismatch fails the job; quarantine does not pass the identity gate.
