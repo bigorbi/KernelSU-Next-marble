@@ -1,0 +1,59 @@
+{
+  "repository": "pershoot/KernelSU-Next",
+  "commit": "9a8d3f03db9bd6d51410a6fd732d1db273692ca6",
+  "files": [
+    {
+      "path": "userspace/ksud/src/module.rs",
+      "git_blob_sha1": "db41b84e89a3629c689b302d1e8f2bef29a2a060",
+      "sha256": "6ee3d352d5f039df8de77a6f77cb29d43ef161348d4976103f3271f998ee1e11",
+      "url": "https://raw.githubusercontent.com/pershoot/KernelSU-Next/9a8d3f03db9bd6d51410a6fd732d1db273692ca6/userspace/ksud/src/module.rs"
+    },
+    {
+      "path": "userspace/ksud/src/init_event.rs",
+      "git_blob_sha1": "bbf4f37a77f8bdaa9f151562d40f170573baf35c",
+      "sha256": "129ff846173c4e3ea5b9bb9ef9b6528877611d965004d01d3638c23426655945",
+      "url": "https://raw.githubusercontent.com/pershoot/KernelSU-Next/9a8d3f03db9bd6d51410a6fd732d1db273692ca6/userspace/ksud/src/init_event.rs"
+    },
+    {
+      "path": "userspace/ksud/src/defs.rs",
+      "git_blob_sha1": "5cb8eaaabfeac4de632586e0690a283fb69c1edf",
+      "sha256": "fe18b80267f833355904731f7d962b1898bd2ee1102b63ed37e570dcafb193ee",
+      "url": "https://raw.githubusercontent.com/pershoot/KernelSU-Next/9a8d3f03db9bd6d51410a6fd732d1db273692ca6/userspace/ksud/src/defs.rs"
+    },
+    {
+      "path": "userspace/ksud/src/cli.rs",
+      "git_blob_sha1": "73d7ddf0700ca918fac570e9c3408925329aad05",
+      "sha256": "f63671d0127454cf070c37f79f2358ddc68ddfba8b27c81f6c66bb781e76981e",
+      "url": "https://raw.githubusercontent.com/pershoot/KernelSU-Next/9a8d3f03db9bd6d51410a6fd732d1db273692ca6/userspace/ksud/src/cli.rs"
+    },
+    {
+      "path": "kernel/runtime/ksud_integration.c",
+      "git_blob_sha1": "630c49cd542d20df2fe0849d8c544eccc8b18584",
+      "sha256": "e9e676e00d2de75885525f58b1c433ea1841c2bec41dc413170dea9f5cb99ad1",
+      "url": "https://raw.githubusercontent.com/pershoot/KernelSU-Next/9a8d3f03db9bd6d51410a6fd732d1db273692ca6/kernel/runtime/ksud_integration.c"
+    },
+    {
+      "path": "kernel/selinux/rules.c",
+      "git_blob_sha1": "872b99f0e47350d57437ea290c441966ea0537c6",
+      "sha256": "77c2524f51960825a582d399605fd6a317be41644915080bca777ff621918020",
+      "url": "https://raw.githubusercontent.com/pershoot/KernelSU-Next/9a8d3f03db9bd6d51410a6fd732d1db273692ca6/kernel/selinux/rules.c"
+    }
+  ],
+  "preflight": {
+    "path": "results/device-test/phone-preflight.txt",
+    "sha256": "bb426e67290a25392372716750aa7436e4244744e1573827a342813e734f2882",
+    "original_rc": {
+      "path": "/metadata/watchdog/ksu/modules.rc",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "uid": 0,
+      "gid": 0,
+      "mode": "0666",
+      "selinux": "u:object_r:metadata_file:s0"
+    },
+    "alternative_rc": "ABSENT"
+  },
+  "historical_writer_process": "NOT_PROVABLE_FROM_PREFLIGHT",
+  "phone_writes": false,
+  "device_guard_tested": false
+}

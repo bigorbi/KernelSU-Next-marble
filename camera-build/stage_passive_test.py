@@ -29,7 +29,8 @@ def stage(source, target):
     target.mkdir()  # Refuse to overwrite an existing staged test.
     files = Path(__file__).resolve().parent / 'device-test'
     for name in ['module.prop', 'skip_mount', 'manual-load.sh', 'rollback-recovery.sh',
-                 'arm-once.sh', 'one-shot-guard.rc.example', 'preflight-readonly.sh']:
+                 'arm-once.sh', 'one-shot-guard.rc.example', 'preflight-readonly.sh',
+                 'metadata-transaction.sh', 'early-guard.sh', 'one-shot-watchdog.rc.example']:
         shutil.copyfile(files / name, target / name)
         (target / name).chmod(0o755 if name.endswith('.sh') else 0o644)
     shutil.copytree(source, target / 'payload')

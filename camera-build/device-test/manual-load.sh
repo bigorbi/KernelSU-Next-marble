@@ -15,6 +15,12 @@ original=$(sha256sum /proc/1/root/vendor_dlkm/lib/modules/camera.ko); original=$
 [ "$(getprop sys.boot_completed)" = 1 ] || fail "Wait until boot completes"
 [ "$(getprop vendor.all.modules.ready)" = 1 ] || fail "Vendor module loader is not finished"
 grep -q '^blocklist camera$' /proc/1/root/vendor_dlkm/lib/modules/modules.blocklist || fail "Early camera-load suppression is unverified"
+ROOT=
+. "$MODDIR/metadata-transaction.sh"
+rc_paths || fail "Cannot verify retained original RC"
+rc_empty "$RC" || fail "Watchdog RC restoration is unverified; do not load"
+rc_empty "$BACKUP" || fail "Saved original RC is damaged; rollback first"
+[ "$(stat -c '%d:%i' "$BACKUP")" = "$(cat "$STATE/original.identity")" ] || fail "Saved RC identity differs"
 [ "$(getprop init.svc.cameraserver)" = stopped ] || fail "Stop cameraserver manually first"
 [ "$(getprop init.svc.vendor.camera-provider-2-7)" = stopped ] || fail "Stop vendor.camera-provider-2-7 manually first"
 while IFS= read -r name; do

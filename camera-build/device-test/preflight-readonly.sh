@@ -21,9 +21,10 @@ echo '=== early-hook collision and recovery paths ==='
 ls -ldZ /metadata /metadata/ksu /metadata/watchdog/ksu /data/adb/modules
 for rc in /metadata/ksu/modules.rc /metadata/watchdog/ksu/modules.rc; do
     if [ -e "$rc" ] || [ -L "$rc" ]; then
-        echo "EXISTING RC: $rc; do not overwrite"
+        echo "EXISTING RC: $rc; inspect before any authorized transaction"
         ls -lZ "$rc"
         sha256sum "$rc"
+        stat -c 'uid=%u gid=%g mode=%a size=%s links=%h device=%d inode=%i' "$rc"
     fi
 done
 echo '=== existing kernel flags ==='

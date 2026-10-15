@@ -35,23 +35,25 @@ The pinned KernelSU has a separate early init.rc hook that reads `/metadata/watc
 
 The staged KernelSU folder is passive: `module.prop`, `skip_mount`, manually invoked scripts, a non-executing `.rc.example` template and a checked candidate payload. There is **no** `service.sh`, `post-fs-data.sh`, system overlay or automatic insmod. No installation ZIP is prepared.
 
-`arm-once.sh`, invoked explicitly by the operator, is the only arming step. It requires the matching kernel, verified payload, exact reviewed loader/blocklist hashes, mounted metadata, and an explicit marker that OrangeFox metadata recovery was verified. It refuses **both existing metadata RC paths**, symlinks or an existing owned staging directory; it never merges or overwrites other modules' RCs.
+`arm-once.sh --authorize-empty-watchdog`, invoked explicitly only after separate authorization for phone writes, supports the exact empty watchdog RC discovered by the user's read-only preflight. It checks root:root, 0666, metadata SELinux label, empty hash/size, one initial link, protected parent, no fallback RC, no writer temporary file and no prior test state. It still requires matching kernel, verified payload, loader/blocklist hashes, mounted metadata and the recovery marker. No arbitrary nonempty configuration is supported.
 
-It copies the unchanged stock blocklist into `/metadata/marble-camera-kmd-test/`, adds only `blocklist camera`, preserves the vendor-file SELinux context, and flushes a complete RC before exclusive hard-link activation at `/metadata/ksu/modules.rc`. On the next boot, that RC first attempts to remove its own active pointer, then bind-mounts only the extra blocklist in init's mount namespace. It does not alter the underlying vendor_dlkm image and does not load any driver. The bind disappears on reboot. Removing the pointer normally limits suppression to one boot; a failed pointer removal is covered by explicit OrangeFox rollback.
+The [pinned-writer investigation and complete transaction](WATCHDOG-RC.md) explains why `ksud` creates this empty file. The transaction saves its **original inode**, preserving ownership, permissions, content and all xattrs, and exclusively publishes a reviewed guard. A blocking early helper restores the original empty RC **before** binding the camera-only blocklist. Foreign content or a failed restore prevents the bind. Normal daemon regeneration of an equivalent empty file is preserved. Backups/captured files remain available, and no shared RC is truncated or merged. The old absent-file v1 template is retained only for backwards-compatible recovery.
 
-Host replay of the actual loader filter removes **only camera**, reducing 288 eligible entries to 287 with all other entries/order preserved. Dependencies still must be observed loaded before manual insmod; the test never auto-loads a dependency chain. If the early hook or mount fails and stock camera loads, `manual-load.sh` refuses to continue. If an existing metadata RC prevents exclusive ownership, stop this installation design and review that collision; do not overwrite it or assume late overlays work.
+Host replay of the actual loader filter removes only camera, reducing 288 eligible entries to 287 with other entries/order preserved. Dependencies still must be observed loaded before manual insmod; the test never auto-loads a dependency chain. The early exec/domain/mount behavior requires a guard-only device rehearsal. If stock camera loads, `manual-load.sh` refuses to continue.
 
 Static dependency closure of the remaining load list plus first-stage modules reaches all 11 direct camera dependencies, without reaching camera itself. That supports a manual first load after normal boot; it is a prediction, not a substitute for the script's live `/sys/module` checks.
 
 ## Operator procedure after a candidate actually builds
 
-1. Run the read-only preflight through your already-authorized root shell, capturing output on the host:
+Phone-write steps below require separate explicit user authorization. Host staging and document preparation do not authorize copying, arming or loading on the device.
+
+1. The submitted read-only `phone-preflight.txt` is accepted for this investigation; no repeat was requested. If device state changes before the authorized test, an optional read-only recheck can be saved separately:
 
    ```sh
-   adb exec-out su -c 'sh -s' < camera-build/device-test/preflight-readonly.sh > ../results/device-test/phone-preflight.txt
+   adb exec-out su -c 'sh -s' < camera-build/device-test/preflight-readonly.sh > ../results/device-test/phone-preflight-recheck.txt
    ```
 
-   Require the expected marble kernel, original camera file hash, module loading not locked, reviewed loader hashes and no conflicting early metadata RC. This command is supplied for the operator; it was not run here. No phone is currently connected.
+   Require the expected marble kernel, original camera file hash, module loading not locked, reviewed loader hashes and the exact eligible empty watchdog RC with no fallback configuration. This command is supplied for the operator; it was not run here. This task reused the submitted report without contacting the phone.
 
 2. Stage the downloaded, passing cloud artifact on the **host**:
 
@@ -65,7 +67,7 @@ Static dependency closure of the remaining load list plus first-stage modules re
 
 4. The user already verified OrangeFox can recover `/data/adb/modules` after a bootloop. **Separately verify `/metadata` can be mounted and accessed read/write in OrangeFox**, rehearse the rollback below, then mark that verification with `METADATA-RECOVERY-VERIFIED` inside this test's module directory. Do not arm before this; deleting a userdata module folder alone is insufficient for an early metadata hook.
 
-5. In normal Android, explicitly invoke `su -c 'sh /data/adb/modules/marble-camera-kmd-test/arm-once.sh'`, then reboot manually. Do not install/update any other KernelSU modules between arming and reboot. The first controlled boot must show `/sys/module/camera` absent and no `camera` in `/proc/modules`; vendor loading must be complete, with the extra blocklist visible through `/proc/1/root/vendor_dlkm/lib/modules/modules.blocklist`. Check the active metadata RC pointer is gone. If any condition fails, stop; never unload stock camera.
+5. In normal Android, explicitly invoke `su -c 'sh /data/adb/modules/marble-camera-kmd-test/arm-once.sh --authorize-empty-watchdog'`, then reboot manually. Do not install/update/enable/disable modules in Manager or run `ksud initrc refresh` between arming and reboot. The first controlled boot must show `/sys/module/camera` absent and no `camera` in `/proc/modules`; vendor loading must be complete, with the extra blocklist visible through `/proc/1/root/vendor_dlkm/lib/modules/modules.blocklist`. Check the watchdog RC has returned to its original zero-byte hash, root:root 0666 and metadata SELinux label. Preserve `/metadata/marble-camera-kmd-test/original.rc` and its identity record. If any condition fails, stop; never unload stock camera.
 
 6. Close camera clients and manually stop `cameraserver` and `vendor.camera-provider-2-7` through root init controls. Then explicitly invoke `manual-load.sh`. It checks the running kernel, stock file identity, boot completion, global suppression, all direct dependencies and payload hashes before one plain `insmod`. It never uses force flags, rmmod, signature/CFI bypasses or retries. A loaded module/build-ID check follows. Any init/probe/loading failure ends this attempt: preserve logs and reboot to stock; do not load another driver in that boot.
 
@@ -75,6 +77,6 @@ No automatic loading at boot will be packaged without separate approval. The kno
 
 ## OrangeFox rollback and tested limits
 
-The completed [rollback design](DEVICE-ROLLBACK.md) covers the metadata pointer and the passive KernelSU folder. Host fault tests cover retained-pointer boot failure, pointer already absent, repeated rollback, foreign RC preservation and symlink refusal. These are actual script tests against simulated recovery filesystems, **not** a claim that the new camera test has been run on the device. Only userdata module recovery is already verified by the user; metadata access and one controlled guard boot remain device prerequisites.
+The completed [rollback design](DEVICE-ROLLBACK.md) covers restoration of the saved empty watchdog RC and disabling the passive KernelSU folder. Host fault tests cover interrupted capture/publication/restore, repeated rollback, preserved inode/attributes/xattrs, injected writer races, foreign RC preservation, symlink refusal and no bind after failed restoration. These are actual script tests against simulated recovery filesystems, **not** a claim that the new camera test has been run on the device. Only userdata module recovery is already verified by the user; metadata access and one controlled guard boot remain device prerequisites.
 
 No phone modifications, candidate compilation, dispatch or push occurred while preparing this workflow. A compiled patched camera.ko is pending approval to publish and run the new workflow once.

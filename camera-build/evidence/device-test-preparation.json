@@ -28,9 +28,9 @@
   "cloud_dispatch": "NOT_RUN",
   "phone_changes": false,
   "installation_zip_created": false,
-  "local_tests_passed": 35,
+  "local_tests_passed": 53,
   "userdata_module_recovery": "USER_VERIFIED",
-  "metadata_recovery": "NOT_YET_DEVICE_VERIFIED",
+  "metadata_recovery": "NOT_ESTABLISHED_BY_ANDROID_PREFLIGHT",
   "guard_boot": "NOT_YET_DEVICE_TESTED",
   "loading_evidence_sha256": {
     "vendor_modprobe.sh": "389d551584b569fab32321bbb6156ed000c1bab3c94b02f57bc23233039532b8",
@@ -74,5 +74,9 @@
     },
     "camera_in_remaining_dependency_closure": false,
     "limitation": "Static dependency reachability only; manual loader still requires each dependency present in /sys/module."
-  }
+  },
+  "watchdog_empty_rc_transaction": "HOST_VALIDATED_NOT_DEVICE_ARMED",
+  "watchdog_source_evidence": "camera-build/evidence/watchdog-rc-source.json",
+  "watchdog_rc_report": "camera-build/WATCHDOG-RC.md",
+  "phone_preflight": "USER_SUPPLIED_READ_ONLY_CHECKS_PASS_EMPTY_WATCHDOG_RC_IDENTIFIED"
 }

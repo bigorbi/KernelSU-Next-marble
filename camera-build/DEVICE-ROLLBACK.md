@@ -1,39 +1,48 @@
 # Reversible camera test rollback
 
-Applies only to module ID `marble-camera-kmd-test` and its exclusively owned one-shot hook. No boot/vendor/vendor_dlkm partition is written. The original ROM ZIP and module backup remain unchanged.
+This procedure restores the preflight's exact empty watchdog RC, disables only `marble-camera-kmd-test`, and leaves other configuration intact. No boot/vendor/vendor_dlkm partition, original camera module or userdata is replaced. Read the [transaction and source analysis](WATCHDOG-RC.md) before authorizing any phone writes. Nothing is installed or armed automatically.
 
 ## Normal Android
 
-1. Stop using the camera. Disable the passive test module in KernelSU, or create `/data/adb/modules/marble-camera-kmd-test/disable` through your root shell.
-2. Check whether `/metadata/ksu/modules.rc` still contains this test's tagged hook. Normally the early action already removed that pointer. If retained, remove it using the owned-file rollback procedure before reboot. Do not delete an unrelated RC or rely on the normal module-disable marker to neutralize metadata injection.
-3. Reboot normally. No camera driver is unloaded manually. The temporary blocklist bind disappears; with the owned RC pointer absent, the original early vendor loader loads the stock module again.
+1. Stop camera use. Invoke the reviewed `rollback-recovery.sh` manually through your KernelSU root shell. It creates this passive module's `disable` marker directly; **do not first use Manager's disable/uninstall operation**, which invokes ksud RC regeneration and could discard evidence.
+2. The script checks metadata is mounted, validates the saved empty inode/identity/owner/mode/label/content, and restores the original watchdog pathname only if absent or occupied by the exact owned guard. It never overwrites foreign or modified RC contents. An already equivalent empty RC from normal post-fs-data regeneration is preserved. Symlinks or changed backup metadata cause a stop.
+3. Require success and inspect the read-only checks below. Then reboot manually. The temporary blocklist bind disappears; the empty watchdog RC injects no action, so the stock early vendor loader loads the original camera. Never rmmod or force-unload the driver. Disabling the userdata folder alone does not neutralize an early metadata hook.
 
 ## OrangeFox after a bootloop
 
-1. Enter OrangeFox using the user's already-tested recovery route. Do not wipe or format userdata, flash a ROM/kernel or change slots.
-2. Decrypt/mount `/data` as previously verified. Also mount `/metadata`. In the recovery terminal, `mount /metadata` should use the recovery fstab; verify `/proc/mounts` actually lists `/metadata`. If it cannot be mounted, stop rather than treating an empty directory as successful rollback. Do not touch `/metadata/vold` or encryption keys.
-3. Open `/data/adb/modules/marble-camera-kmd-test`. Create its `disable` marker. The user may instead delete this exact module folder, as in the previously successful recovery, but **first handle the separate metadata hook**.
-4. Run the supplied recovery script manually:
+1. Enter OrangeFox by the user's already-verified recovery route. Do not wipe/format, flash any partition or change slots. Decrypt/mount `/data` as already verified. Also mount `/metadata` using the recovery fstab and confirm `/proc/mounts` lists it. An unmounted directory is not successful rollback. Do not touch vold or encryption keys.
+2. Retain the passive module folder until restoration is complete. Run its recovery script manually in the recovery terminal:
 
    ```sh
    sh /data/adb/modules/marble-camera-kmd-test/rollback-recovery.sh
    ```
 
-   If the folder was already deleted, copy `camera-build/device-test/rollback-recovery.sh` from this host to recovery's `/tmp` via recovery ADB, then explicitly run it there:
+   The supplied companion `metadata-transaction.sh` must be in the same directory. If the folder was already deleted or userdata cannot be decrypted, place the **two reviewed host files** into recovery's `/tmp` and run there:
 
    ```sh
-   adb push camera-build/device-test/rollback-recovery.sh /tmp/camera-rollback.sh
-   adb shell sh /tmp/camera-rollback.sh
+   adb push camera-build/device-test/rollback-recovery.sh /tmp/rollback-recovery.sh
+   adb push camera-build/device-test/metadata-transaction.sh /tmp/metadata-transaction.sh
+   adb shell sh /tmp/rollback-recovery.sh
    ```
 
-   These are operator commands, not actions executed by this project. The script checks metadata is mounted, disables only this test module if accessible, and removes an RC only if its entire contents match the known owned template. It checks both `/metadata/ksu/modules.rc` and the higher-priority `/metadata/watchdog/ksu/modules.rc`, preserves foreign content, refuses unexpected symlinks or modified tagged files, and does not reboot automatically.
-5. If an RC is reported changed, preserve it for inspection and do not blindly delete shared configuration. The arming method requires both RC paths initially absent. For the untouched test template, removal restores that exact prior state. If another tool modified a shared RC, review/restore its saved state instead; this design intentionally refuses to guess.
-6. Files under `/metadata/marble-camera-kmd-test/` are inert after the active RC pointer is gone. They may be retained for evidence or removed after confirming their exclusive ownership. Do not restore the test RC when cleaning up. No original image/module needs restoration because none was overwritten.
-7. Reboot **System** normally. Confirm the original `camera.ko` path still hashes to `a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1`, the original camera loads during early boot, and camera behavior returns to the pre-test state. A pathname hash alone cannot identify an already resident driver; the clean reboot and early-load evidence matter.
+   These are operator actions requiring authorization, not executed commands. The saved original lives on metadata, so deleting the userdata module does not delete that backup. Do not source an unreviewed helper or delete the metadata directory to fix a failure.
+3. Require script success. It restores zero-byte content, root:root 0666 and `u:object_r:metadata_file:s0`, using the saved original inode when restoration is needed. It retains the backup, identity record and any retired guard. It also retains legacy v1 exact-whole-file-hash rollback, checks both RC paths for symlinks/owned hooks, and refuses changed tagged files. A foreign fallback RC remains untouched. The script never reboots or unloads a module.
+4. Inspect these read-only outputs before rebooting:
 
-## What has actually been tested
+   ```sh
+   ls -ldZ /metadata/watchdog/ksu /metadata/watchdog/ksu/modules.rc
+   stat -c 'uid=%u gid=%g mode=%a size=%s device=%d inode=%i' /metadata/watchdog/ksu/modules.rc
+   sha256sum /metadata/watchdog/ksu/modules.rc
+   ls -lZ /metadata/ksu/modules.rc
+   ```
 
-- The user verified OrangeFox access to `/data/adb/modules` and successful boot recovery after deleting an unrelated KernelSU module.
-- Host execution of the real rollback script removes only the exact owned hook, marks this module disabled, preserves other files, succeeds when repeated, preserves foreign/modified RC content, and refuses symlinks.
-- The real vendor loader's filter was replayed without modprobe: only the `camera` entry is suppressed, with 287 other eligible entries unchanged.
-- The early hook, bind permission, OrangeFox metadata access and candidate load are **not yet device-tested**. Do not describe this design as device-validated until the operator completes that rehearsal. Do not rely on KernelSU volume-key safe mode for this independent early metadata hook.
+   Expect root:root 0666, size 0, SELinux metadata_file, empty SHA-256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`; the fallback was initially absent. If it has appeared, preserve and review it rather than deleting it. The saved `original.rc` must remain the recorded device/inode and unchanged attributes/content. A daemon-created equivalent active inode can differ and is deliberately preserved.
+5. A STOP/nonzero result requires review of current RC, backup and retired files. No forced restoration, shared-file deletion, manual merge or `ksud initrc refresh` is part of recovery. Concurrent writer data is preserved, possibly in the private capture slot; the script reports failure rather than guessing. Keep those files for inspection and do not reboot into a still-owned active guard.
+6. Once restoration is verified, leave the module disabled or delete only its userdata folder if desired. Retain `/metadata/marble-camera-kmd-test` for evidence initially; its files are inert once neither active RC contains the guard. Never restore `one-shot.rc` while cleaning up. There is no automatic cleanup command that risks deleting an unexamined backup.
+7. Reboot **System** manually. Verify a clean stock early camera load and the original path hash `a7ae49bcfb2332b267550cf0433f605bbb28cf66cef1378deb443ebe4983c4c1`. A pathname hash alone cannot identify an already resident driver; the clean reboot matters. Camera behavior should return to its pre-test state without clearing apps or userdata.
+
+## Verified scope
+
+Userdata module recovery is user-verified. Host tests execute real rename/link restoration, check inode/mode/owner/content/xattrs, cover interruptions and writer collisions, and retain the previous legacy rollback/symlink/foreign-file tests. A host execution of the early shell helper with a mock mount confirms failed restore never reaches a bind. Host owner/SELinux adapters and mocked sync/mount do not establish Android policy, mount namespace or power-loss behavior.
+
+OrangeFox `/metadata` access and required tools must be checked separately before arming unless already verified there: mounted filesystem, label inspection, same-filesystem rename and exclusive `ln -T`. The submitted Android preflight establishes neither recovery tool support nor actual early-hook execution. Do not rely on KernelSU volume-key safe mode for this independent early hook. No phone rollback or new camera test has been executed by this project.

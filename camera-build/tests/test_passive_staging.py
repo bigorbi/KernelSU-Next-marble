@@ -31,6 +31,8 @@ class PassiveStagingTests(unittest.TestCase):
             stage(source, dest)
             self.assertTrue((dest / 'skip_mount').exists())
             self.assertTrue((dest / 'arm-once.sh').exists())
+            for name in ['metadata-transaction.sh', 'early-guard.sh', 'one-shot-watchdog.rc.example']:
+                self.assertTrue((dest / name).is_file())
             self.assertFalse((dest / 'service.sh').exists())
             self.assertFalse((dest / 'post-fs-data.sh').exists())
             self.assertFalse(list(root.glob('*.zip')))

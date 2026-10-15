@@ -11,13 +11,27 @@ if [ -z "$ROOT" ]; then
 fi
 MOD="$ROOT/data/adb/modules/marble-camera-kmd-test"
 if [ -L "$MOD" ]; then echo "STOP: unexpected module symlink" >&2; exit 1; fi
+if [ -L "$MOD/disable" ]; then echo "STOP: unexpected disable marker symlink" >&2; exit 1; fi
 if [ -d "$MOD" ]; then touch "$MOD/disable"; fi
 for part in metadata metadata/ksu metadata/watchdog metadata/watchdog/ksu; do
     if [ -L "$ROOT/$part" ]; then echo "STOP: unexpected metadata symlink" >&2; exit 1; fi
 done
+STATE="$ROOT/metadata/marble-camera-kmd-test"
+if [ -L "$STATE" ]; then echo "STOP: unexpected state symlink" >&2; exit 1; fi
+if [ -d "$STATE" ]; then
+    LIBDIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+    [ -f "$LIBDIR/metadata-transaction.sh" ] && [ ! -L "$LIBDIR/metadata-transaction.sh" ] || { echo "STOP: supply the reviewed companion metadata-transaction.sh" >&2; exit 1; }
+    . "$LIBDIR/metadata-transaction.sh"
+    if [ -e "$STATE/original.identity" ] || [ -L "$STATE/original.identity" ] || [ -e "$STATE/original.rc" ] || [ -L "$STATE/original.rc" ]; then
+        rc_restore || exit 1
+    fi
+fi
 for name in metadata/ksu/modules.rc metadata/watchdog/ksu/modules.rc; do
     rc="$ROOT/$name"
     if [ -L "$rc" ]; then echo "STOP: unexpected RC symlink; inspect manually" >&2; exit 1; fi
+    if [ -f "$rc" ] && grep -q '^# marble-camera-kmd-test:one-shot:watchdog-v2$' "$rc"; then
+        echo "STOP: v2 RC still active; saved original/identity required; never delete it blindly" >&2; exit 1
+    fi
     if [ -f "$rc" ] && grep -q '^# marble-camera-kmd-test:one-shot:v1$' "$rc"; then
         digest=$(sha256sum "$rc"); digest=${digest%% *}
         [ "$digest" = "64467cebb57628cad34c11103041bb0092ceacde22e23de15a0cd45706c25031" ] || { echo "STOP: tagged RC contains changes; preserve it and review before reboot" >&2; exit 1; }
@@ -25,5 +39,5 @@ for name in metadata/ksu/modules.rc metadata/watchdog/ksu/modules.rc; do
         echo "Removed only owned test RC: /$name"
     fi
 done
-echo "Early test hook removed or absent; unrelated files preserved. Reboot normally to restore stock loading."
+echo "Early test hook restored/removed or absent; unrelated files preserved. Reboot normally to restore stock loading."
 echo "No driver was unloaded. Leave the passive test module disabled."
