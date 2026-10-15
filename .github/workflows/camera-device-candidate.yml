@@ -1,0 +1,117 @@
+name: Experimental marble camera KMD candidate
+run-name: EXPERIMENTAL patched FullLTO camera; manual test only
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: camera-device-candidate-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  camera:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      CAMERA_SUSFS_REF: ca7093a1a26f7911987110c34a1352d74cfb1d09
+      CAMERA_EXPLORATORY: 'true'
+      CAMERA_PRIVATE_REFERENCE: ''
+    steps:
+    - name: Checkout camera branch
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      with:
+        persist-credentials: 'false'
+    - name: Initialize diagnostic reports and validate inputs
+      run: python3 camera-build/ci.py init
+    - name: Authenticate corrected FullLTO baseline and real symbol tables
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: python3 camera-build/device_candidate.py inputs
+    - name: Checkout historical builder reference
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      with:
+        repository: aosp-pablo/KernelSU-Next-marble
+        ref: 3577f1d72a7c00c9248882ccac70ac3f15a97baa
+        path: camera-work/builder
+        persist-credentials: 'false'
+    - name: Checkout kernel base
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      with:
+        repository: aosp-pablo/android_kernel_xiaomi_sm8450
+        ref: 5c59cd9a314704d30f3f66004183426da23410e1
+        path: camera-work/kernel
+        persist-credentials: 'false'
+    - name: Checkout unmodified module sources
+      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      with:
+        repository: aosp-pablo/android_kernel_xiaomi_sm8450-modules
+        ref: 83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a
+        path: camera-work/modules-baseline
+        persist-credentials: 'false'
+    - name: Install dependencies and bound runner resource use
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends bc bison build-essential flex git curl jq kmod libelf-dev libssl-dev libncurses-dev rsync xz-utils zstd python3 python3-yaml python3-venv unzip zip cpio
+        sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
+        if [ ! -e /mnt/camera-build.swap ]; then
+          sudo fallocate -l 8G /mnt/camera-build.swap
+          sudo chmod 600 /mnt/camera-build.swap
+          sudo mkswap /mnt/camera-build.swap
+          sudo swapon /mnt/camera-build.swap
+        fi
+        df -h
+        free -h
+    - name: Verify and prepare both matching compilers
+      run: python3 camera-build/ci.py toolchains
+    - name: Prepare hash-pinned independent ARM64 CFI verifier
+      run: |-
+        python3 -m venv --system-site-packages camera-work/cfi-venv
+        camera-work/cfi-venv/bin/pip install --only-binary=:all: --require-hashes --ignore-installed -r camera-build/requirements-cfi.txt
+        echo "$PWD/camera-work/cfi-venv/bin" >> "$GITHUB_PATH"
+    - name: Test audit rules and closed compatibility gates
+      run: |
+        PATH="$PWD/camera-build/toolchains/android-r563880c/bin:$PWD/camera-build/toolchains/llvm-22.1.8/bin:$PATH" \
+          python3 -m unittest discover -s camera-build/tests -p 'test_*.py' -v
+    - name: Integrate same pinned manager and recorded exploratory SUSFS
+      run: python3 camera-build/ci.py sources
+    - name: Compare running configuration and natural kernel release
+      run: python3 camera-build/ci.py config
+    - name: Verify corrected reference ABI and CFI (section/code differences recorded)
+      run: python3 camera-build/device_candidate.py reference
+    - name: Prepare headers, fixed CFI helper and isolated reviewed KMD source
+      run: python3 camera-build/device_candidate.py prepare
+    - name: Compile patched ARM64 camera with corrected FullLTO flags
+      run: python3 camera-build/device_candidate.py build
+    - name: Verify CRCs, dependencies, CFI publications and executed type checks
+      id: candidate
+      run: python3 camera-build/device_candidate.py verify
+    - name: Finalize reports and checksums
+      if: ${{ always() }}
+      run: python3 camera-build/device_candidate.py finalize
+    - name: Upload build logs even on failure
+      if: ${{ always() }}
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: kernel-build-logs
+        path: camera-output/logs/
+        if-no-files-found: warn
+        retention-days: '14'
+        compression-level: '1'
+    - name: Upload candidate only after binary safety checks pass
+      if: ${{ success() && steps.candidate.outcome == 'success' }}
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: experimental-camera-candidate
+        path: camera-output/device-candidate/
+        if-no-files-found: warn
+        retention-days: '14'
+        compression-level: '1'
+    - name: Upload experimental reports even on failure
+      if: ${{ always() }}
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: experimental-camera-report
+        path: camera-output/reports/
+        if-no-files-found: warn
+        retention-days: '14'
+        compression-level: '1'

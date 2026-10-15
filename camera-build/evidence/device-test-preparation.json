@@ -1,0 +1,78 @@
+{
+  "baseline_run": 38701930741,
+  "baseline_sha256": "edf7665286ceb2ad1e2d932f2d4fb2f9cc74785185247212075558c020b0ec3b",
+  "checks": {
+    "elf_type": true,
+    "machine": true,
+    "compiler": true,
+    "modinfo": true,
+    "imports_crc": true,
+    "undefined": true,
+    "exports": true,
+    "absolute_export_crc": true,
+    "module_struct_size": true,
+    "signature_trailer": true,
+    "allocatable_sections": false,
+    "cfi_symbols": true,
+    "relocation_properties": true,
+    "cfi_type_dispatch_and_targets": true,
+    "compiled_source_equivalence": false,
+    "cfi_published_targets": true
+  },
+  "experimental_binary_eligible": true,
+  "installation_approved": false,
+  "patch_applies_to_pinned_sources": true,
+  "patch_sha256": "cbc37f8d259b096cb7625e03e71c4593f4232d5b6d80e84df0449d53f8465d7d",
+  "prepared_workflow": ".github/workflows/camera-device-candidate.yml",
+  "patched_module_status": "NOT_BUILT_AWAITING_DISPATCH_APPROVAL",
+  "cloud_dispatch": "NOT_RUN",
+  "phone_changes": false,
+  "installation_zip_created": false,
+  "local_tests_passed": 35,
+  "userdata_module_recovery": "USER_VERIFIED",
+  "metadata_recovery": "NOT_YET_DEVICE_VERIFIED",
+  "guard_boot": "NOT_YET_DEVICE_TESTED",
+  "loading_evidence_sha256": {
+    "vendor_modprobe.sh": "389d551584b569fab32321bbb6156ed000c1bab3c94b02f57bc23233039532b8",
+    "init.qti.kernel.rc": "d956b2fbbe77706f1df550639fe6f9c9ef5feffd05add66b432217870e0a20ae",
+    "vendor-blocklist": "1fd4e3e5e5a13920c2fa75f0cdb7149869ceef6c194f2516ce977c0e492cb706",
+    "ksu-rc-hook": "e9e676e00d2de75885525f58b1c433ea1841c2bec41dc413170dea9f5cb99ad1"
+  },
+  "load_filter": {
+    "only_removed_entry": "camera",
+    "original_filtered_count": 288,
+    "guard_filtered_count": 287,
+    "unchanged_order_and_other_entries": true,
+    "reverse_dependency_rows": 0
+  },
+  "dependencies": {
+    "direct_camera_dependencies": [
+      "leds-qti-flash",
+      "wl2866d_ldo",
+      "qcom-scm",
+      "mdt_loader",
+      "llcc-qcom",
+      "synx-driver",
+      "qcom_iommu_util",
+      "hwid",
+      "msm-mmrm",
+      "clk-qcom",
+      "mem_buf_dev"
+    ],
+    "predicted_available_without_camera": {
+      "leds-qti-flash": true,
+      "wl2866d_ldo": true,
+      "qcom-scm": true,
+      "mdt_loader": true,
+      "llcc-qcom": true,
+      "synx-driver": true,
+      "qcom_iommu_util": true,
+      "hwid": true,
+      "msm-mmrm": true,
+      "clk-qcom": true,
+      "mem_buf_dev": true
+    },
+    "camera_in_remaining_dependency_closure": false,
+    "limitation": "Static dependency reachability only; manual loader still requires each dependency present in /sys/module."
+  }
+}

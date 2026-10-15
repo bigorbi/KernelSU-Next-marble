@@ -1,0 +1,5 @@
+# marble-camera-kmd-test:one-shot:v1
+# DESIGN EXAMPLE ONLY; do not install before early-hook and recovery verification.
+on early-init
+    rm /metadata/ksu/modules.rc
+    mount none /metadata/marble-camera-kmd-test/modules.blocklist /vendor_dlkm/lib/modules/modules.blocklist bind

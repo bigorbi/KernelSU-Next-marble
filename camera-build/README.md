@@ -1,5 +1,7 @@
 # Camera baseline and gated correction
 
+**Current user-directed scope:** [controlled reversible device testing](DEVICE-TEST.md), using corrected FullLTO run 38701930741. The separate candidate workflow records section/code differences as accepted experimental risk while retaining ABI, CRC, dependency and CFI gates. Its patched build awaits dispatch approval. No phone installation or auto-loading ZIP has been prepared. The historical release workflow described below remains unchanged.
+
 This workflow attempts a real ARM64 kernel/MMRM/camera build on GitHub-hosted Ubuntu. It never flashes a phone, installs modules, changes CRCs/vermagic, creates a flashable package, or runs on push/PR events. The original upstream build workflow is unchanged.
 
 The pinned historical builder is used as a source reference, while the camera pipeline has its own independent scripts. The verifier and toolchain installer reuse the project's reconstruction logic, adapted to this repository layout. All substantial compilation happens on Actions; local `ci.py --dry-run` does not download, compile or write build output.

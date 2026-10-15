@@ -1,0 +1,80 @@
+# Controlled marble camera KMD test
+
+**Prepared, not dispatched or installed.** The user authorizes experimental device development and accepts temporary bootloop risk. Exact allocated-section and compiled-code equivalence are diagnostics for this experiment. Kernel vermagic, imported/exported CRCs, dependency identity, CFI type/target checks, BTI entry publication and native CFI failure handling remain mandatory. This is separate from release certification; the existing release workflow/policy is unchanged.
+
+## Candidate build awaiting approval
+
+Reference: [run 38701930741](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38701930741), commit `10ce3d0d89d17de0f7c8853a15acda6ad9822172`. Its corrected FullLTO `camera.ko` SHA-256 is `edf7665286ceb2ad1e2d932f2d4fb2f9cc74785185247212075558c020b0ec3b`. It passes all 14 retained original-module checks, including strict original CFI fingerprints and 714 valid published callback fields. Only section/code equivalence fail. Verified artifact ZIP SHA-256: `96ba0a6d7851c4480c3f61f55674fa939b65653cfbe792a52f41cb11387e37dc`, artifact ID 11957367080.
+
+New manual workflow: `.github/workflows/camera-device-candidate.yml`. It authenticates that baseline and the real kernel/MMRM tables from the first build, regenerates headers, applies the verified BTI helper correction, clones a separate module source tree at `83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a`, applies the complete reviewed `camera-fix.patch` (SHA-256 `cbc37f8d259b096cb7625e03e71c4593f4232d5b6d80e84df0449d53f8465d7d`), repeats its existing source-extracted boundary/ownership tests on the runner, and compiles one patched FullLTO module with Android Clang r563880c/build 14054515. No full kernel/MMRM rebuild or substantial local compilation occurs.
+
+Kernel `5c59cd9a314704d30f3f66004183426da23410e1`, KernelSU `9a8d3f03db9bd6d51410a6fd732d1db273692ca6`, exploratory SUSFS `ca7093a1a26f7911987110c34a1352d74cfb1d09`, LLVM 22.1.8 header preparation, natural release `5.10.269-Zois-17-5c59cd`, and all running config values remain pinned. FullLTO retains cross-DSO CFI/noncanonical tables and native trapping under `CONFIG_UBSAN_TRAP=y`; no custom trap-handler flag is added.
+
+Before publishing `experimental-camera-candidate`, the workflow requires:
+
+- Matching ELF architecture, compiler identity, vermagic/modinfo/dependencies, all import/export CRCs, undefined symbols, module structure size and signature format.
+- The complete original publication map at valid BTI/B entries; unchanged CFI symbol surface and ARM64 security-property notes.
+- Actual Unicorn execution of both baseline and patched dispatchers, comparing every accepted type/destination group and negative wrong-type/alignment checks.
+- An unchanged native `__cfi_check_fail` body, no unsupported runtime relocation kinds, and confirmation that the intended KMD helper actually changed in the compiled module.
+
+Counts/layout and unrelated compiled-function differences are recorded experimental risk, not vetoes. The candidate carries its audit, source manifest, patch, hash inventory, dependency list and build-ID note. Any concrete ABI/CFI failure prevents candidate publication; logs/reports still upload. There are no phone commands or installation ZIPs in the workflow. Existing artifact inputs expire October 28/29; verified local copies are retained, and expired cloud inputs must be deliberately replaced rather than silently skipped.
+
+## Actual stock loading: ordinary overlays are too late
+
+These facts come from read-only extraction of the local official ROM, with extracted vendor/vendor_boot images checked against their payload partition hashes:
+
+1. `/vendor/etc/init/hw/init.qti.kernel.rc` starts `vendor.modprobe` on **early-init**. Its `on init` waits for `vendor.all.modules.ready=1`.
+2. `/vendor/bin/vendor_modprobe.sh` chooses `/vendor_dlkm/lib/modules` before `/vendor/lib/modules`, reads `modules.blocklist`, filters `modules.load`, and invokes `/vendor/bin/modprobe -b -s -d ... -a ...`. Remaining entries are launched in parallel, then waited for.
+3. `camera` is in the load list and absent from the original blocklist. `/vendor/lib/modules` is a symlink to `/vendor_dlkm/lib/modules`. No other modules.dep row depends on `camera.ko`.
+4. Both vendor_boot ramdisk fragments were inspected: neither contains `camera.ko`. The fstab first-stage mounts vendor_dlkm and `/metadata`; `/data` is late-mounted and encrypted.
+5. The pinned KernelSU's normal module scripts run at **post-fs-data**, later than that loader. A normal file overlay cannot replace a driver already resident in kernel memory. Neither copying a new pathname nor restarting the camera provider replaces it.
+
+The pinned KernelSU has a separate early init.rc hook that reads `/metadata/watchdog/ksu/modules.rc` preferentially, otherwise `/metadata/ksu/modules.rc`, and appends its contents while init parses the primary init.rc. The inspected file matches pinned Git blob `630c49cd542d20df2fe0849d8c544eccc8b18584`. [AOSP init's import parser](https://android.googlesource.com/platform/system/core/+/refs/heads/main/init/import_parser.cpp) defers imports until the containing file finishes, supporting an appended early action preceding imported vendor actions. [Init's documented ordering](https://android.googlesource.com/platform/system/core/+/refs/heads/main/init/README.md) follows parse order. This establishes a plausible early insertion point; the installed device's actual hook, SELinux permissions and ordering still require a guard-only boot. Do not assume successful suppression from static source alone.
+
+## Proposed reversible KernelSU method: manual driver load first
+
+The staged KernelSU folder is passive: `module.prop`, `skip_mount`, manually invoked scripts, a non-executing `.rc.example` template and a checked candidate payload. There is **no** `service.sh`, `post-fs-data.sh`, system overlay or automatic insmod. No installation ZIP is prepared.
+
+`arm-once.sh`, invoked explicitly by the operator, is the only arming step. It requires the matching kernel, verified payload, exact reviewed loader/blocklist hashes, mounted metadata, and an explicit marker that OrangeFox metadata recovery was verified. It refuses **both existing metadata RC paths**, symlinks or an existing owned staging directory; it never merges or overwrites other modules' RCs.
+
+It copies the unchanged stock blocklist into `/metadata/marble-camera-kmd-test/`, adds only `blocklist camera`, preserves the vendor-file SELinux context, and flushes a complete RC before exclusive hard-link activation at `/metadata/ksu/modules.rc`. On the next boot, that RC first attempts to remove its own active pointer, then bind-mounts only the extra blocklist in init's mount namespace. It does not alter the underlying vendor_dlkm image and does not load any driver. The bind disappears on reboot. Removing the pointer normally limits suppression to one boot; a failed pointer removal is covered by explicit OrangeFox rollback.
+
+Host replay of the actual loader filter removes **only camera**, reducing 288 eligible entries to 287 with all other entries/order preserved. Dependencies still must be observed loaded before manual insmod; the test never auto-loads a dependency chain. If the early hook or mount fails and stock camera loads, `manual-load.sh` refuses to continue. If an existing metadata RC prevents exclusive ownership, stop this installation design and review that collision; do not overwrite it or assume late overlays work.
+
+Static dependency closure of the remaining load list plus first-stage modules reaches all 11 direct camera dependencies, without reaching camera itself. That supports a manual first load after normal boot; it is a prediction, not a substitute for the script's live `/sys/module` checks.
+
+## Operator procedure after a candidate actually builds
+
+1. Run the read-only preflight through your already-authorized root shell, capturing output on the host:
+
+   ```sh
+   adb exec-out su -c 'sh -s' < camera-build/device-test/preflight-readonly.sh > ../results/device-test/phone-preflight.txt
+   ```
+
+   Require the expected marble kernel, original camera file hash, module loading not locked, reviewed loader hashes and no conflicting early metadata RC. This command is supplied for the operator; it was not run here. No phone is currently connected.
+
+2. Stage the downloaded, passing cloud artifact on the **host**:
+
+   ```sh
+   python3 camera-build/stage_passive_test.py /path/to/experimental-camera-candidate /new/host/path/marble-camera-kmd-test
+   ```
+
+   The helper refuses failed/changed audit receipts, modified payloads, unlisted files or an existing destination. It creates a directory only, never a ZIP or phone installation.
+
+3. After inspecting it, manually copy that passive folder into `/data/adb/modules/marble-camera-kmd-test` using KernelSU root, preserving an existing directory by refusing to overwrite it. Set root ownership, script modes 0755 and ordinary files 0644. Its presence alone does not load anything. KernelSU can display/disable this registered module.
+
+4. The user already verified OrangeFox can recover `/data/adb/modules` after a bootloop. **Separately verify `/metadata` can be mounted and accessed read/write in OrangeFox**, rehearse the rollback below, then mark that verification with `METADATA-RECOVERY-VERIFIED` inside this test's module directory. Do not arm before this; deleting a userdata module folder alone is insufficient for an early metadata hook.
+
+5. In normal Android, explicitly invoke `su -c 'sh /data/adb/modules/marble-camera-kmd-test/arm-once.sh'`, then reboot manually. Do not install/update any other KernelSU modules between arming and reboot. The first controlled boot must show `/sys/module/camera` absent and no `camera` in `/proc/modules`; vendor loading must be complete, with the extra blocklist visible through `/proc/1/root/vendor_dlkm/lib/modules/modules.blocklist`. Check the active metadata RC pointer is gone. If any condition fails, stop; never unload stock camera.
+
+6. Close camera clients and manually stop `cameraserver` and `vendor.camera-provider-2-7` through root init controls. Then explicitly invoke `manual-load.sh`. It checks the running kernel, stock file identity, boot completion, global suppression, all direct dependencies and payload hashes before one plain `insmod`. It never uses force flags, rmmod, signature/CFI bypasses or retries. A loaded module/build-ID check follows. Any init/probe/loading failure ends this attempt: preserve logs and reboot to stock; do not load another driver in that boot.
+
+7. Save dmesg, then manually restart `vendor.camera-provider-2-7` and `cameraserver`. Test one short rear-camera preview, front camera, switching and video. Save kernel/provider logs and the candidate hash. Stop at the first CFI, memory-lifetime, Oops or recurring camera failure; rollback by reboot rather than unloading. Do not clear app/user data. A successful insmod alone is not a working-camera result.
+
+No automatic loading at boot will be packaged without separate approval. The known historical SUSFS attribution and existing request error-cleanup leak risks remain documented; this patch does not claim to solve all camera lifetime/concurrency defects or change reference ownership. Cold loading with no resident camera avoids unloading active callbacks. Repeated initialization after a failed load and active-driver removal are outside this test method.
+
+## OrangeFox rollback and tested limits
+
+The completed [rollback design](DEVICE-ROLLBACK.md) covers the metadata pointer and the passive KernelSU folder. Host fault tests cover retained-pointer boot failure, pointer already absent, repeated rollback, foreign RC preservation and symlink refusal. These are actual script tests against simulated recovery filesystems, **not** a claim that the new camera test has been run on the device. Only userdata module recovery is already verified by the user; metadata access and one controlled guard boot remain device prerequisites.
+
+No phone modifications, candidate compilation, dispatch or push occurred while preparing this workflow. A compiled patched camera.ko is pending approval to publish and run the new workflow once.

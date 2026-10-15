@@ -1,0 +1,6 @@
+id=marble-camera-kmd-test
+name=Marble camera KMD manual test
+version=experimental-1
+versionCode=1
+author=Camera repair investigation
+description=Passive staging only. No boot loader or overlay. Manual cold-load requires verified stock-load suppression.
