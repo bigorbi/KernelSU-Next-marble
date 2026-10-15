@@ -24,13 +24,13 @@
   "patch_applies_to_pinned_sources": true,
   "patch_sha256": "cbc37f8d259b096cb7625e03e71c4593f4232d5b6d80e84df0449d53f8465d7d",
   "prepared_workflow": ".github/workflows/camera-device-candidate.yml",
-  "patched_module_status": "NOT_BUILT_AWAITING_DISPATCH_APPROVAL",
-  "cloud_dispatch": "NOT_RUN",
+  "patched_module_status": "BUILT_VERIFIED_HOST_STAGED_RUN_38728953993",
+  "cloud_dispatch": "EXISTING_USER_RUN_38728953993_REUSED_NO_NEW_DISPATCH",
   "phone_changes": false,
   "installation_zip_created": false,
-  "local_tests_passed": 53,
+  "local_tests_passed": 57,
   "userdata_module_recovery": "USER_VERIFIED",
-  "metadata_recovery": "NOT_ESTABLISHED_BY_ANDROID_PREFLIGHT",
+  "metadata_recovery": "USER_VERIFIED_EXT4_RW_ROOT_TOOLS_RC_CONTEXT_AND_DATA",
   "guard_boot": "NOT_YET_DEVICE_TESTED",
   "loading_evidence_sha256": {
     "vendor_modprobe.sh": "389d551584b569fab32321bbb6156ed000c1bab3c94b02f57bc23233039532b8",
@@ -78,5 +78,11 @@
   "watchdog_empty_rc_transaction": "HOST_VALIDATED_NOT_DEVICE_ARMED",
   "watchdog_source_evidence": "camera-build/evidence/watchdog-rc-source.json",
   "watchdog_rc_report": "camera-build/WATCHDOG-RC.md",
-  "phone_preflight": "USER_SUPPLIED_READ_ONLY_CHECKS_PASS_EMPTY_WATCHDOG_RC_IDENTIFIED"
+  "phone_preflight": "USER_SUPPLIED_READ_ONLY_CHECKS_PASS_EMPTY_WATCHDOG_RC_IDENTIFIED",
+  "candidate_run": 38728953993,
+  "candidate_sha256": "ddf6dd8e764ce8d99f69706c75b5f9aeb61d08542617c93ac0e6a02e170c08ea",
+  "metadata_filesystem_rehearsal": "PREPARED_NOT_RUN_ON_PHONE",
+  "operator_guide": "camera-build/OPERATOR-38728953993.md",
+  "guard_boot_authorized": false,
+  "driver_load_authorized": false
 }

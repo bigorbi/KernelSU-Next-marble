@@ -1,0 +1,80 @@
+{
+  "artifacts": {
+    "run_id": 38728953993,
+    "head_sha": "709ea0c3f12c8d6927906a35a4cbb3db86ab2b75",
+    "artifacts": [
+      {
+        "name": "experimental-camera-report",
+        "artifact_id": 11969404375,
+        "archive_sha256": "0139cb590390779a2a1303d4fff90be733e506939966b5fefdd2f60d5dffd8ad",
+        "verified": true
+      },
+      {
+        "name": "kernel-build-logs",
+        "artifact_id": 11969244505,
+        "archive_sha256": "9cdad21d91f30c69e44df0ff94770f83f65e794b99a4ccce1852ee4a542b923c",
+        "verified": true
+      },
+      {
+        "name": "experimental-camera-candidate",
+        "artifact_id": 11969229738,
+        "archive_sha256": "e0de2fb98d3ac12bfc48dd3c315f1f76c2a0055ac275e67c92b228923f74225a",
+        "verified": true
+      }
+    ]
+  },
+  "verification": {
+    "candidate_sha256": "ddf6dd8e764ce8d99f69706c75b5f9aeb61d08542617c93ac0e6a02e170c08ea",
+    "cloud_required_checks": {
+      "elf_type": true,
+      "machine": true,
+      "compiler": true,
+      "modinfo": true,
+      "imports_crc": true,
+      "undefined": true,
+      "exports": true,
+      "absolute_export_crc": true,
+      "module_struct_size": true,
+      "signature_trailer": true,
+      "cfi_symbols": true,
+      "cfi_published_targets": true,
+      "supported_runtime_relocations": true,
+      "native_cfi_failure_body": true,
+      "kmd_patch_compiled": true,
+      "arm64_security_properties": true,
+      "cfi_type_target_groups": true
+    },
+    "host_metadata_checks": {
+      "elf_type": true,
+      "machine": true,
+      "compiler": true,
+      "modinfo": true,
+      "imports_crc": true,
+      "undefined": true,
+      "exports": true,
+      "absolute_export_crc": true,
+      "module_struct_size": true,
+      "signature_trailer": true
+    },
+    "all_artifact_internal_hashes_verified": true,
+    "patch_verified": true,
+    "cfi_publications": 714,
+    "cfi_entries": 1094,
+    "invalid_cfi_publications": 0,
+    "negative_cfi_tests_in_cloud": 594,
+    "vermagic": [
+      "vermagic=5.10.269-Zois-17-5c59cd SMP preempt mod_unload modversions aarch64"
+    ],
+    "deps": [
+      "depends=leds-qti-flash,wl2866d_ldo,qcom-scm,mdt_loader,llcc-qcom,synx-driver,qcom_iommu_util,hwid,msm-mmrm,clk-qcom,mem_buf_dev"
+    ],
+    "release_gate_passed": false,
+    "installation_approved": false,
+    "phone_changes": false
+  },
+  "orangefox_recovery": "USER_VERIFIED_METADATA_EXT4_RW_ROOT_TOOLS_CONTEXT_DATA",
+  "disposable_rehearsal": "PREPARED_NOT_RUN_ON_PHONE",
+  "guard_boot": "NOT_AUTHORIZED_NOT_RUN",
+  "driver_load": "NOT_AUTHORIZED_NOT_RUN",
+  "phone_writes_by_agent": false
+}

@@ -1,8 +1,10 @@
 # Controlled marble camera KMD test
 
-**Prepared, not dispatched or installed.** The user authorizes experimental device development and accepts temporary bootloop risk. Exact allocated-section and compiled-code equivalence are diagnostics for this experiment. Kernel vermagic, imported/exported CRCs, dependency identity, CFI type/target checks, BTI entry publication and native CFI failure handling remain mandatory. This is separate from release certification; the existing release workflow/policy is unchanged.
+**Candidate built and host-staged; not installed or armed by the agent.** The user authorizes experimental device development and accepts temporary bootloop risk. Exact allocated-section and compiled-code equivalence are diagnostics for this experiment. Kernel vermagic, imported/exported CRCs, dependency identity, CFI type/target checks, BTI entry publication and native CFI failure handling remain mandatory. This is separate from release certification; the existing release workflow/policy is unchanged.
 
-## Candidate build awaiting approval
+## Candidate build completed; guard test awaiting authorization
+
+Current candidate: [run 38728953993](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38728953993), SHA-256 `ddf6dd8e764ce8d99f69706c75b5f9aeb61d08542617c93ac0e6a02e170c08ea`. Its 17 required cloud safety checks pass; host metadata/CRCs and 714 CFI publications were independently rechecked. See the exact [operator commands](OPERATOR-38728953993.md); arming and reboot are isolated in a [held guide](HELD-GUARD-38728953993.md) requiring separate authorization.
 
 Reference: [run 38701930741](https://github.com/bigorbi/KernelSU-Next-marble/actions/runs/38701930741), commit `10ce3d0d89d17de0f7c8853a15acda6ad9822172`. Its corrected FullLTO `camera.ko` SHA-256 is `edf7665286ceb2ad1e2d932f2d4fb2f9cc74785185247212075558c020b0ec3b`. It passes all 14 retained original-module checks, including strict original CFI fingerprints and 714 valid published callback fields. Only section/code equivalence fail. Verified artifact ZIP SHA-256: `96ba0a6d7851c4480c3f61f55674fa939b65653cfbe792a52f41cb11387e37dc`, artifact ID 11957367080.
 
@@ -50,7 +52,7 @@ Phone-write steps below require separate explicit user authorization. Host stagi
 1. The submitted read-only `phone-preflight.txt` is accepted for this investigation; no repeat was requested. If device state changes before the authorized test, an optional read-only recheck can be saved separately:
 
    ```sh
-   adb exec-out su -c 'sh -s' < camera-build/device-test/preflight-readonly.sh > ../results/device-test/phone-preflight-recheck.txt
+   adb exec-out "su -c 'sh -s'" < camera-build/device-test/preflight-readonly.sh > ../results/device-test/phone-preflight-recheck.txt
    ```
 
    Require the expected marble kernel, original camera file hash, module loading not locked, reviewed loader hashes and the exact eligible empty watchdog RC with no fallback configuration. This command is supplied for the operator; it was not run here. This task reused the submitted report without contacting the phone.
@@ -65,7 +67,7 @@ Phone-write steps below require separate explicit user authorization. Host stagi
 
 3. After inspecting it, manually copy that passive folder into `/data/adb/modules/marble-camera-kmd-test` using KernelSU root, preserving an existing directory by refusing to overwrite it. Set root ownership, script modes 0755 and ordinary files 0644. Its presence alone does not load anything. KernelSU can display/disable this registered module.
 
-4. The user already verified OrangeFox can recover `/data/adb/modules` after a bootloop. **Separately verify `/metadata` can be mounted and accessed read/write in OrangeFox**, rehearse the rollback below, then mark that verification with `METADATA-RECOVERY-VERIFIED` inside this test's module directory. Do not arm before this; deleting a userdata module folder alone is insufficient for an early metadata hook.
+4. The user has now verified OrangeFox root, metadata ext4 read/write, tool availability, exact empty RC attributes and userdata module access. Run the disposable filesystem rehearsal in the operator guide; after PASS the optional passive-copy commands create `METADATA-RECOVERY-VERIFIED`. Do not arm before that operation-level rehearsal. No generic recovery verification needs repeating.
 
 5. In normal Android, explicitly invoke `su -c 'sh /data/adb/modules/marble-camera-kmd-test/arm-once.sh --authorize-empty-watchdog'`, then reboot manually. Do not install/update/enable/disable modules in Manager or run `ksud initrc refresh` between arming and reboot. The first controlled boot must show `/sys/module/camera` absent and no `camera` in `/proc/modules`; vendor loading must be complete, with the extra blocklist visible through `/proc/1/root/vendor_dlkm/lib/modules/modules.blocklist`. Check the watchdog RC has returned to its original zero-byte hash, root:root 0666 and metadata SELinux label. Preserve `/metadata/marble-camera-kmd-test/original.rc` and its identity record. If any condition fails, stop; never unload stock camera.
 
@@ -77,6 +79,6 @@ No automatic loading at boot will be packaged without separate approval. The kno
 
 ## OrangeFox rollback and tested limits
 
-The completed [rollback design](DEVICE-ROLLBACK.md) covers restoration of the saved empty watchdog RC and disabling the passive KernelSU folder. Host fault tests cover interrupted capture/publication/restore, repeated rollback, preserved inode/attributes/xattrs, injected writer races, foreign RC preservation, symlink refusal and no bind after failed restoration. These are actual script tests against simulated recovery filesystems, **not** a claim that the new camera test has been run on the device. Only userdata module recovery is already verified by the user; metadata access and one controlled guard boot remain device prerequisites.
+The completed [rollback design](DEVICE-ROLLBACK.md) covers restoration of the saved empty watchdog RC and disabling the passive KernelSU folder. Host fault tests cover interrupted capture/publication/restore, repeated rollback, preserved inode/attributes/xattrs, injected writer races, foreign RC preservation, symlink refusal and no bind after failed restoration. These are actual script tests against simulated recovery filesystems, **not** a claim that the new camera test has been run on the device. Userdata and basic metadata recovery are now user-verified. The exact disposable filesystem rehearsal and one controlled guard boot remain pending; neither was run by the agent.
 
-No phone modifications, candidate compilation, dispatch or push occurred while preparing this workflow. A compiled patched camera.ko is pending approval to publish and run the new workflow once.
+The existing cloud candidate was downloaded, authenticated and staged on the Linux host. No new compilation/dispatch, push, phone writes, arming, suppressed boot or driver load occurred in this preparation. The exact next commands are in the operator guide; guard arming/reboot and driver loading remain separately authorized stages.
