@@ -1,0 +1,32 @@
+{
+  "container_sha256": "a4055222afb7e4daff90f73e8f8d013a7fb7e18f005c761a9be4fcb88766ffe7",
+  "container_size": 201326592,
+  "header_version": 4,
+  "header_size": 1584,
+  "page_size": 4096,
+  "os_version_encoded": 570425769,
+  "kernel_size": 46492836,
+  "kernel_sha256": "17652956b2732342d047f06aed0e1bdebf8e47fe22586714e58ff8e595d34cec",
+  "raw_kernel_sha256": "17652956b2732342d047f06aed0e1bdebf8e47fe22586714e58ff8e595d34cec",
+  "kernel_compression": "none",
+  "arm64_image_size": 44171264,
+  "ramdisk_size": 2591801,
+  "ramdisk_sha256": "6d7b57944175ad3a4a230126ec40e42ec82b6621d29eca1b52384395933e1c6e",
+  "boot_signature_size": 0,
+  "boot_signature_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "linux_banners": [
+    "Linux version 5.10.269-Zois-17-5c59cd (build-user@build-host) (Android (14054515, +pgo, +bolt, +lto, +mlgo, based on r563880c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f06077099aa41290cdb4c5e6fa0f59349), LLD 21.0.0 (/mnt/disks/build-disk/src/googleplex-android/llvm-r563880-release/out/llvm-project/llvm 5e96669f06077099aa41290cdb4c5e6fa0f59349)) #1 SMP PREEMPT Tue Oct 6 08:47:06 CEST 2026"
+  ],
+  "avb_footer": {
+    "major": 1,
+    "minor": 0,
+    "original_image_size": 49090560,
+    "vbmeta_offset": 49090560,
+    "vbmeta_size": 704,
+    "vbmeta_sha256": "1a4fd7c82ef916d31b4365d880bd75ba5557866a3f728a4cd9ddd2dfd714837c"
+  },
+  "cryptographic_avb_verified": false,
+  "installation_approved": false,
+  "embedded_config_sha256": "a1ede035f96aff9b5f339cccf678f23c746bb25aafc8c5e08f607da43c305f36",
+  "embedded_ksu_config": []
+}

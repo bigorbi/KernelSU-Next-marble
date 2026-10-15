@@ -1,0 +1,26 @@
+{
+  "status": "PREPARED_VALIDATED_LOCALLY_NOT_KERNEL_BUILT",
+  "host_unit_tests_passed": 67,
+  "host_c_executions_passed": 100,
+  "source_git_blob": "630c49cd542d20df2fe0849d8c544eccc8b18584",
+  "corrected_source_sha256": "6e560f1293606a36e5cd7d4e5ba9fbe4b4c9e21e0dc160a535801d3c3eae5b7b",
+  "patch_sha256": "80cbf9e049061489d7a63481ae22cffd32ca30e79ae61bb08b61179e7d229807",
+  "workflow": ".github/workflows/camera-initrc-kernel.yml",
+  "kernel_build_dispatched": false,
+  "boot_image_built": false,
+  "boot_publication_allowed": false,
+  "phone_contact": false,
+  "phone_writes": false,
+  "cloud_push": false,
+  "archived_failure_manifest_files_unchanged": 23,
+  "unchanged_camera_sha256": "ddf6dd8e764ce8d99f69706c75b5f9aeb61d08542617c93ac0e6a02e170c08ea",
+  "official_kernel_import_crcs_checked": 3829,
+  "official_module_inventories": 391,
+  "kernel_reference_exports": 16509,
+  "unresolved": [
+    "Exact installed boot backup, container and kernel rollback not verified",
+    "Trusted bootloader state and temporary-boot/AVB acceptance not verified",
+    "Historical SUSFS SHA remains uncertain; exploratory source retained",
+    "Cloud compile, runtime CFI, custom RC execution and early mount ordering remain untested"
+  ]
+}

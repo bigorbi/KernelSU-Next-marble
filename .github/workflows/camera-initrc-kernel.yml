@@ -1,0 +1,92 @@
+name: Exploratory camera guard kernel correction
+run-name: EXPLORATORY KSU-SUSFS init-RC size correction - diagnostics only
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: camera-initrc-kernel-${{ github.repository }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    env:
+      CAMERA_EXPLORATORY: 'true'
+      CAMERA_SUSFS_REF: ca7093a1a26f7911987110c34a1352d74cfb1d09
+    steps:
+      - name: Checkout reviewed camera branch
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          persist-credentials: 'false'
+      - name: Initialize closed publication gate
+        run: python3 camera-build/kernel_initrc_fix.py init
+      - name: Checkout historical builder reference
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/KernelSU-Next-marble
+          ref: 3577f1d72a7c00c9248882ccac70ac3f15a97baa
+          path: camera-work/builder
+          persist-credentials: 'false'
+      - name: Checkout exact kernel base
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/android_kernel_xiaomi_sm8450
+          ref: 5c59cd9a314704d30f3f66004183426da23410e1
+          path: camera-work/kernel
+          persist-credentials: 'false'
+      - name: Checkout pinned module header inputs only
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+        with:
+          repository: aosp-pablo/android_kernel_xiaomi_sm8450-modules
+          ref: 83ff8a6f43d2fd897a6ee262f5965d4a9d75f00a
+          path: camera-work/modules-baseline
+          persist-credentials: 'false'
+      - name: Install dependencies and bound runner memory
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends bc bison build-essential flex git curl kmod libelf-dev libssl-dev libncurses-dev rsync xz-utils zstd lz4 python3 python3-yaml cpio
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
+          if [ ! -e /mnt/camera-initrc.swap ]; then
+            sudo fallocate -l 8G /mnt/camera-initrc.swap
+            sudo chmod 600 /mnt/camera-initrc.swap
+            sudo mkswap /mnt/camera-initrc.swap
+            sudo swapon /mnt/camera-initrc.swap
+          fi
+          df -h
+          free -h
+      - name: Verify upstream LLVM 22.1.8 only
+        run: python3 camera-build/kernel_initrc_fix.py toolchain
+      - name: Integrate pinned KSU and SUSFS and test the minimal correction
+        run: python3 camera-build/kernel_initrc_fix.py sources
+      - name: Validate workflow and regression rules
+        run: python3 -m unittest discover -s camera-build/tests -p 'test_*.py' -v
+      - name: Require every running config option and natural release to match
+        run: python3 camera-build/kernel_initrc_fix.py config
+      - name: Compile genuine ThinLTO kernel and symbol table with two jobs
+        run: python3 camera-build/kernel_initrc_fix.py build
+      - name: Audit kernel ABI, security options, KSU and embedded configuration
+        run: python3 camera-build/kernel_initrc_fix.py audit
+      - name: Finalize diagnostics and checksums even on failure
+        if: ${{ always() }}
+        run: python3 camera-build/kernel_initrc_fix.py finalize
+      - name: Upload kernel diagnostic logs even on failure
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: initrc-kernel-build-logs
+          path: camera-output/logs/
+          if-no-files-found: warn
+          retention-days: '14'
+          compression-level: '1'
+      - name: Upload source changes, hashes, headers and ABI reports
+        if: ${{ always() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: initrc-kernel-review
+          path: camera-output/reports/
+          if-no-files-found: warn
+          retention-days: '14'
+          compression-level: '6'
+      # Deliberately no Image, vmlinux, boot.img, DTB, flashable ZIP or release
+      # upload. Current-boot backup, repack/AVB and kernel rollback need review.

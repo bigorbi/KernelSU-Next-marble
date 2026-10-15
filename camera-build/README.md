@@ -1,6 +1,6 @@
 # Camera baseline and gated correction
 
-**Current user-directed scope:** [controlled reversible device testing](DEVICE-TEST.md), using corrected FullLTO run 38701930741. The separate candidate workflow records section/code differences as accepted experimental risk while retaining ABI, CRC, dependency and CFI gates. Its patched build awaits dispatch approval. No phone installation or auto-loading ZIP has been prepared. The historical release workflow described below remains unchanged.
+**Current user-directed scope:** [minimal KSU/SUSFS init-RC sizing correction](KSU-INITRC-KERNEL-FIX.md), following the failed first guard boot. The patched camera from run 38728953993 and passive installation remain unchanged. The guard's custom RC never reached init because the running kernel underreported its size. A separate manual-only kernel workflow is prepared, with no image publication or dispatch. Existing ABI/CFI gates and all failure evidence/backups are preserved. Do not rearm the old transaction or load the experimental camera. Historical workflows and investigations below remain available.
 
 This workflow attempts a real ARM64 kernel/MMRM/camera build on GitHub-hosted Ubuntu. It never flashes a phone, installs modules, changes CRCs/vermagic, creates a flashable package, or runs on push/PR events. The original upstream build workflow is unchanged.
 
