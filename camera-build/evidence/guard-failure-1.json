@@ -1,0 +1,33 @@
+{
+  "status": "ROOT_CAUSE_CONFIRMED_OFFLINE_NO_RETEST",
+  "kernel_su_pin": "9a8d3f03db9bd6d51410a6fd732d1db273692ca6",
+  "physical_init_rc_bytes": 58427,
+  "builtin_rc_bytes": 355,
+  "custom_rc_bytes": 233,
+  "advertised_total_bytes": 58782,
+  "required_total_bytes": 59015,
+  "custom_bytes_delivered": 0,
+  "active_rc": {
+    "identity": "66305:293",
+    "size": 0,
+    "uid": 0,
+    "gid": 0,
+    "mode": "0666",
+    "context": "u:object_r:metadata_file:s0"
+  },
+  "saved_rc_identity": "66305:286",
+  "retired_guard_exists": false,
+  "fallback_rc_exists": false,
+  "pid1_blocklist_bind_exists": false,
+  "persistent_active_test_hook": false,
+  "ksud_regeneration_attribution": "SOURCE_STATE_INFERENCE_NOT_PER_INODE_WRITER_AUDIT",
+  "host_unit_tests_passed": 58,
+  "reader_emulation_cases_passed": 4,
+  "draft_patch_applies_to_pinned_copy": true,
+  "draft_kernel_patch_compiled": false,
+  "phone_changes_during_investigation": false,
+  "cloud_build_dispatched": false,
+  "guard_retest_authorized": false,
+  "driver_load_authorized": false,
+  "reader_sha256": "d32279af8f0b6944dc9622ee3f6b4831da2b6bdb490e6e5450cf2ee7a8b5d455"
+}

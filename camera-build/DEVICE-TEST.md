@@ -1,3 +1,5 @@
+> Current method BLOCKED after failed guard boot. The kernel fstat callback excluded all 233 custom RC bytes; the helper never ran. No repeat boot or driver loading is authorized. See [cause and safe stop state](GUARD-FAILURE-1.md). Corrected camera candidate remains untested on-device.
+
 # Controlled marble camera KMD test
 
 **Candidate built and host-staged; not installed or armed by the agent.** The user authorizes experimental device development and accepts temporary bootloop risk. Exact allocated-section and compiled-code equivalence are diagnostics for this experiment. Kernel vermagic, imported/exported CRCs, dependency identity, CFI type/target checks, BTI entry publication and native CFI failure handling remain mandatory. This is separate from release certification; the existing release workflow/policy is unchanged.

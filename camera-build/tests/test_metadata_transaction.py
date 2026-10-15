@@ -174,6 +174,23 @@ os.execv({real_ln!r},[{real_ln!r}]+args)
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.rc.read_bytes(), (FILES / 'one-shot-watchdog.rc.example').read_bytes())
 
+    def test_failed_guard_ksud_refresh_without_retired_hook_rolls_back_safely(self):
+        # Exact failed-boot shape: private original saved, no helper retirement,
+        # ksud replaces the active guard with a new equivalent empty inode.
+        self.arm(); self.rc.unlink(); self.rc.write_bytes(b''); self.rc.chmod(0o666)
+        os.setxattr(self.rc, 'user.test.selinux', LABEL)
+        refreshed = self.attributes(self.rc)
+        self.assertFalse((self.state / 'retired.rc').exists())
+        mod = self.root / 'data/adb/modules/marble-camera-kmd-test'; mod.mkdir(parents=True)
+        for _ in range(2):
+            result = subprocess.run(['sh', str(FILES / 'rollback-recovery.sh'), '--root', str(self.root)],
+                                    env=self.env, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(self.attributes(self.rc), refreshed)
+            self.assertEqual(self.attributes(self.state / 'original.rc'), self.initial)
+        self.assertTrue((mod / 'disable').is_file())
+        self.assertFalse((self.state / 'retired.rc').exists())
+
     def test_writer_race_during_capture_is_preserved_and_aborts(self):
         p = self.run_transaction('rc_capture_and_arm', RACE_MV='original.rc')
         self.assertNotEqual(p.returncode, 0)

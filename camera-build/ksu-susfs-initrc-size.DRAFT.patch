@@ -1,0 +1,41 @@
+--- a/kernel/runtime/ksud_integration.c
++++ b/kernel/runtime/ksud_integration.c
+@@ -19,6 +19,8 @@
+ #include <linux/workqueue.h>
+ #include <linux/uio.h>
+ #include <linux/stat.h>
++#include <linux/limits.h>
++#include <linux/overflow.h>
+
+ #include "arch.h"
+ #include "klog.h" // IWYU pragma: keep
+@@ -538,17 +540,27 @@
+ #ifdef CONFIG_KSU_SUSFS
+ void ksu_handle_vfs_fstat(int fd, loff_t *kstat_size_ptr)
+ {
+-    loff_t new_size = *kstat_size_ptr + ksu_rc_len;
++    loff_t new_size;
+     struct file *file = fget(fd);
+
+     if (!file)
+         return;
+
+     if (is_init_rc(file)) {
++        /* Size and read must use the same cached custom-RC snapshot. */
++        load_module_rc_once();
++        if (*kstat_size_ptr < 0 || module_rc_len > (size_t)S64_MAX ||
++            check_add_overflow(*kstat_size_ptr, (loff_t)ksu_rc_len, &new_size) ||
++            check_add_overflow(new_size, (loff_t)module_rc_len, &new_size)) {
++            pr_err("init rc size overflow; preserving underlying stat size\n");
++            goto out;
++        }
+         pr_info("stat init.rc");
+-        pr_info("adding ksu_rc_len: %lld -> %lld", *kstat_size_ptr, new_size);
++        pr_info("adding rc len: %lld -> %lld (static=%zu module=%zu)",
++                *kstat_size_ptr, new_size, ksu_rc_len, module_rc_len);
+         *kstat_size_ptr = new_size;
+     }
++out:
+     fput(file);
+ }
+ #endif
